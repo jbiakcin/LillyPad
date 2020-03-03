@@ -1,5 +1,4 @@
 import React from 'react';
-import {Redirect}  from 'react-router-dom';
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -23,14 +22,14 @@ class SignupForm extends React.Component {
     e.preventDefault();
     // debugger;
     const user = Object.assign({}, this.state);
-    this.props.processForm(user).then(() => this.props.history.push("/dashboard"));
+    this.props.processForm(user);
   }
 
   demoUser(e) {
     e.preventDefault();
     // debugger;
     const user = {email: 'abc@abc.com', password: 'hunter12'};
-    this.props.demoForm(user).then(()=>this.props.history.push("/dashboard"));
+    this.props.demoForm(user);
   }
 
   renderErrors() {
@@ -76,7 +75,7 @@ class SignupForm extends React.Component {
                 />
               </label>
               <label>Email
-              <input required type="text"
+              <input required type="email"
                   value={this.state.email}
                   onChange={this.update('email')}
                   placeholder="Email"
