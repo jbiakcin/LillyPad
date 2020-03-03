@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   def ensure_user_logged_in
     unless current_user
-      render json: ['invalid credentials'], status: 401
+      render json: ['invalid credentials']
     end
   end
 
