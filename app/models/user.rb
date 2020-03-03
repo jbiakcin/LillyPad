@@ -5,8 +5,6 @@
 #  id              :bigint           not null, primary key
 #  first_name      :string           not null
 #  last_name       :string           not null
-#  username        :string           not null
-#  age             :integer          not null
 #  email           :string           not null
 #  password_digest :string           not null
 #  session_token   :string           not null
@@ -14,10 +12,11 @@
 #  city            :text
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  age             :integer
 #
 class User < ApplicationRecord
 
-  validates :first_name, :last_name, :username, :age, :email, :password_digest, :session_token, presence: true
+  validates :first_name, :last_name, :email, :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 8 }, allow_nil: true
 
   after_initialize :ensure_session_token
@@ -27,7 +26,7 @@ class User < ApplicationRecord
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
-    return user if user && self.is_password?(password)
+    return user if user && user.is_password?(password)
   end
 
   def self.generate_session_token

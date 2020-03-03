@@ -1,4 +1,5 @@
 import React from 'react';
+import {Redirect}  from 'react-router-dom';
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -20,14 +21,16 @@ class SignupForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    // debugger;
     const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    this.props.processForm(user).then(() => this.props.history.push("/dashboard"));
   }
 
   demoUser(e) {
     e.preventDefault();
+    // debugger;
     const user = {email: 'abc@abc.com', password: 'hunter12'};
-    this.props.demoForm(user);
+    this.props.demoForm(user).then(()=>this.props.history.push("/dashboard"));
   }
 
   renderErrors() {
@@ -55,39 +58,41 @@ class SignupForm extends React.Component {
           <div className="login-mid-line">
             <p>or</p>
           </div>
-          <div className="signup">
-            <h2>Sign Up With Email</h2>
-            <label>First name
-            <input required type="text"
-              value={this.state.firstName}
-              onChange={this.update('firstName')}
-              placeholder="First name"
-            />
-            </label>
-            <label>Last name
-            <input required type="text"
-                value={this.state.lastName}
-                onChange={this.update('lastName')}
-                placeholder="Last name"
+          <form onSubmit={this.handleSubmit} className="signup-box">
+            <div className="signup">
+              <h2>Sign Up With Email</h2>
+              <label>First name
+              <input required type="text"
+                value={this.state.firstName}
+                onChange={this.update('firstName')}
+                placeholder="First name"
               />
-            </label>
-            <label>Email
-            <input required type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
-                placeholder="Email"
-              />
-            </label>
-            <label>Password
-              <p>Must be at least 8 characters</p>
-            <input required type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                placeholder="Password"
-              />
-            </label>
-            <button type="submit">Join</button>
-          </div>
+              </label>
+              <label>Last name
+              <input required type="text"
+                  value={this.state.lastName}
+                  onChange={this.update('lastName')}
+                  placeholder="Last name"
+                />
+              </label>
+              <label>Email
+              <input required type="text"
+                  value={this.state.email}
+                  onChange={this.update('email')}
+                  placeholder="Email"
+                />
+              </label>
+              <label>Password
+                <p>Must be at least 8 characters</p>
+              <input required type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  placeholder="Password"
+                />
+              </label>
+              <input type="submit" value="Join" />
+            </div>
+          </form>
         </div>
       </main>
     );
