@@ -7,7 +7,10 @@ class SignupForm extends React.Component {
       firstName: '',
       lastName: '',
       email: '',
-      password: ''
+      password: '',
+      age: "",
+      gender: "",
+      city: ""
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -45,6 +48,10 @@ class SignupForm extends React.Component {
   }
 
   render () {
+    const ageChoices = [<option key='--'>--</option>]
+    for (let i = 18; i < 99; i++) {
+      ageChoices.push(<option key={i}>{i}</option>);
+    }
     return (
       <main className="join-content">
         <div className="sign-up-form">
@@ -96,6 +103,38 @@ class SignupForm extends React.Component {
                     value={this.state.password}
                     onChange={this.update('password')}
                     placeholder="Password"
+                  />
+                </label>
+              </fieldset>
+              <div className="join-age-gender">
+                <fieldset className="age"> Age
+                  <br/>
+                  <label className="age-select">
+                    <select required name="age" placeholder="Age" onChange={this.update('age')} key="age">
+                      {ageChoices}
+                    </select>
+                  </label>
+                </fieldset>
+                <fieldset className="gender">Gender
+                  <br/>
+                  <label className="gender-select">
+                    <select required name="gender" placeholder="Gender" onChange={this.update('gender')}>
+                      <option value="Gender">Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </label>
+                </fieldset>
+              </div>
+              <fieldset className="city">City
+                <br/>
+                <label className="city-input">
+                  <input required
+                    type="text"
+                    value={this.state.city}
+                    onChange={this.update('city')}
+                    placeholder="Where do you live?"
                   />
                 </label>
               </fieldset>

@@ -9,8 +9,8 @@ class SplashHeader extends React.Component {
         <div className="logo">
           <Link to="/" className="logo-link"><p>LillyPad</p></Link>
         </div>
-        <div className="session-button">
-          <Link to="/login" className="login-link"> <button>Log In</button></Link>
+        <div>
+          <Link to="/login"> <button className="login-button">Log In</button></Link>
         </div>
       </header>
     );

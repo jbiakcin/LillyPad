@@ -35,7 +35,7 @@ span, article, footer, time, small {
   color: #ED6504;
 }
 
-.session-button {
+.login-button {
   border: 1px solid #287FB8;
   color: #287FB8;
   background-color: white;
@@ -48,6 +48,7 @@ span, article, footer, time, small {
   padding: 8px 12px;
   margin: 25px;
 }
+
 
 .splash-body {
   display: flex;
@@ -89,7 +90,7 @@ span, article, footer, time, small {
   color: #fff;
 }
 
-.splash-body-login-link {
+.splash-body-login-button {
   display: inline-block;
   cursor: pointer;
   font-size: 14px;
@@ -193,6 +194,28 @@ span, article, footer, time, small {
   width: calc(50% - 10px);
   display: inline-block;
   box-sizing: border-box;
+}
+
+.join-age-gender {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.age {
+  display: inline-block;
+  position: relative;
+}
+.age select {
+  postion: absolute;
+  z-index: 1;
+}
+
+.gender {
+  margin-left: 50px;
+}
+
+.city {
+  margin-top: 25px;
 }
 
 .signup-box input {

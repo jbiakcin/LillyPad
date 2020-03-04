@@ -37,6 +37,7 @@ class LoginForm extends React.Component{
     return (
       <div className="login-page">
         <form onSubmit={this.handleSubmit} className="login-form-box">
+          <span className="x">&times;</span>
           <div className="login-header-box">
             <header className="login-header">Log in to LillyPad</header>
           </div>
