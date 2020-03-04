@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
+import LoginFormContainer from '../../components/session_form/login_form_container';
+import LoginModal from '../session_form/login_modal';
 
 class SplashHeader extends React.Component {
 
@@ -9,12 +11,13 @@ class SplashHeader extends React.Component {
         <div className="logo">
           <Link to="/" className="logo-link"><p>LillyPad</p></Link>
         </div>
-        <div>
-          <Link to="/login"> <button className="login-button">Log In</button></Link>
+        <div className="login-button">
+          <LoginModal/>
         </div>
       </header>
     );
   }
 }
+
 
 export default withRouter(SplashHeader);

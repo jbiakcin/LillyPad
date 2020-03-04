@@ -35,9 +35,9 @@ class LoginForm extends React.Component{
 
   render () {
     return (
-      <div className="login-page">
+      
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          <span className="x">&times;</span>
+          <span className="x" onClick={this.props.hideModal}>&times;</span>
           <div className="login-header-box">
             <header className="login-header">Log in to LillyPad</header>
           </div>
@@ -60,7 +60,7 @@ class LoginForm extends React.Component{
               />
             </label>
             <br/>
-            <input type="submit" className="login-submit" value="Log In"/>
+            <button type="submit" className="login-submit">Log In</button>
           </div>
           <div className="or-divider"> ----------  or  ----------</div>
           <div className="no-account-yet">
@@ -68,7 +68,7 @@ class LoginForm extends React.Component{
             <Link to="/" className="join-link"><p>Join</p></Link>
           </div>
         </form>
-      </div>
+      
     )
   }
 }

@@ -139,7 +139,7 @@ span, article, footer, time, small {
   flex-direction: column;
   background-color: white;
   text-align: center;
-  justify-content: center;
+  justify-content: space-evenly;
   border-radius: 1%;
 }
 
@@ -151,6 +151,8 @@ span, article, footer, time, small {
   font-size: 30px;
   font-weight: bold;
 }
+
+
 
 .demo-login-button {
   width: 200px;
@@ -165,6 +167,7 @@ span, article, footer, time, small {
   text-align: center;
   background-color: #3b5998;
   border: 1px solid #3b5998;
+  margin-bottom: 60px;
 }
 
 .signup-box fieldset {
@@ -175,7 +178,6 @@ span, article, footer, time, small {
   font-size: 14px;
   font-weight: normal;
   color: #27374c;
-  opacity: .75;
 }
 
 .signup-box fieldset label {
@@ -199,15 +201,6 @@ span, article, footer, time, small {
 .join-age-gender {
   display: flex;
   justify-content: flex-start;
-}
-
-.age {
-  display: inline-block;
-  position: relative;
-}
-.age select {
-  postion: absolute;
-  z-index: 1;
 }
 
 .gender {
@@ -252,14 +245,27 @@ span, article, footer, time, small {
 }
 
 .login-page {
-  width: 100%;
-  height: 900px;
-  background-color: black;
   display: flex;
-  opacity: 0.9;
   justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
+
+.gray-modal {
+  background-color:rgba(0,0,0,0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
 .login-form-box {
+  text-align: left;
   margin: 170px;
   display: block;
   background-color: white;
@@ -270,6 +276,17 @@ span, article, footer, time, small {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
+  position: relative;
+}
+
+.x {
+  position: absolute;
+  color: gray;
+  top: 10px;
+  right: 20px;
+  font-size: 36px;
+  line-height: 1;
+  cursor: pointer;
 }
 
 .login-header-box {
@@ -289,6 +306,7 @@ span, article, footer, time, small {
   display: block;
   box-sizing: border-box;
   padding: 20px 40px 40px;
+  color: black;
 }
 
 .login-form input {
@@ -299,9 +317,11 @@ span, article, footer, time, small {
   border-radius: 2px;
   padding: 12px 8px;
   font-size: 15px;
+  color: black;
 }
 
 .login-submit {
+  width: 100%;
   margin-top: 30px;
   text-align: center;
   background: #287FB8;
