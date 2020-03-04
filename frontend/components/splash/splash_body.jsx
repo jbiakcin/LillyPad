@@ -1,5 +1,6 @@
 import React from 'react';
 import SignupFormContainer from '../session_form/signup_form_container';
+import {Link, withRouter} from 'react-router-dom';
 
 class SplashBody extends React.Component {
 
@@ -13,10 +14,14 @@ class SplashBody extends React.Component {
         <div>
           <SignupFormContainer />
         </div>
+        <div className="splash-body-bottom">
+          <h4>Already a member?</h4>
+          <Link to="/login" className="splash-body-login-link"> <button>Log In</button></Link>
+        </div>
 
       </main>
     )
   }
 }
 
-export default SplashBody;
+export default withRouter(SplashBody);

@@ -46,12 +46,12 @@ class SignupForm extends React.Component {
 
   render () {
     return (
-      <main>
+      <main className="join-content">
         <div className="sign-up-form">
           <div className="demo-login">
-          <h2>Login as a Demo User</h2>
+          <h3>Login as a Demo User</h3>
             <form onSubmit={this.demoUser} className="demo-login-form">
-              <input type="submit" value="Demo login"/>
+              <input className="demo-login-button" type="submit" value="Demo login"/>
             </form>
           </div>
           <div className="login-mid-line">
@@ -59,37 +59,49 @@ class SignupForm extends React.Component {
           </div>
           <form onSubmit={this.handleSubmit} className="signup-box">
             <div className="signup">
-              <h2>Sign Up With Email</h2>
-              <label>First name
-              <input required type="text"
-                value={this.state.firstName}
-                onChange={this.update('firstName')}
-                placeholder="First name"
-              />
-              </label>
-              <label>Last name
-              <input required type="text"
-                  value={this.state.lastName}
-                  onChange={this.update('lastName')}
-                  placeholder="Last name"
-                />
-              </label>
-              <label>Email
-              <input required type="email"
-                  value={this.state.email}
-                  onChange={this.update('email')}
-                  placeholder="Email"
-                />
-              </label>
-              <label>Password
-                <p>Must be at least 8 characters</p>
-              <input required type="password"
-                  value={this.state.password}
-                  onChange={this.update('password')}
-                  placeholder="Password"
-                />
-              </label>
-              <input type="submit" value="Join" />
+              <h3>Sign Up With Email</h3>
+              <fieldset>
+                <div className="join-name">
+                  <div className="join-name-input">
+                    <label>First name
+                    <input required type="text"
+                      value={this.state.firstName}
+                      onChange={this.update('firstName')}
+                      placeholder="First name"
+                    />
+                    </label>
+                  </div>
+                  <div className="join-name-input">
+                    <label>Last name
+                    <input required type="text"
+                        value={this.state.lastName}
+                        onChange={this.update('lastName')}
+                        placeholder="Last name"
+                      />
+                    </label>
+                  </div>
+                </div>
+                <label>Email
+                  <br/>
+                <input required type="email"
+                    value={this.state.email}
+                    onChange={this.update('email')}
+                    placeholder="Email"
+                  />
+                </label>
+                <br/>
+                <label>Password
+                  <p>Must be at least 8 characters</p>
+                <input required type="password"
+                    value={this.state.password}
+                    onChange={this.update('password')}
+                    placeholder="Password"
+                  />
+                </label>
+              </fieldset>
+              <div className="orange-button">
+                <input className="signup-submit" type="submit" value="Join" />
+              </div>
             </div>
           </form>
         </div>

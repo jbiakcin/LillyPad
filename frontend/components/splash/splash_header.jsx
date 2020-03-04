@@ -5,12 +5,11 @@ class SplashHeader extends React.Component {
 
   render (){
     return (
-      <header>
+      <header className="splash-header">
         <div className="logo">
-          <Link to="/" className="logo-link"/>
-            <p>LillyPad</p>
+          <Link to="/" className="logo-link"><p>LillyPad</p></Link>
         </div>
-        <div className="session-buttons">
+        <div className="session-button">
           <Link to="/login" className="login-link"> <button>Log In</button></Link>
         </div>
       </header>
