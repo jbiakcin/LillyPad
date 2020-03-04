@@ -316,3 +316,34 @@ span, article, footer, time, small {
 .or-divider {
   text-align: center;
 }
+
+.greeting-box {
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  height: 80px;
+  background-color: white;
+}
+
+.greeting-name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.greeting-logout-button {
+  border: 1px solid #287FB8;
+  color: #287FB8;
+  background-color: white;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  border-radius: 2px;
+  text-align: center;
+  font-weight: bold;
+  padding: 8px 12px;
+  margin: 25px;
+}
