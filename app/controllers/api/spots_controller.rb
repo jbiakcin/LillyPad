@@ -35,6 +35,7 @@ class Api::SpotsController < ApplicationController
       render "api/spots/show"
     else
       render json: @spot.errors.full_messages, status: 401
+    end
   end
 
   private
