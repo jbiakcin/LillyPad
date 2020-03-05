@@ -39,7 +39,7 @@ class SignupForm extends React.Component {
     return (
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li className="error" key={`error-${i}`}>
             {error}
           </li>
         ))}
@@ -52,6 +52,12 @@ class SignupForm extends React.Component {
     for (let i = 18; i < 99; i++) {
       ageChoices.push(<option key={i}>{i}</option>);
     }
+
+    let errorMsg;
+    if (this.props.errors) {
+      errorMsg = <div className="signup-error">{this.renderErrors()}</div>
+    }
+
     return (
       <main className="join-content">
         <div className="sign-up-form">
@@ -67,6 +73,7 @@ class SignupForm extends React.Component {
           <form onSubmit={this.handleSubmit} className="signup-box">
             <div className="signup">
               <h3>Sign Up With Email</h3>
+              {errorMsg}
               <fieldset>
                 <div className="join-name">
                   <div className="join-name-input">
@@ -88,18 +95,17 @@ class SignupForm extends React.Component {
                     </label>
                   </div>
                 </div>
-                <label>Email
+                <label className="signup-email" >Email
                   <br/>
-                <input required type="email"
+                  <input required type="email"
                     value={this.state.email}
                     onChange={this.update('email')}
                     placeholder="Email"
                   />
                 </label>
-                <br/>
-                <label>Password
+                <label className="signup-password">Password
                   <p>Must be at least 8 characters</p>
-                <input required type="password"
+                  <input required type="password"
                     value={this.state.password}
                     onChange={this.update('password')}
                     placeholder="Password"
@@ -109,16 +115,16 @@ class SignupForm extends React.Component {
               <div className="join-age-gender">
                 <fieldset className="age"> Age
                   <br/>
-                  <label className="age-select">
-                    <select required name="age" placeholder="Age" onChange={this.update('age')} key="age">
+                  <label >
+                    <select className="age-select" required name="age" placeholder="Age" onChange={this.update('age')} key="age">
                       {ageChoices}
                     </select>
                   </label>
                 </fieldset>
                 <fieldset className="gender">Gender
                   <br/>
-                  <label className="gender-select">
-                    <select required name="gender" placeholder="Gender" onChange={this.update('gender')}>
+                  <label>
+                    <select className="gender-select" required name="gender" placeholder="Gender" onChange={this.update('gender')}>
                       <option value="Gender">Gender</option>
                       <option value="Male">Male</option>
                       <option value="Female">Female</option>

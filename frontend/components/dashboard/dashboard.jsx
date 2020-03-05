@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import DashboardHeader from './dashboard_header';
 
 
 class DashBoard extends React.Component {
@@ -8,9 +8,9 @@ class DashBoard extends React.Component {
     const {currentUser} = this.props;
     return (
       <div>
+        <div><DashboardHeader logout={this.props.logout}/></div>
         <div className="greeting-box">
         <h2 className="greeting-name">Hello {currentUser.first_name} {currentUser.last_name}!</h2>
-        <button className="greeting-logout-button" onClick={this.props.logout}>Log Out</button>
         </div>
         <h3>More to Come on this page!</h3>
       </div>
