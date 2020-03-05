@@ -20,6 +20,11 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates :password, length: { minimum: 8 }, allow_nil: true
 
+  has_many :spots,
+  class_name: :Spot,
+  foreign_key: :host_id,
+  primary_key: :id
+
   after_initialize :ensure_session_token
 
   attr_reader :password

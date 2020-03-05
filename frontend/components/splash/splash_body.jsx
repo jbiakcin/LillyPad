@@ -13,7 +13,7 @@ class SplashBody extends React.Component {
           <h1>Stay with Locals and Meet Travelers</h1>
           <h2>Share Authentic Travel Experiences</h2>
         </header>
-        <div>
+        <div className="sign-up-form-container">
           <SignupFormContainer />
         </div>
         <div className="splash-body-bottom">
