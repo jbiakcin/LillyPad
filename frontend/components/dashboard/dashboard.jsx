@@ -15,8 +15,9 @@ class DashBoard extends React.Component {
         <div className="dashboard-body">
           <div className="dashboard-sidebar">
             <div className="greeting-box">
-              <p>{currentUser.first_name} {currentUser.last_name}</p>
-              <p>{currentUser.city}</p>
+              <p className="greeting-name">{currentUser.first_name} {currentUser.last_name}</p>
+              <br/>
+              <p className="greeting-city">{currentUser.city}</p>
             </div>
             <div className="accept-guests">
               <p>Not Accepting Guests</p>
