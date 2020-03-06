@@ -68,7 +68,9 @@ class SignupForm extends React.Component {
             </form>
           </div>
           <div className="login-mid-line">
+            <div className="form-separator"></div>
             <p>or</p>
+            <div className="form-separator"></div>
           </div>
           <form onSubmit={this.handleSubmit} className="signup-box">
             <div className="signup">

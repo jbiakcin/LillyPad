@@ -13,4 +13,4 @@ const mDP = dispatch => ({
   fetchUsers: users => dispatch(fetchUsers(users))
 });
 
-export default connect(mSP, mDP)(spotShow);
+export default (connect(mSP, mDP)(spotShow));

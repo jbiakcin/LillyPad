@@ -14,7 +14,7 @@ export const fetchSpot = spotId => (
 
 export const createSpot = spot => (
   $.ajax({
-    url: `api/spots`,
+    url: `/api/spots`,
     method: 'POST',
     data: {spot}
   })

@@ -63,7 +63,11 @@ class LoginForm extends React.Component{
             <br/>
             <button type="submit" className="login-submit">Log In</button>
           </div>
-          <div className="or-divider"> ----------  or  ----------</div>
+          <div className="login-or-divider">
+            <div className="login-or-separator"></div>
+            <p className="or">or</p>
+          <div className="login-or-separator"></div>
+          </div>
           <div className="no-account-yet">
             <p>Don't have an account?</p>
             <Link to="/" className="join-link"><p>Join</p></Link>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, withRouter} from 'react-router-dom';
 
 class SpotShow extends React.Component {
   componentDidMount() {
@@ -8,7 +8,6 @@ class SpotShow extends React.Component {
   }
   
   render (){
-    // debugger;
     const spot = this.props.spot;
     const hostEmail = this.props.users[spot.host_id].email;
     return (
@@ -23,4 +22,4 @@ class SpotShow extends React.Component {
   }
 }
 
-export default SpotShow;
+export default withRouter(SpotShow);

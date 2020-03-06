@@ -13,9 +13,15 @@ class DashBoard extends React.Component {
       <div>
         <div><DashboardHeader logout={this.props.logout}/></div>
         <div className="greeting-box">
-        <h2 className="greeting-name">Hello {currentUser.first_name} {currentUser.last_name}!</h2>
+          <h2 className="greeting-name">Hello {currentUser.first_name} {currentUser.last_name}!</h2>
+          <br/>
+          <h3>{currentUser.city}</h3>
         </div>
         <SpotIndexContainer/>
+        <div>
+          <h2>My Spots:</h2>
+
+        </div>
       </div>
     );
   }
