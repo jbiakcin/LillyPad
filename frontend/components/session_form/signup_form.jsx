@@ -23,14 +23,12 @@ class SignupForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // debugger;
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
   }
 
   demoUser(e) {
     e.preventDefault();
-    // debugger;
     const user = {email: 'abc@abc.com', password: 'hunter12'};
     this.props.demoForm(user);
   }

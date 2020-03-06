@@ -12,18 +12,17 @@ class SpotIndex extends React.Component {
 
     return (
       <div>
-        <div>
-          <h2>All available spots:</h2>
-          <ul>
-            {spots.map(spot => (
+        <div className="dashboard-spots">
+          <h2 className="spots-header">HIT AMERICA'S NATIONAL PARKS WITH LILLYPAD...:</h2>
+          <ul className="dashboard-spots-index">
+            {spots.map(spot => 
               <SpotIndexItem 
                 spot={spot} 
                 key={spot.id}
                 deleteSpot={deleteSpot}
               />
-            ))}
+            )}
           </ul>
-          <Link to={`/spots/new`}>Add a new spot.</Link>
         </div>
       </div>
     );

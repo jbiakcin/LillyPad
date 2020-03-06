@@ -39,6 +39,7 @@ class SpotForm extends React.Component {
             placeholder="##"
             onChange={this.update('maxGuests')}/>
           </label>
+          <button type="submit" className="create-edit-submit-button">{this.props.formType}</button>
         </form>
       </div>
     );

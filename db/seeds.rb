@@ -10,6 +10,7 @@ Spot.destroy_all
 
 demo_user= User.create!({first_name: 'Demo', last_name: 'User', email: 'abc@abc.com', password: 'hunter12', gender: 'Female', city: 'San Francisco', age: 23})
 
+jennie = User.create!({first_name: 'Jennie', last_name: 'Richardson', email: 'jrichardson@fakeemail.com', password: 12345678, gender: 'Female', city: 'Fresno', age: 21})
 tom = User.create!({first_name: 'Tom', last_name: 'Cruise', email: 'tcruise@fakeemail.com', password: 12345678, gender: 'Male', city: 'New York', age: 50})
 james = User.create!({first_name: 'James', last_name: 'Bond', email: 'jbond@fakeemail.com', password: 12345678, gender: 'Male', city: 'Las Vegas', age: 45})
 jennifer = User.create!({first_name: 'Jennifer', last_name: 'Lopez', email: 'jlo@fakeemail.com', password: 12345678, gender: 'Female', city: 'Miami', age: 31})
@@ -17,31 +18,31 @@ julia = User.create!({first_name: 'Julia', last_name: 'Roberts', email: 'jrobert
 emma = User.create!({first_name: 'Emma', last_name: 'stone', email: 'estone@fakeemail.com', password: 12345678, gender: 'Female', city: 'Las Vegas', age: 22})
 cary = User.create!({first_name: 'Cary', last_name: 'Grant', email: 'cgrant@fakeemail.com', password: 12345678, gender: 'Male', city: 'Los Angeles', age: 30})
 
-demo = Spot.create!({host_id: User.find_by(email: "abc@abc.com").id, 
-host_name: User.find_by(email: "abc@abc.com").first_name + " " + User.find_by(email: "abc@abc.com").last_name, 
-site: 'Golden Gate Park', location_name: "Demo Pad", max_guests: 2})
+# demo = Spot.create!({host_id: User.find_by(email: "abc@abc.com").id, 
+# host_name: User.find_by(email: "abc@abc.com").first_name + " " + User.find_by(email: "abc@abc.com").last_name, 
+# site: 'Golden Gate Park', location_name: "Demo Pad", max_guests: 2})
 
-cruise = Spot.create!({host_id: User.find_by(email: "tcruise@fakeemail.com").id, 
-host_name: User.find_by(email: "tcruise@fakeemail.com").first_name + " " + User.find_by(email: "tcruise@fakeemail.com").last_name, 
-site: 'Niagra Falls', location_name: "Casa Cruise", max_guests: 8})
+spot1 = Spot.create!({host_id: User.find_by(email: "jrichardson@fakeemail.com").id, 
+host_name: User.find_by(email: "jrichardson@fakeemail.com").first_name + " " + User.find_by(email: "jrichardson@fakeemail.com").last_name, 
+site: 'Niagra Falls', location_name: "Casa Lilly", max_guests: 2})
 
-bond = Spot.create!({host_id: User.find_by(email: "jbond@fakeemail.com").id, 
-host_name: User.find_by(email: "jbond@fakeemail.com").first_name + " " + User.find_by(email: "jbond@fakeemail.com").last_name, 
-site: 'Grand Canyon', location_name: "Bond Mansion", max_guests: 5})
+spot2 = Spot.create!({host_id: User.find_by(email: "jrichardson@fakeemail.com").id, 
+host_name: User.find_by(email: "jrichardson@fakeemail.com").first_name + " " + User.find_by(email: "jrichardson@fakeemail.com").last_name, 
+site: 'Grand Canyon', location_name: "Bond Pond", max_guests: 1})
 
-lopez = Spot.create!({host_id: User.find_by(email: "jlo@fakeemail.com").id, 
-host_name: User.find_by(email: "jlo@fakeemail.com").first_name + " " + User.find_by(email: "jlo@fakeemail.com").last_name, 
-site: 'Everglades National Park', location_name: "JLo Home", max_guests: 5})
+spot3 = Spot.create!({host_id: User.find_by(email: "jrichardson@fakeemail.com").id, 
+host_name: User.find_by(email: "jrichardson@fakeemail.com").first_name + " " + User.find_by(email: "jrichardson@fakeemail.com").last_name,
+site: 'Everglades National Park', location_name: "JLo Pad", max_guests: 3})
 
-roberts = Spot.create!({host_id: User.find_by(email: "jroberts@fakeemail.com").id, 
-host_name: User.find_by(email: "jroberts@fakeemail.com").first_name + " " + User.find_by(email: "jroberts@fakeemail.com").last_name, 
-site: 'Glacier National Park', location_name: "Home of Smiles", max_guests: 4})
+spot4 = Spot.create!({host_id: User.find_by(email: "jrichardson@fakeemail.com").id, 
+host_name: User.find_by(email: "jrichardson@fakeemail.com").first_name + " " + User.find_by(email: "jrichardson@fakeemail.com").last_name, 
+site: 'Glacier National Park', location_name: "Home of Lillies", max_guests: 2})
 
-stone = Spot.create!({host_id: User.find_by(email: "estone@fakeemail.com").id, 
-host_name: User.find_by(email: "estone@fakeemail.com").first_name + " " + User.find_by(email: "estone@fakeemail.com").last_name, 
-site: 'Zion National Park', location_name: "Stone Abode", max_guests: 3})
+spot5 = Spot.create!({host_id: User.find_by(email: "jrichardson@fakeemail.com").id, 
+host_name: User.find_by(email: "jrichardson@fakeemail.com").first_name + " " + User.find_by(email: "jrichardson@fakeemail.com").last_name,
+site: 'Zion National Park', location_name: "Lilly Abode", max_guests: 1})
 
-grant = Spot.create!({host_id: User.find_by(email: "cgrant@fakeemail.com").id, 
-host_name: User.find_by(email: "cgrant@fakeemail.com").first_name + " " + User.find_by(email: "cgrant@fakeemail.com").last_name, 
-site: 'Angeles National Forest', location_name: "Grant Base", max_guests: 3})
+spot6= Spot.create!({host_id: User.find_by(email: "jrichardson@fakeemail.com").id, 
+host_name: User.find_by(email: "jrichardson@fakeemail.com").first_name + " " + User.find_by(email: "jrichardson@fakeemail.com").last_name,
+site: 'Angeles National Forest', location_name: "Grand Pad", max_guests: 5})
 

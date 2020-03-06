@@ -3,10 +3,11 @@ class Api::SpotsController < ApplicationController
 
   def index
     @spots = Spot.all
+    render :index
   end
 
   def show
-    @spot = Spot.find(params[:id])
+    @spot = Spot.with_attached_photos.find(params[:id])
   end
 
   def create
@@ -40,6 +41,6 @@ class Api::SpotsController < ApplicationController
 
   private
   def spot_params
-    params.require(:spot).permit(:host_id, :host_name, :site, :location_name, :max_guests)
+    params.require(:spot).permit(:host_id, :host_name, :site, :location_name, :max_guests, photos: [])
   end
 end

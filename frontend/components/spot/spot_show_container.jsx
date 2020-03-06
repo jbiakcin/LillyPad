@@ -3,9 +3,9 @@ import {fetchSpot} from '../../actions/spot_actions';
 import {fetchUsers} from '../../actions/user_actions';
 import spotShow from './spot_show';
 
-const mSP = (state, ownProps) => ({
-  spot: state.entities.spots[ownProps.match.params.spotId],
-  users: state.entities.users
+const mSP = ({entities}, ownProps) => ({
+  spot: entities.spots[ownProps.match.params.spotId],
+  users: entities.users
 });
 
 const mDP = dispatch => ({

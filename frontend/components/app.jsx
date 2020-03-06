@@ -16,7 +16,7 @@ const App = () =>(
       <AuthRoute path="/signup" component={SplashContainer} />
       <AuthRoute path="/login" component={LoginFormContainer}/>
       <ProtectedRoute exact path="/dashboard" component={DashBoardContainer}/>
-      <ProtectedRoute path="/" component={DashBoardContainer}/>
+      <ProtectedRoute exact path="/" component={DashBoardContainer}/>
       <ProtectedRoute path="/spots/new" component={CreateSpotFormContainer}/>
       <ProtectedRoute path="/spots/:spotId/edit" component={EditSpotFormContainer}/>
       <Route exact path="/spots" component={SpotIndexContainer}/>

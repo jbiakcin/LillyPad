@@ -19,4 +19,6 @@ class Spot < ApplicationRecord
   class_name: :User,
   foreign_key: :host_id,
   primary_key: :id
+
+  has_many_attached :photos
 end

@@ -25,6 +25,8 @@ span, article, footer, time, small {
   padding: 0 10px;
   height: 80px;
   background-color: white;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.25);
 }
 
 .logo {
@@ -51,7 +53,6 @@ span, article, footer, time, small {
   height: 25px;
   vertical-align: center;
 }
-
 
 .splash-body {
   display: flex;
@@ -311,7 +312,6 @@ span, article, footer, time, small {
   bottom: 0;
 }
 
-
 .login-form-box {
   text-align: left;
   margin: 170px;
@@ -430,23 +430,6 @@ span, article, footer, time, small {
   margin-right: 10px;
 }
 
-.greeting-box {
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px;
-  height: 80px;
-  background-color: white;
-}
-
-.greeting-name {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 40px;
-}
-
 .greeting-logout-button {
   border: 1px solid #287FB8;
   color: #287FB8;
@@ -462,4 +445,71 @@ span, article, footer, time, small {
   width: 80px;
   height: 25px;
   vertical-align: center;
+}
+
+.dashboard {
+  background-color: #f1efea;
+  min-height: 100vh;
+  margin-top: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dashboard-body {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  list-style: none;
+}
+
+.dashboard-sidebar {
+  display: block;
+  max-width: 320px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.greeting-box {
+  display: block;
+  background-color: white;
+  padding: 20px;
+  border-bottom: 1px solid #e6e6e6;
+  width: 310px;
+  height: 103px;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.accept-guests {
+  background-color: white;
+}
+
+.dashboard-spots {
+  background-color: white;
+}
+
+.dashboard-spots-index {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 960px;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+}
+
+.spot-index-item {
+  list-style: none;
+  width: 300px;
+  height: 225px;
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.index-item-style {
+
 }

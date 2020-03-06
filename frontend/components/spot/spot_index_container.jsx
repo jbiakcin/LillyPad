@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import SpotIndex from './spot_index';
-import {fetchSpots, deleteSpot} from '../../actions/spot_actions';
+import {fetchSpots} from '../../actions/spot_actions';
 
 const mSP = state => {
 
@@ -10,8 +10,7 @@ const mSP = state => {
 };
 
 const mDP = dispatch => ({
-  fetchSpots: () => dispatch(fetchSpots()),
-  deleteSpot: spotId => dispatch(deleteSpot(spotId))
+  fetchSpots: () => dispatch(fetchSpots())
 });
 
 export default connect(mSP, mDP)(SpotIndex);

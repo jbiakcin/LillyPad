@@ -10,19 +10,23 @@ class DashBoard extends React.Component {
   render () {
     const {currentUser} = this.props;
     return (
-      <div>
+      <main className="dashboard">
         <div><DashboardHeader logout={this.props.logout}/></div>
-        <div className="greeting-box">
-          <h2 className="greeting-name">Hello {currentUser.first_name} {currentUser.last_name}!</h2>
-          <br/>
-          <h3>{currentUser.city}</h3>
+        <div className="dashboard-body">
+          <div className="dashboard-sidebar">
+            <div className="greeting-box">
+              <p>{currentUser.first_name} {currentUser.last_name}</p>
+              <p>{currentUser.city}</p>
+            </div>
+            <div className="accept-guests">
+              <p>Not Accepting Guests</p>
+            </div>
+          </div>
+          <div className="dashboard-spots">
+            <SpotIndexContainer/>
+          </div>
         </div>
-        <SpotIndexContainer/>
-        <div>
-          <h2>My Spots:</h2>
-
-        </div>
-      </div>
+      </main>
     );
   }
 }
