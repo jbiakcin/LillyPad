@@ -15813,3 +15813,316 @@ Processing by Api::SpotsController#index as JSON
 Completed 200 OK in 108ms (Views: 50.3ms | ActiveRecord: 56.4ms)
 
 
+Started GET "/api/spots/15" for ::1 at 2020-03-06 14:56:19 -0800
+Processing by Api::SpotsController#show as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/spots_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" = $3[0m  [["record_type", "Spot"], ["name", "photos"], ["record_id", 15]]
+  ↳ app/controllers/api/spots_controller.rb:10
+  Rendering api/spots/show.json.jbuilder
+  Rendered api/spots/_spot.json.jbuilder (0.9ms)
+  Rendered api/spots/show.json.jbuilder (3.9ms)
+Completed 200 OK in 15ms (Views: 8.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/spots" for ::1 at 2020-03-06 14:56:21 -0800
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (1.8ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.4ms)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 15], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 16], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 17], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 18], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 19], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 20], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/index.json.jbuilder (24.1ms)
+Completed 200 OK in 30ms (Views: 25.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-06 15:05:37 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "fmbxbYPcTGI2Yxl1P2wv8g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 82ms (Views: 78.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/spots" for ::1 at 2020-03-06 15:05:37 -0800
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (8.2ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.6ms)
+  [1m[36mActiveStorage::Attachment Load (3.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 15], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (7.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 16], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 17], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (8.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 18], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (12.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 19], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 20], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/index.json.jbuilder (75.2ms)
+Completed 200 OK in 81ms (Views: 40.6ms | ActiveRecord: 40.4ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-03-06 15:06:02 -0800
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "fmbxbYPcTGI2Yxl1P2wv8g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:44
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "abc@abc.com"], ["id", 56], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "m-HivT9X4LnU7aBxjJR5IA"], ["updated_at", "2020-03-06 23:06:02.993259"], ["id", 56]]
+  ↳ app/models/user.rb:44
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:44
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (2.1ms)
+Completed 200 OK in 17ms (Views: 6.7ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/api/session" for ::1 at 2020-03-06 15:06:47 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"abc@abc.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "abc@abc.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:44
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "abc@abc.com"], ["id", 56], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "NzCONx509OcY1MN7sQCMtA"], ["updated_at", "2020-03-06 23:06:47.719468"], ["id", 56]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:44
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered api/users/show.json.jbuilder (4.7ms)
+Completed 200 OK in 257ms (Views: 13.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/spots" for ::1 at 2020-03-06 15:06:47 -0800
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (6.0ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (1.5ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 15], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 16], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 17], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 18], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 19], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.4ms)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 20], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/index.json.jbuilder (40.8ms)
+Completed 200 OK in 48ms (Views: 38.0ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/" for ::1 at 2020-03-06 15:07:31 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "NzCONx509OcY1MN7sQCMtA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 68ms (Views: 64.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/spots" for ::1 at 2020-03-06 15:07:31 -0800
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (17.7ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.4ms)
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 15], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (5.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 16], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.8ms)
+  [1m[36mActiveStorage::Attachment Load (10.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 17], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 18], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (6.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 19], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 20], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/index.json.jbuilder (88.3ms)
+Completed 200 OK in 96ms (Views: 53.5ms | ActiveRecord: 42.3ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-03-06 15:08:03 -0800
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "NzCONx509OcY1MN7sQCMtA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:44
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "abc@abc.com"], ["id", 56], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Cma7xIpwXnyw9BGS6Qe0fg"], ["updated_at", "2020-03-06 23:08:03.343791"], ["id", 56]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:44
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/api/session" for ::1 at 2020-03-06 15:10:23 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"abc@abc.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "abc@abc.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:44
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "abc@abc.com"], ["id", 56], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "IOkAT6iPZ9aUWoaIDvK6sQ"], ["updated_at", "2020-03-06 23:10:24.048743"], ["id", 56]]
+  ↳ app/models/user.rb:44
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:44
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/show.json.jbuilder (1.7ms)
+Completed 200 OK in 229ms (Views: 6.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/spots" for ::1 at 2020-03-06 15:10:24 -0800
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (7.7ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.7ms)
+  [1m[36mActiveStorage::Attachment Load (3.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 15], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 16], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 17], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 18], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 19], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 20], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/index.json.jbuilder (40.3ms)
+Completed 200 OK in 48ms (Views: 34.6ms | ActiveRecord: 13.3ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-03-06 15:11:05 -0800
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "IOkAT6iPZ9aUWoaIDvK6sQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:44
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "abc@abc.com"], ["id", 56], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "7OOAiFiwiMZ4CTEryrK1YA"], ["updated_at", "2020-03-06 23:11:05.239795"], ["id", 56]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:44
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.9ms)
+Completed 200 OK in 12ms (Views: 6.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-06 15:13:14 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 47ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-03-06 15:13:16 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"abc@abc.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "abc@abc.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:44
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "abc@abc.com"], ["id", 56], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[36mUser Update (1.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "pjA_xtJvXwV2x1aAS1Evww"], ["updated_at", "2020-03-06 23:13:16.647736"], ["id", 56]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:44
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 226ms (Views: 6.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/spots" for ::1 at 2020-03-06 15:13:16 -0800
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (0.5ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.4ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 15], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 16], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 17], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 18], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 19], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 20], ["record_type", "Spot"], ["name", "photos"]]
+  ↳ app/views/api/spots/index.json.jbuilder:4
+  Rendered api/spots/index.json.jbuilder (25.6ms)
+Completed 200 OK in 34ms (Views: 29.8ms | ActiveRecord: 4.0ms)
+
+
