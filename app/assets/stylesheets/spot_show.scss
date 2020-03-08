@@ -1,0 +1,132 @@
+.spot-show-main {
+  background-color: #f1efea;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.spot-show-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // min-height: 750px;
+  flex-grow: 1;
+  margin: 0 auto;
+  padding: 0px;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  overflow-y: hidden;
+  color: #287FB8
+}
+
+.spot-show-detail {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.25);
+  box-sizing: border-box;
+  background-color: white;
+  padding: 25px;
+}
+
+.spot-detail-header {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.show-spot-info {
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+.booking-button {
+  width: 150px;
+  height: 35px;
+  cursor: pointer;
+  border: 1px solid grey;
+  text-align: center;
+  box-shadow: grey;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.back-to-link {
+  color: #287FB8;
+}
+
+.back-to-link:hover {
+  color: teal;
+}
+
+.spot-show-pix {
+  width: 900px;
+}
+
+.spot-show-pix-indiv {
+  width: 280px;
+  height: 140px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: zoom-in;
+}
+
+.spot-show-pix-indiv:hover {
+  transform: scale(1.5);
+}
+
+.things-to-do {
+  width: 900px;
+  display: block;
+  box-sizing: border-box;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.25);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.things-to-do h2 {
+  display: block;
+  color: #ED6504;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.things-to-do-list {
+  padding: 30px;
+  line-height: 2.5;
+}
+
+.things-to-do-list li {
+  list-style: none;
+}
+
+.reviews {
+  width: 900px;
+  display: block;
+  box-sizing: border-box;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.25);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.reviews h2 {
+  color: #ED6504;
+  display: block;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.reviews p {
+  padding: 30px;
+}
+
+.fa-list-alt {
+  color: #287FB8
+}
+
+.things-to-do-list li i {
+  color:#ED6504;
+}

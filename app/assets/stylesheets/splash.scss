@@ -1,0 +1,103 @@
+.splash-header {
+  display: block;
+  box-sizing: border-box;
+  top: 0;
+  width: 100vw;
+  padding: 0 10px;
+  height: 80px;
+  background-color: white;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.25);
+  margin-bottom: 25px;
+}
+
+.splash-wrapper {
+  display: flex;
+  box-sizing: border-box;
+  -webkit-box-pack: justify;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  max-width: 1280px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin-bottom: 15px;
+}
+
+.logo {
+  box-sizing: border-box;
+  font-family: fantasy;
+  font-size: 25px;
+  font-weight: bold;
+  color: #ED6504;
+}
+
+.login-button {
+  border: 1px solid #287FB8;
+  color: #287FB8;
+  background-color: white;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  border-radius: 2px;
+  text-align: center;
+  font-weight: bold;
+  margin: 25px;
+  width: 100px;
+  height: 30px;
+  vertical-align: center;
+}
+
+.splash-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 750px;
+  flex-grow: 1;
+  margin: 0 auto;
+  padding: 40px;
+  line-height: 1.5;
+  background-color: #287FB8;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  justify-content: center;
+}
+
+.splash-body-header {
+  text-align: center;
+  color: #fff;
+}
+
+.splash-body-header h1 {
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0 0 15px 0;
+  box-sizing: border-box;
+  display: block;
+}
+
+.splash-body-header h2 {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0 0 0.75em 0;
+  box-sizing: border-box;
+  display: block;
+}
+
+.splash-body-bottom {
+  text-align: center;
+  color: #fff;
+}
+
+.splash-body-login-button {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 1px 12px;
+}
+
+.splash-body-bottom h4 {
+  font-size: 15px;
+  font-weight: normal;
+}

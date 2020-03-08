@@ -28,11 +28,11 @@ class DashBoard extends React.Component {
             </div>
             <div className="verified">
               <div className="verified-header">MY PROFILE</div>
-              <ul className="verified-status fa-ul">
-                <li><span class="fa-li"><i class="fas fa-spinner fa-pulse"></i></span>Payment not verified</li>
-                <li><span class="fa-li"><i class="fas fa-spinner fa-pulse"></i></span>Phone not verified</li>
-                <li><span class="fa-li"><i class="fas fa-spinner fa-pulse"></i></span>Government ID not verified</li>
-                <li><span class="fa-li"><i class="fas fa-spinner fa-pulse"></i></span>Address not verified</li>
+              <ul className="verified-status">
+                <li><i className="fas fa-check"></i>&nbsp;&nbsp; Payment verified</li>
+                <li><i className="fas fa-times"></i> &nbsp;&nbsp;Phone not verified</li>
+                <li><i className="fas fa-times"></i> &nbsp;&nbsp;Government ID not verified</li>
+                <li><i className="fas fa-times"></i> &nbsp;&nbsp;Address not verified</li>
               </ul>
             </div>
           </div>

@@ -9,7 +9,6 @@ const SpotIndexItem = props => {
           {props.spot.location_name}
           <img className="spot-index-pix" src={props.spot.photoUrls[0]} />
           <br/>
-          <p>Near: {props.spot.site}</p>
           </div>
         </Link>
     </li>

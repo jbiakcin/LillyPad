@@ -1,0 +1,225 @@
+.greeting-logout-button {
+  border: 1px solid #287FB8;
+  color: #287FB8;
+  background-color: white;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  border-radius: 2px;
+  text-align: center;
+  font-weight: bold;
+  // margin: 25px;
+  width: 100px;
+  height: 30px;
+  vertical-align: center;
+}
+
+.dashboard {
+  background-color: #f1efea;
+  // min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.dashboard-body {
+  display: flex;
+  flex-direction: row;
+  // min-height: 750px;
+  flex-grow: 1;
+  margin: 0 auto;
+  padding: 0px;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  overflow-y: hidden;
+}
+
+.verified {
+  text-align: left;
+  padding: 25px;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.verified-header {
+  display: block;
+  border-bottom: 1px solid lightgray;
+  font-weight: bold;
+  height: 40px;
+}
+
+.verified-status {
+  line-height: 3;
+  color: gray;
+}
+
+.verified-status li {
+  list-style: none;
+}
+
+.dashboard-sidebar {
+  text-align: center;
+  margin-right: 20px;
+}
+
+.greeting-box {
+  color: #27374c;
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-bottom: 1px solid #e6e6e6;
+  width: 310px;
+  height: 103px;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.greeting-name {
+  font-weight: bold;
+}
+
+.accept-guests {
+  justify-content: center;
+  display: flex;
+  height: 70px;
+  background-color: white;
+  padding: 10px;
+  align-items: center;
+}
+
+.accept-status {
+	display: block;
+	font-size: 16px;
+	font-weight: 700;
+	color: #444;
+	line-height: 1.3;
+	padding: .6em 1.4em .5em .8em;
+	width: 90%;
+	box-sizing: border-box;
+	margin: 0;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	background-repeat: no-repeat, repeat;
+	background-position: right .7em top 50%, 0 0;
+  background-size: .65em auto, 100%;
+  text-align-last: center;
+  justify-content: center;
+  cursor: pointer;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+	  linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+}
+
+.accept-status::-ms-expand {
+	display: none;
+}
+
+.accept-status option {
+	font-weight:normal;
+}
+
+.accept-status {
+  height: 50px;
+}
+
+.dashboard-spots {
+  background-color: white;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.25);
+  margin-bottom: 10px;
+}
+
+.dashboard-spots-index {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 960px;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.my-travel-plans {
+  display: block;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.25);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.my-travel-plans h2 {
+  display: block;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.planned-trips {
+  padding: 5px 10px;
+  display: block;
+  background-color: #f7f7f7;
+  line-height: 2.5;
+}
+
+.planned-trips p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.planned-trips li {
+  padding-left: 25px;
+  list-style:none;
+}
+
+.bottom-line {
+  border-bottom: 1px solid lightgray;
+}
+
+.happenings {
+  display: block;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.25);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sf-happenings {
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #f7f7f7;
+  line-height: 2.5;
+}
+
+.sf-happenings p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sf-happenings li {
+  padding-left: 25px;
+  list-style: none;
+}
+
+.sf-happenings button {
+  text-align: center;
+  font-weight: bold;
+  position: top;
+  background: #287FB8;
+  color: white;
+  width: 150px;
+  height: 40px;
+  margin-top: 20px;
+}
+
+.fa-check {
+  color: green;
+}
+
+.fa-times {
+  color: red;
+}
