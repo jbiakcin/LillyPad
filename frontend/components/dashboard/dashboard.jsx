@@ -20,12 +20,54 @@ class DashBoard extends React.Component {
               <p className="greeting-city">{currentUser.city}</p>
             </div>
             <div className="accept-guests">
-              <p>Not Accepting Guests</p>
+              <select className="accept-status">
+                <option value="Accepting">Accepting Guests</option>
+                <option value="Maybe">Maybe Accepting Guests</option>
+                <option value="No">Not Accepting Guests</option>
+              </select>
             </div>
           </div>
-          <div className="dashboard-spots">
-            <SpotIndexContainer/>
-          </div>
+          <section className="dashboard-right">
+            <div className="dashboard-spots">
+              <SpotIndexContainer/>
+            </div>
+            <div className="my-travel-plans">
+              <h2><i class="fas fa-plane"></i>    MY TRAVEL PLANS</h2>
+              <ul className="planned-trips bottom-line"><p>New York</p>
+                <li key={Math.random()}>NY Trip</li>
+                <li key={Math.random()}>Visiting: Niagara Falls</li>
+                <li key={Math.random()}>Lenght of stay: 3 days</li>
+                <li key={Math.random()}>First time in NY</li>
+              </ul>
+              <ul className="planned-trips"><p>SoCal</p>
+                <li key={Math.random()}>Hiking Trip</li>
+                <li key={Math.random()}>Visiting: Angeles National Forest</li>
+                <li key={Math.random()}>Lenght of stay: 4 days</li>
+                <li key={Math.random()}>Stocking up on hiking gear for this trip</li>
+              </ul>
+            </div>
+
+            <div className="happenings">
+              <h2><i class="fas fa-calendar-alt"></i>&nbsp;&nbsp; WHAT'S HAPPENING NEAR: SAN FRANCISCO, CA</h2>
+              <div className="sf-happenings bottom-line">
+                <ul className="sf-events"><p>Free Guided Trail and Nature Walk</p>
+                  <li key={Math.random()}>Where: Golden Gate Park</li>
+                  <li key={Math.random()}>When: Everyday 10 AM - 12 PM</li>
+                  <li key={Math.random()}>Meet at: Tea Garden Entrance</li>
+                </ul>
+                <button>Join</button>
+              </div>
+              <div className="sf-happenings">
+                <ul className="sf-events"><p>Tour of Muir Woods, An Echanted Forest</p>
+                  <li key={Math.random()}>Where: Muir Woods</li>
+                  <li key={Math.random()}>When: Sundays 2 PM - 4 PM</li>
+                  <li key={Math.random()}>Meet at: Visitor Center</li>
+                </ul>
+                <button>Join</button>
+              </div>
+            </div>
+
+          </section>
         </div>
       </main>
     );

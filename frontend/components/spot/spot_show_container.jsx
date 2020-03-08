@@ -2,15 +2,16 @@ import {connect} from 'react-redux';
 import {fetchSpot} from '../../actions/spot_actions';
 import {fetchUsers} from '../../actions/user_actions';
 import spotShow from './spot_show';
+import {logout} from '../../actions/session_actions';
 
-const mSP = ({entities}, ownProps) => ({
+const mSP = ({entities, session}, ownProps) => ({
   spot: entities.spots[ownProps.match.params.spotId],
-  users: entities.users
+  currentUser: entities.users[session.id]
 });
 
 const mDP = dispatch => ({
   fetchSpot: spotId => dispatch(fetchSpot(spotId)),
-  fetchUsers: users => dispatch(fetchUsers(users))
+  logout: () => dispatch(logout())
 });
 
 export default (connect(mSP, mDP)(spotShow));

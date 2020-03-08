@@ -7,8 +7,9 @@ const SpotIndexItem = props => {
         <Link to={`/spots/${props.spot.id}`}>
         <div className="spot-index-item">
           {props.spot.location_name}
+          <img className="spot-index-pix" src={props.spot.photoUrls[0]} />
           <br/>
-          picture here
+          <p>Near: {props.spot.site}</p>
           </div>
         </Link>
     </li>

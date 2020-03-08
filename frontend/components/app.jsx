@@ -1,5 +1,6 @@
 import React from 'react';
-import {Route, Switch} from 'react-router-dom'
+import {Route, Switch, Redirect} from 'react-router-dom'
+
 
 import SplashContainer from '../components/splash/splash_container';
 import LoginFormContainer from '../components/session_form/login_form_container';
@@ -15,12 +16,13 @@ const App = () =>(
     <Switch>
       <AuthRoute path="/signup" component={SplashContainer} />
       <AuthRoute path="/login" component={LoginFormContainer}/>
-      <ProtectedRoute exact path="/dashboard" component={DashBoardContainer}/>
-      <ProtectedRoute exact path="/" component={DashBoardContainer}/>
-      <ProtectedRoute path="/spots/new" component={CreateSpotFormContainer}/>
       <ProtectedRoute path="/spots/:spotId/edit" component={EditSpotFormContainer}/>
-      <Route exact path="/spots" component={SpotIndexContainer}/>
-      <Route path="/spots/:spotId" component={SpotShowContainer}/>
+      <ProtectedRoute path="/spots/:spotId" component={SpotShowContainer}/>
+      <ProtectedRoute path="/spots/new" component={CreateSpotFormContainer}/>
+      <ProtectedRoute path="/dashboard" component={DashBoardContainer}/>
+      <ProtectedRoute path="/spots" component={SpotIndexContainer}/>
+      <ProtectedRoute path="/" component={DashBoardContainer}/>
+      <Redirect to="/" />
     </Switch>
   </div>
 );

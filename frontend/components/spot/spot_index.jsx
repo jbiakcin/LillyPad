@@ -13,7 +13,7 @@ class SpotIndex extends React.Component {
     return (
       <div>
         <div className="dashboard-spots">
-          <h2 className="spots-header">HIT AMERICA'S NATIONAL PARKS WITH LILLYPAD...:</h2>
+          <h2 className="spots-header"><i class="fas fa-frog"></i>&nbsp;&nbsp;HOP ON TO AMERICA'S NATIONAL PARKS WITH LILLYPAD....</h2>
           <ul className="dashboard-spots-index">
             {spots.map(spot => 
               <SpotIndexItem 
