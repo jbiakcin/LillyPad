@@ -8,7 +8,7 @@ class SplashBody extends React.Component {
 
   render () {
     return (
-      <main className="splash-body">
+      <main className="splash-body" >
         <header className="splash-body-header">
           <h1>Stay with Locals and Meet Travelers</h1>
           <h2>Share Authentic Travel Experiences</h2>
