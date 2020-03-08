@@ -6,13 +6,15 @@ class DashboardHeader extends React.Component {
   render (){
     return (
       <header className="splash-header">
-        <div className="logo">
-          <Link to="/" className="logo-link"><p>LillyPad</p></Link>
+        <div className="splash-wrapper">
+          <div className="logo">
+            <Link to="/" className="logo-link"><p>LillyPad</p></Link>
+          </div>
+          <button 
+            className="greeting-logout-button" 
+            onClick={this.props.logout}
+          >Log Out</button>
         </div>
-        <button 
-          className="greeting-logout-button" 
-          onClick={this.props.logout}
-        >Log Out</button>
       </header>
     );
   }

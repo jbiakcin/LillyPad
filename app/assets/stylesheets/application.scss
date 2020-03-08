@@ -19,16 +19,29 @@ span, article, footer, time, small {
 }
 
 .splash-header {
+  display: block;
+  box-sizing: border-box;
   top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100vw;
   padding: 0 10px;
   height: 80px;
   background-color: white;
-  margin-bottom: 25px;
   box-shadow: 0 3px 6px 0 rgba(0,0,0,0.25);
+  margin-bottom: 25px;
+}
+
+.splash-wrapper {
+  display: flex;
+  box-sizing: border-box;
+  -webkit-box-pack: justify;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  max-width: 1280px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin-bottom: 25px;
 }
 
 .logo {
@@ -49,10 +62,9 @@ span, article, footer, time, small {
   border-radius: 2px;
   text-align: center;
   font-weight: bold;
-  padding: 8px 12px;
   margin: 25px;
-  width: 80px;
-  height: 25px;
+  width: 100px;
+  height: 30px;
   vertical-align: center;
 }
 
@@ -442,17 +454,15 @@ span, article, footer, time, small {
   border-radius: 2px;
   text-align: center;
   font-weight: bold;
-  padding: 8px 12px;
   margin: 25px;
-  width: 80px;
-  height: 25px;
+  width: 100px;
+  height: 30px;
   vertical-align: center;
 }
 
 .dashboard {
   background-color: #f1efea;
   min-height: 100vh;
-  margin-top: 25px;
   font-family: Arial, Helvetica, sans-serif;
 
 }
@@ -470,11 +480,27 @@ span, article, footer, time, small {
   justify-content: center;
 }
 
+.verified {
+  text-align: left;
+  padding: 25px;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.verified-header {
+  //this is the profile header
+  display: block;
+  border-bottom: 1px solid lightgray;
+  font-weight: bold;
+  height: 40px;
+}
+
+.verified-status {
+  line-height: 3;
+  color: gray;
+}
+
 .dashboard-sidebar {
-  /* display: block;
-  max-width: 320px;
-  padding-right: 10px;
-  box-sizing: border-box; */
   text-align: center;
   margin-right: 20px;
 }
@@ -652,16 +678,17 @@ span, article, footer, time, small {
   width: 300px;
   height: 225px;
   display: inline-block;
-  padding: 10px;
+  padding: 2px;
   text-align: center;
   align-content: space-between;
   vertical-align: middle;
-  background-color: #287FB8;
-  color: white;
+  background-color: rgba(154, 235, 150, 0.25);
+  color: gray;
   font-weight: bold;
   margin-top: 4px;
   margin-bottom: 4px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .index-item-style {
@@ -670,7 +697,7 @@ span, article, footer, time, small {
 
 .spot-index-pix {
   width: 280px;
-  height: 140px;;
+  height: 175px;
 }
 
 .spot-detail {

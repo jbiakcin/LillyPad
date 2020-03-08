@@ -7,11 +7,13 @@ class SplashHeader extends React.Component {
   render (){
     return (
       <header className="splash-header">
-        <div className="logo">
-          <Link to="/" className="logo-link"><p>LillyPad</p></Link>
-        </div>
-        <div className="login-button">
-          <LoginModal/>
+        <div className="splash-wrapper">
+          <div className="logo">
+            <Link to="/" className="logo-link"><p>LillyPad</p></Link>
+          </div>
+          <div className="login-button">
+            <LoginModal/>
+          </div>
         </div>
       </header>
     );

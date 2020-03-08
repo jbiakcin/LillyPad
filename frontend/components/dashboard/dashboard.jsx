@@ -26,13 +26,22 @@ class DashBoard extends React.Component {
                 <option value="No">Not Accepting Guests</option>
               </select>
             </div>
+            <div className="verified">
+              <div className="verified-header">MY PROFILE</div>
+              <ul className="verified-status fa-ul">
+                <li><span class="fa-li"><i class="fas fa-spinner fa-pulse"></i></span>Payment not verified</li>
+                <li><span class="fa-li"><i class="fas fa-spinner fa-pulse"></i></span>Phone not verified</li>
+                <li><span class="fa-li"><i class="fas fa-spinner fa-pulse"></i></span>Government ID not verified</li>
+                <li><span class="fa-li"><i class="fas fa-spinner fa-pulse"></i></span>Address not verified</li>
+              </ul>
+            </div>
           </div>
           <section className="dashboard-right">
             <div className="dashboard-spots">
               <SpotIndexContainer/>
             </div>
             <div className="my-travel-plans">
-              <h2><i class="fas fa-plane"></i>    MY TRAVEL PLANS</h2>
+              <h2><i className="fas fa-plane"></i>    MY TRAVEL PLANS</h2>
               <ul className="planned-trips bottom-line"><p>New York</p>
                 <li key={Math.random()}>NY Trip</li>
                 <li key={Math.random()}>Visiting: Niagara Falls</li>
@@ -48,7 +57,7 @@ class DashBoard extends React.Component {
             </div>
 
             <div className="happenings">
-              <h2><i class="fas fa-calendar-alt"></i>&nbsp;&nbsp; WHAT'S HAPPENING NEAR: SAN FRANCISCO, CA</h2>
+              <h2><i className="fas fa-calendar-alt"></i>&nbsp;&nbsp; WHAT'S HAPPENING NEAR: SAN FRANCISCO, CA</h2>
               <div className="sf-happenings bottom-line">
                 <ul className="sf-events"><p>Free Guided Trail and Nature Walk</p>
                   <li key={Math.random()}>Where: Golden Gate Park</li>
