@@ -1,6 +1,6 @@
 class Api::SpotsController < ApplicationController
   before_action :require_logged_in, only: [:create, :update, :destroy]
-
+  
   def index
     @spots = Spot.all
     render :index

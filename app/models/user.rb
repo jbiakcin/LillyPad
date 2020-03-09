@@ -25,6 +25,11 @@ class User < ApplicationRecord
   foreign_key: :host_id,
   primary_key: :id
 
+  has_many :bookings,
+  class_name: :Booking,
+  foreign_key: :hopper_id,
+  primary_key: :id
+
   after_initialize :ensure_session_token
 
   attr_reader :password

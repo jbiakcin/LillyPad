@@ -20,5 +20,14 @@ class Spot < ApplicationRecord
   foreign_key: :host_id,
   primary_key: :id
 
+  has_many :bookings,
+  class_name: :Booking,
+  foreign_key: :spot_id,
+  primary_key: :id
+
+  has_many :hoppers,
+  through: :bookings,
+  source: :hopper
+
   has_many_attached :photos
 end

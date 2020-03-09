@@ -74,7 +74,7 @@ spot5.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/
 spot5.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/Zion/zion_4.jpeg"), filename: "zion_4.jpeg")
 spot5.save!
 
-spot6= Spot.create!({host_id: jennie.id, 
+spot6 = Spot.create!({host_id: jennie.id, 
 host_name: jennie.first_name + " " + jennie.last_name,
 site: 'Angeles National Forest', location_name: "Angel Crib", max_guests: 3})
 spot6.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/Angeles/angeles_lilly.jpg"), filename: "angeles_lilly.jpg")
@@ -83,3 +83,7 @@ spot6.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/
 spot6.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/Angeles/angeles_3.jpeg"), filename: "angeles_3.jpeg")
 spot6.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/Angeles/angeles_4.jpg"), filename: "angeles_4.jpg")
 spot6.save!
+
+booking1 = Booking.create({arrival_date: "10/11/2020", departure_date: "10/15/2020", num_travelers: 3, hopper_id: jennifer.id, spot_id: spot1.id, status: "pending"})
+booking2 = Booking.create({arrival_date: "10/11/2020", departure_date: "10/15/2020", num_travelers: 1, hopper_id: julia.id, spot_id: spot2.id, status: "approved"})
+booking3 = Booking.create({arrival_date: "10/11/2020", departure_date: "10/15/2020", num_travelers: 2, hopper_id: cary.id, spot_id: spot3.id, status: "denied"})
