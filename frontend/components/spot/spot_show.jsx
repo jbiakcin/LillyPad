@@ -50,11 +50,11 @@ class SpotShow extends React.Component {
           <div className="things-to-do">
             <h2><i className="fas fa-list-alt"></i>&nbsp;&nbsp; Things to do in the area:</h2>
             <ul className="things-to-do-list">
-              <li key="thing1"><i class="fas fa-hiking"></i>&nbsp;&nbsp; Hiking</li>
-              <li key="thing2"><i class="fas fa-swimmer"></i>&nbsp;&nbsp; Swimming in the nearby lake</li>
-              <li key="thing3"><i class="fas fa-mountain"></i>&nbsp;&nbsp; Mountain Climbing</li>
-              <li key="thing4"><i class="fas fa-skiing"></i>&nbsp;&nbsp; Skiing in winter</li>
-              <li key="thing5"><i class="fas fa-running"></i>&nbsp;&nbsp; Trail running</li>
+              <li key="thing1"><i className="fas fa-hiking"></i>&nbsp;&nbsp; Hiking</li>
+              <li key="thing2"><i className="fas fa-swimmer"></i>&nbsp;&nbsp; Swimming in the nearby lake</li>
+              <li key="thing3"><i className="fas fa-mountain"></i>&nbsp;&nbsp; Mountain Climbing</li>
+              <li key="thing4"><i className="fas fa-skiing"></i>&nbsp;&nbsp; Skiing in winter</li>
+              <li key="thing5"><i className="fas fa-running"></i>&nbsp;&nbsp; Trail running</li>
             </ul>
           </div>
 
