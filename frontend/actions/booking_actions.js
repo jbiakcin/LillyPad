@@ -10,7 +10,7 @@ const receiveBookings = bookings =>({
 
 const receiveBooking = booking =>({
   type: RECEIVE_BOOKING,
-  bookings
+  booking
 });
 
 const removeBooking = bookingId =>({

@@ -9,8 +9,9 @@ require 'open-uri'
 
 User.destroy_all
 Spot.destroy_all
+Booking.destroy_all
 
-demo_user= User.create!({first_name: 'Johnny', last_name: 'Ribbit', email: 'abc@abc.com', password: 'hunter12', gender: 'Female', city: 'San Francisco', age: 23})
+demo_user= User.create!({first_name: 'Demo', last_name: 'User', email: 'abc@abc.com', password: 'hunter12', gender: 'Female', city: 'San Francisco', age: 23})
 
 jennie = User.create!({first_name: 'Jennie', last_name: 'Richardson', email: 'jrichardson@fakeemail.com', password: 12345678, gender: 'Female', city: 'Fresno', age: 21})
 tom = User.create!({first_name: 'Tom', last_name: 'Cruise', email: 'tcruise@fakeemail.com', password: 12345678, gender: 'Male', city: 'New York', age: 50})
@@ -84,6 +85,6 @@ spot6.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/
 spot6.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/Angeles/angeles_4.jpg"), filename: "angeles_4.jpg")
 spot6.save!
 
-booking1 = Booking.create({arrival_date: "10/11/2020", departure_date: "10/15/2020", num_travelers: 3, hopper_id: jennifer.id, spot_id: spot1.id, status: "pending"})
-booking2 = Booking.create({arrival_date: "10/11/2020", departure_date: "10/15/2020", num_travelers: 1, hopper_id: julia.id, spot_id: spot2.id, status: "approved"})
-booking3 = Booking.create({arrival_date: "10/11/2020", departure_date: "10/15/2020", num_travelers: 2, hopper_id: cary.id, spot_id: spot3.id, status: "denied"})
+booking1 = Booking.create!({arrival_date: Date.new(2020, 10, 11), departure_date: Date.new(2020, 10, 15), num_travelers: 3, hopper_id: jennifer.id, spot_id: spot1.id, status: "pending"})
+booking2 = Booking.create!({arrival_date: Date.new(2020, 10, 11), departure_date: Date.new(2020, 10, 15), num_travelers: 1, hopper_id: julia.id, spot_id: spot2.id, status: "approved"})
+booking3 = Booking.create!({arrival_date: Date.new(2020, 10, 11), departure_date: Date.new(2020, 10, 15), num_travelers: 2, hopper_id: cary.id, spot_id: spot3.id, status: "denied"})

@@ -4,7 +4,7 @@ import {
   REMOVE_SPOT
 } from '../actions/spot_actions';
 
-const SpotsReducer = (state = {}, action) =>{
+const SpotsReducer = (state = {}, action) => {
   Object.freeze(state);
 
   switch (action.type) {

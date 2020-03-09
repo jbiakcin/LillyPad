@@ -3,6 +3,7 @@ class Api::BookingsController < ApplicationController
 
   def index
     @bookings = Booking.all
+    render :index
   end
 
   def show
@@ -40,7 +41,7 @@ class Api::BookingsController < ApplicationController
     end
   end
 
-  private:
+  private
   def booking_params
     params.require(:booking).permit(:arrival_date, :departure_date, :num_travelers, :hopper_id, :spot_id, :status)
   end
