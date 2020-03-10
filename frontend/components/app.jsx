@@ -10,6 +10,7 @@ import SpotIndexContainer from '../components/spot/spot_index_container';
 import SpotShowContainer from '../components/spot/spot_show_container';
 import EditBookingFormContainer from '../components/booking/edit_booking_form_container';
 import CreateBookingFormContainer from '../components/booking/create_booking_form_container';
+import BookingShowContainer from '../components/booking/booking_show_container';
 
 const App = () =>(
   <div>
@@ -17,6 +18,7 @@ const App = () =>(
       <AuthRoute path="/signup" component={SplashContainer} />
       <AuthRoute path="/login" component={LoginFormContainer}/>
       <ProtectedRoute path="/spots/:spotId/bookings/new" component={CreateBookingFormContainer}/>
+      <ProtectedRoute path="/users/:userId/bookings/show" component={BookingShowContainer}/>
       {/* <ProtectedRoute path="/spots/:spotId/bookings/:bookingId/edit" component={EditBookingFormContainer}/> */}
       <ProtectedRoute path="/spots/:spotId" component={SpotShowContainer}/>
       <ProtectedRoute path="/dashboard" component={DashBoardContainer}/>

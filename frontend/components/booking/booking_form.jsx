@@ -22,6 +22,7 @@ class BookingForm extends React.Component {
     // debugger;
     e.preventDefault;
     this.props.processForm(this.state)
+      .then(this.props.history.push('/dashboard'))
   }
 
   render () {

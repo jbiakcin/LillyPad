@@ -2,12 +2,12 @@ class Api::BookingsController < ApplicationController
   # before_action :require_logged_in, only: [:create, :update, :destroy]
 
   def index
-    @bookings = Booking.all
+    @bookings = current_user.bookings.all
     render :index
   end
 
   def show
-    @booking = Booking.find(params[:id])
+    @booking = current_user.bookings.find(params[:id])
   end
 
   def create
@@ -21,9 +21,8 @@ class Api::BookingsController < ApplicationController
   end
 
   def update
-    @booking = Booking.find(params[:id])
-    if current_user.id == @booking.hopper_id
-      @booking.update(booking_params)
+    @booking = current_user.bookings.find(params[:id])
+    if @booking.update(booking_params)
       render 'api/bookings/show'
     else
       render json: ["You must be logged in to update a booking."]
@@ -31,13 +30,9 @@ class Api::BookingsController < ApplicationController
   end
 
   def destroy
-    @booking = Booking.find(params[:id])
-    if current_user.id == @booking.hopper_id
-      @booking.destroy
-      render 'api/bookings/show'
-    else
-      render json: @booking.errors.full_messages, status: 401
-    end
+    @booking = current_user.bookings.find(params[:id])
+    @booking.destroy
+    render 'api/bookings/show'
   end
 
   private

@@ -7,14 +7,15 @@ export const fetchAllBookings = () => (
 
 export const fetchBooking = bookingId => (
   $.ajax({
-    url: `/api/users/${userId}/bookings/${bookingId}`,
+    url: `/api/bookings/${bookingId}`,
     method: 'GET'
   })
 );
 
-export const fetchUserBookings = () => (
+export const fetchUserBookings = (userId) => (
   $.ajax({
-    url: `/api/users/${userId}/bookings`
+    url: `/api/users/${userId}/bookings`,
+    method: 'GET'
   })
 )
 
@@ -28,7 +29,7 @@ export const createBooking = booking => (
 
 export const updateBooking = booking => (
   $.ajax({
-    url: `/api/users/${booking.user_id}/bookings/${booking.id}`,
+    url: `/api/bookings/${booking.id}`,
     method: `PATCH`,
     data: {booking}
   })
@@ -36,7 +37,7 @@ export const updateBooking = booking => (
 
 export const deleteBooking = bookingId => (
   $.ajax({
-    url: `/api/users/${booking.user_id}/bookings/${bookingId}`,
+    url: `/api/bookings/${bookingId}`,
     method: `DELETE`
   })
 )

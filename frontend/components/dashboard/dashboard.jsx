@@ -1,8 +1,7 @@
 import React from 'react';
 import DashboardHeader from './dashboard_header';
-import SpotIndex from '../spot/spot_index';
 import SpotIndexContainer from '../spot/spot_index_container';
-import {fetchSpots} from '../../actions/spot_actions';
+import BookingIndexContainer from '../booking/booking_index_container';
 
 
 class DashBoard extends React.Component {
@@ -39,6 +38,9 @@ class DashBoard extends React.Component {
           <section className="dashboard-right">
             <div className="dashboard-spots">
               <SpotIndexContainer/>
+            </div>
+            <div className="dashboard-bookings">
+              <BookingIndexContainer/>
             </div>
             <div className="my-travel-plans">
               <h2><i className="fas fa-plane"></i>    MY TRAVEL PLANS</h2>
