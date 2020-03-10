@@ -18,8 +18,13 @@ const removeBooking = bookingId =>({
   bookingId
 });
 
-export const fetchBookings = () => dispatch => (
-  BookingAPIUtil.fetchBookings()
+export const fetchAllBookings = () => dispatch => (
+  BookingAPIUtil.fetchAllBookings()
+    .then(bookings => dispatch(receiveBookings(bookings)))
+);
+
+export const fetchUserBookings = () => dispatch => (
+  BookingAPIUtil.fetchUserBookings()
     .then(bookings => dispatch(receiveBookings(bookings)))
 );
 

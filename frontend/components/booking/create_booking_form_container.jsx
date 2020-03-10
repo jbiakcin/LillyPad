@@ -13,7 +13,7 @@ const mSP = ({entities, session, errors}, ownProps) => {
       num_travelers: '',
       hopper_id: currentUser.id,
       spot_id: ownProps.match.params.spotId,
-      status: 'Pending'
+      // status: 'pending'
     },
     errors: errors.session,
     formType: 'Send Request'

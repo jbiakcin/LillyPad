@@ -12,10 +12,9 @@ class Api::BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-
+    @booking.status = "pending"
     if @booking.save
-      render `api/spots`
-      # render `api/bookings/show`
+      render 'api/bookings/show'
     else
       render json: @booking.errors.full_messages, status: 422
     end
@@ -25,7 +24,7 @@ class Api::BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     if current_user.id == @booking.hopper_id
       @booking.update(booking_params)
-      render `api/bookings/show`
+      render 'api/bookings/show'
     else
       render json: ["You must be logged in to update a booking."]
     end 
@@ -35,7 +34,7 @@ class Api::BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     if current_user.id == @booking.hopper_id
       @booking.destroy
-      render `api/bookings/show`
+      render 'api/bookings/show'
     else
       render json: @booking.errors.full_messages, status: 401
     end

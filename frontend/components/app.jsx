@@ -17,7 +17,7 @@ const App = () =>(
       <AuthRoute path="/signup" component={SplashContainer} />
       <AuthRoute path="/login" component={LoginFormContainer}/>
       <ProtectedRoute path="/spots/:spotId/bookings/new" component={CreateBookingFormContainer}/>
-      <ProtectedRoute path="/spots/:spotId/bookings/:bookingId/edit" component={EditBookingFormContainer}/>
+      {/* <ProtectedRoute path="/spots/:spotId/bookings/:bookingId/edit" component={EditBookingFormContainer}/> */}
       <ProtectedRoute path="/spots/:spotId" component={SpotShowContainer}/>
       <ProtectedRoute path="/dashboard" component={DashBoardContainer}/>
       <ProtectedRoute path="/spots" component={SpotIndexContainer}/>

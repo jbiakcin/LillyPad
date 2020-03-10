@@ -5,7 +5,6 @@ import DashboardHeader from '../dashboard/dashboard_header';
 class SpotShow extends React.Component {
   componentDidMount() {
     this.props.fetchSpot(this.props.match.params.spotId)
-    .then(() => this.props.fetchUsers());
   }
 
   componentDidUpdate(prevProps) {
@@ -14,13 +13,11 @@ class SpotShow extends React.Component {
 
     if (currentId !== prevId) {
       this.props.fetchSpot(currentId);
-      // this.props.fetchUsers();
     }
   }
   
   render (){
     const spot = this.props.spot;
-    const user = this.props.user;
 
     if (!spot) {
       return (
@@ -38,7 +35,6 @@ class SpotShow extends React.Component {
             </header>
             <div className="show-spot-info">
               <p>Site to see:  {spot.site}</p>
-              <p>Host: {user.first_name} {user.last_name} </p>
               <p>Max # of guests:  {spot.max_guests}</p>
             </div>
             <div className="spot-show-pix">

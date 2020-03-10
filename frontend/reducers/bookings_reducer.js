@@ -6,12 +6,12 @@ import {
 
 const BookingsReducer = (state = {}, action) => {
   Object.freeze(state);
-
+  // debugger;
   switch (action.type) {
     case RECEIVE_BOOKINGS:
       return Object.assign({}, state, state.bookings);
     case RECEIVE_BOOKING:
-      return Object.assign({}, state, {[state.booking.id]: state.booking});
+      return Object.assign({}, state, {[action.booking.id]: action.booking});
     case REMOVE_BOOKING:
       let newState = Object.assign({}, state);
       delete newState[action.bookingId];

@@ -1,5 +1,6 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
+import DatePicker from 'react-datepicker';
 
 class BookingForm extends React.Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class BookingForm extends React.Component {
   }
 
   handleSubmit(e) {
-    debugger;
+    // debugger;
     e.preventDefault;
     this.props.processForm(this.state)
   }
@@ -34,14 +35,9 @@ class BookingForm extends React.Component {
               value={this.state.arrival_date}
               placeholder="Arrival"
               onChange={this.updateDate('arrival_date')} /> */}
-            <input 
-              type="date" 
-              value={this.state.arrival_date}
-              onChange={this.updateDate('arrival_date')} 
-              placeholder="YYYY-MM-DD" 
-              required 
-              pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
-            />          
+            {/* <input type="date" value={this.state.arrival_date} onChange={this.updateDate('arrival_date')} placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>           */}
+            <input type="date" name={this.state.arrival_date} onChange={this.updateDate('arrival_date')} placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" title="Enter a date in this formart YYYY-MM-DD" />
+            {/* <DatePicker selected={this.state.arrival_date} onChange={this.updateDate('arrival_date')} name="arrival_date" dateFormat="MM/DD/YYYY"/> */}
           </label>
           <label className="dep-date">Departure Date:
             {/* <input required
@@ -49,14 +45,9 @@ class BookingForm extends React.Component {
               value={this.state.departure_date}
               placeholder="Arrival"
               onChange={this.updateDate('departure_date')} /> */}
-            <input 
-              type="date" 
-              value={this.state.arrival_date}
-              onChange={this.updateDate('departure_date')} 
-              placeholder="YYYY-MM-DD" 
-              required 
-              pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
-            />          
+            {/* <input type="date" value={this.state.departure_date} onChange={this.updateDate('departure_date')} placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>           */}
+            <input type="date" name={this.state.departure_date} onChange={this.updateDate('departure_date')} placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" title="Enter a date in this formart YYYY-MM-DD" />
+            {/* <DatePicker selected={this.state.departure_date} onChange={this.updateDate('departure_date')} name="departure_date" dateFormat="MM/DD/YYYY" /> */}
           </label>
           <label className="num-travelers">Number of travelers in your group:
             <input required
