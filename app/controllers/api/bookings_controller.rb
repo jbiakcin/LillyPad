@@ -1,5 +1,5 @@
 class Api::BookingsController < ApplicationController
-  before_action :require_logged_in, only: [:create, :update, :destroy]
+  # before_action :require_logged_in, only: [:create, :update, :destroy]
 
   def index
     @bookings = Booking.all
@@ -12,10 +12,10 @@ class Api::BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.hopper_id = current_user.id
 
     if @booking.save
-      render `api/bookings/show`
+      render `api/spots`
+      # render `api/bookings/show`
     else
       render json: @booking.errors.full_messages, status: 422
     end

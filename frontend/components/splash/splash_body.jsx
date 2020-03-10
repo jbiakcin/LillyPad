@@ -18,7 +18,7 @@ class SplashBody extends React.Component {
         </div>
         <div className="splash-body-bottom">
           <h4>Already a member?</h4>
-          <LoginModal/>
+          <LoginModal clearErrors={this.props.clearErrors}/>
         </div>
       </main>
     )

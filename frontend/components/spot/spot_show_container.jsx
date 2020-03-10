@@ -4,13 +4,19 @@ import {fetchUsers} from '../../actions/user_actions';
 import spotShow from './spot_show';
 import {logout} from '../../actions/session_actions';
 
-const mSP = ({entities, session}, ownProps) => ({
-  spot: entities.spots[ownProps.match.params.spotId],
-  currentUser: entities.users[session.id]
-});
+const mSP = ({entities, session}, ownProps) => {
+  // debugger;
+  const spot = entities.spots[ownProps.match.params.spotId];
+  return {
+    spot,
+    user: entities.users[spot.host_id],
+    currentUser: entities.users[session.id]
+  };
+};
 
 const mDP = dispatch => ({
   fetchSpot: spotId => dispatch(fetchSpot(spotId)),
+  fetchUsers: () => dispatch(fetchUsers()),
   logout: () => dispatch(logout())
 });
 

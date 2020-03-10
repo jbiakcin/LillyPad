@@ -21,6 +21,10 @@ class LoginForm extends React.Component{
     this.props.processForm(user);
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
   renderErrors() {
     return (
       <ul>
