@@ -9,7 +9,7 @@ class BookingIndex extends React.Component {
 
   render () {
     const {bookings, deleteBooking, updateBooking} = this.props
-    debugger;
+    // debugger;
     return (
       <div>
         <h2>MY BOOKING REQUESTS:</h2>

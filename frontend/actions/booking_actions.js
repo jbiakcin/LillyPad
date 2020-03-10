@@ -44,6 +44,6 @@ export const updateBooking = booking => dispatch => (
 );
 
 export const deleteBooking = bookingId => dispatch => (
-  BookingAPIUtil.deleteBooking(BookingId)
+  BookingAPIUtil.deleteBooking(bookingId)
     .then(booking => dispatch(removeBooking(bookingId)))
 )
