@@ -8,7 +8,6 @@ const mSP = ({entities, session}, ownProps) => {
   const spot = entities.spots[ownProps.match.params.spotId];
   return {
     spot,
-    // user: entities.users[spot.host_id],
     currentUser: entities.users[session.id]
   };
 };

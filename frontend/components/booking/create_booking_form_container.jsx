@@ -4,17 +4,18 @@ import {createBooking} from '../../actions/booking_actions';
 import {logout} from '../../actions/session_actions';
 
 const mSP = ({entities, session, errors}, ownProps) => {
-  // debugger;
-  const currentUser = entities.users[session.id];
+
   return {
-    currentUser,
+    currentUser: entities.users[session.id],
+    spots: entities.spots,
     booking: {
       arrival_date: null,
       departure_date: null,
       num_travelers: 1,
       hopper_id: currentUser.id,
-      spot_id: ownProps.match.params.spotId,
-      focusedInput: null
+      // spot_id: ownProps.match.params.spotId,
+      // spot_id: entities.spots.id,
+      // focusedInput: null
     },
     errors: errors.session,
     formType: 'SEND'

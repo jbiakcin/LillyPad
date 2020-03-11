@@ -10,14 +10,19 @@ class EditBookingForm extends React.Component {
   }
 
   render () {
-    let {booking, updateBooking, formType} = this.props;
+    let {booking, processForm, updateBooking, formType} = this.props;
     if (!booking) return null;
     booking = Object.assign({}, booking);
     booking.arrival_date = moment(booking.arrival_date);
     booking.departure_date = moment(booking.departure_date);
     // debugger;
     return (
-      <BookingForm booking={booking} updateBooking={updateBooking} formType={formType} />
+      <BookingForm 
+        booking={booking} 
+        updateBooking={updateBooking} 
+        formType={formType}
+        processForm={processForm}
+        />
     );
   }
 }

@@ -1,8 +1,18 @@
 import React from 'react';
 import {Link, withRouter, NavLink} from 'react-router-dom';
 import DashboardHeader from '../dashboard/dashboard_header';
+import CreateBookingFormContainer from '../booking/create_booking_form_container';
+import BookingForm from '../booking/booking_form';
 
 class SpotShow extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {showForm: false};
+
+    this.showForm = this.showForm.bind(this);
+    this.hideForm = this.hideForm.bind(this);
+  }
+
   componentDidMount() {
     this.props.fetchSpot(this.props.match.params.spotId)
   }
@@ -14,6 +24,23 @@ class SpotShow extends React.Component {
     if (currentId !== prevId) {
       this.props.fetchSpot(currentId);
     }
+  }
+
+  // hideShow() {
+  //   let x = document.getElementById("hide-show");
+  //   if (x.style.display === "none") {
+  //     x.style.display = "block";
+  //   } else {
+  //     x.style.display = "none";
+  //   }
+  // }
+
+  showForm() {
+    this.setState({showForm: true})
+  }
+
+  hideForm() {
+    this.setState({ showForm: false })
   }
   
   render (){
@@ -42,9 +69,14 @@ class SpotShow extends React.Component {
                 <img className="spot-show-pix-indiv" key={i} src={url} />
               ))}
             </div>
-            <Link to={`/spots/${spot.id}/bookings/new`} className="booking-button"><p>Book this spot!</p></Link>
+            {/* <Link to={`/spots/${spot.id}/bookings/new`} className="booking-button"><p>Book this spot!</p></Link> */}
+            <button className="booking-button" onClick={this.showForm}>Book this spot!</button>
             <br/>
             <Link to="/" className="back-to-link">Back to all spots</Link>
+          </div>
+          <div>
+            {this.state.showForm && < CreateBookingFormContainer/>}
+            {/* <BookingForm /> */}
           </div>
           <div className="things-to-do">
             <h2><i className="fas fa-list-alt"></i>&nbsp;&nbsp; Things to do in the area:</h2>

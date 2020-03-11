@@ -29,21 +29,23 @@ class BookingForm extends React.Component {
     const booking = Object.assign({}, this.state)
     booking.arrival_date = moment(booking.arrival_date).format('YYYY-MM-DD');
     booking.departure_date = moment(booking.departure_date).format('YYYY-MM-DD');
+    booking.spot_id = this.props.match.params.spotId;
     this.props.processForm(booking)
-      .then(() => this.props.history.push('/dashboard'), (response => console.log(response)));
+      .then(() => this.props.history.push('/dashboard'));
   }
 
   render () {
     return (
       <main className="booking-form-main">
-        <div>
+        {/* <div>
           <DashboardHeader logout={this.props.logout}/>
-        </div>
+        </div> */}
         <div className="booking-form-body">
           <h2>{this.props.formType} YOUR REQUEST TO STAY AT (this will be the spot name)</h2>
           <form onSubmit={this.handleSubmit}>
             <div className="date-join">
-              <label className="date-range">Dates:
+              <label className="date-range">Arrival and Departure Dates:
+                <br/>
                 <br/>
                 <DateRangePicker
                   startDate={this.state.arrival_date} // momentPropTypes.momentObj or null,
@@ -56,15 +58,14 @@ class BookingForm extends React.Component {
                   showClearDates={true}
                   regular={true}
                   numberOfMonths={1} 
-                  startDatePlaceholderText="Arrival"
-                  endDatePlaceholderText="Departure"// PropTypes.func.isRequired,
+                  startDatePlaceholderText="yyyy-mm-dd"
+                  endDatePlaceholderText="yyyy-mm-dd"// PropTypes.func.isRequired,
                 />
               </label>
             </div>
             <div className="num-travelers">
-              <label className="num-label">Number of travelers
-              <br/>
-                <select className="num-travelers-select">
+              <label className="num-label">Number of travelers </label>
+                <select value={this.state.num_travelers} onChange={this.update('num_travelers')} className="num-travelers-select">
                   <option value="--">--</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -82,7 +83,6 @@ class BookingForm extends React.Component {
                   <option value="14">14</option>
                   <option value="15">15</option>
                 </select>
-              </label>
             </div>
             <div className="msg">
               <label>Message</label>
@@ -92,6 +92,7 @@ class BookingForm extends React.Component {
             <div className="booking-form-submit">
               <button type="submit" className="booking-form-submit-button">{this.props.formType}</button>
             </div>
+            <button onClick={this.hideForm} className="cancel-button" >Cancel</button>
           </form>
         </div>
       </main>

@@ -8,6 +8,7 @@ const mSP = (state, ownProps) => ({
 });
 
 const mDP = dispatch => ({
+  processForm: booking => dispatch(updateBooking(booking)),
   fetchBooking: bookingId => dispatch(fetchBooking(bookingId)),
   updateBooking: booking => dispatch(updateBooking(booking))
 });
