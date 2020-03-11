@@ -4,5 +4,5 @@ json.spot do
 end
 
 json.user do
-      json.extract! @spot.host, :id, :first_name, :last_name, :email
+    json.extract! @spot.host, :id, :first_name, :last_name, :email
 end

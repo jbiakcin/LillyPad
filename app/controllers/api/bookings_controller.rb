@@ -2,17 +2,17 @@ class Api::BookingsController < ApplicationController
   # before_action :require_logged_in, only: [:create, :update, :destroy]
 
   def index
-    @bookings = current_user.bookings.all
+    @bookings = current_user.bookings.includes(:spot).all
     render :index
   end
 
   def show
-    @booking = current_user.bookings.find(params[:id])
+    @booking = current_user.bookings.includes(:spot).find(params[:id])
   end
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.status = "pending"
+    @booking.status = "Pending"
     if @booking.save
       render 'api/bookings/show'
     else

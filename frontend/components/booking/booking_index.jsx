@@ -8,18 +8,19 @@ class BookingIndex extends React.Component {
   }
 
   render () {
-    const {bookings, deleteBooking, updateBooking} = this.props
+    const {spots, bookings, deleteBooking, updateBooking} = this.props
     // debugger;
     return (
-      <div>
-        <h2>MY BOOKING REQUESTS:</h2>
-        <ul>
+      <div className="dashboard-booking-index">
+        <h2><i className="far fa-list-alt"></i>&nbsp;&nbsp;MY BOOKING REQUESTS:</h2>
+        <ul className="dashboard-booking-list">
           {bookings.map(booking=>
             <BookingIndexItem
               booking={booking}
               key={booking.id}
               deleteBooking={deleteBooking}
               updateBooking={updateBooking}
+              spots={spots}
             />
           )}
         </ul>

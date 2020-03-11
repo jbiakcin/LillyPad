@@ -1,5 +1,45 @@
+.booking-show-main {
+  background-color: #f1efea;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+.booking-show-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 auto;
+  padding: 0px;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  overflow-y: hidden;
+  color: #287FB8
+}
 
-.booking-cancel {
+.booking-show-detail {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.25);
+  box-sizing: border-box;
+  background-color: white;
+  padding: 25px;
+}
+
+.booking-detail-header {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.booking-spot-info {
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+.booking-cancel-button {
   cursor: pointer;
 }

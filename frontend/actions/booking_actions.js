@@ -3,14 +3,16 @@ export const RECEIVE_BOOKINGS = "RECEIVE_BOOKINGS";
 export const RECEIVE_BOOKING = "RECEIVE_BOOKING";
 export const REMOVE_BOOKING = "REMOVE_BOOKING";
 
-const receiveBookings = bookings =>({
+const receiveBookings = payload =>({
   type: RECEIVE_BOOKINGS,
-  bookings
+  bookings: payload.bookings,
+  spots: payload.spots
 });
 
-const receiveBooking = booking =>({
+const receiveBooking = payload =>({
   type: RECEIVE_BOOKING,
-  booking
+  booking: payload.booking,
+  spot: payload.spot
 });
 
 const removeBooking = bookingId =>({

@@ -4,15 +4,16 @@ import {withRouter} from 'react-router-dom';
 
 class EditBookingForm extends React.Component {
   componentDidMount() {
-    this.props.fetchBooking(this.props.params.bookingId)
+    // debugger;
+    this.props.fetchBooking(this.props.match.params.bookingId)
   }
 
   render () {
-    const {booking, updateBooking} = this.props;
+    const {booking, updateBooking, formType} = this.props;
     if (!booking) return null;
-
+    // debugger;
     return (
-      <BookingForm booking={booking} updateBooking={updateBooking} />
+      <BookingForm booking={booking} updateBooking={updateBooking} formType={formType} />
     );
   }
 }

@@ -42,22 +42,6 @@ class DashBoard extends React.Component {
             <div className="dashboard-bookings">
               <BookingIndexContainer/>
             </div>
-            <div className="my-travel-plans">
-              <h2><i className="fas fa-plane"></i>    MY TRAVEL PLANS</h2>
-              <ul className="planned-trips bottom-line"><p>New York</p>
-                <li key={Math.random()}>NY Trip</li>
-                <li key={Math.random()}>Visiting: Niagara Falls</li>
-                <li key={Math.random()}>Lenght of stay: 3 days</li>
-                <li key={Math.random()}>First time in NY</li>
-              </ul>
-              <ul className="planned-trips"><p>SoCal</p>
-                <li key={Math.random()}>Hiking Trip</li>
-                <li key={Math.random()}>Visiting: Angeles National Forest</li>
-                <li key={Math.random()}>Lenght of stay: 4 days</li>
-                <li key={Math.random()}>Stocking up on hiking gear for this trip</li>
-              </ul>
-            </div>
-
             <div className="happenings">
               <h2><i className="fas fa-calendar-alt"></i>&nbsp;&nbsp; WHAT'S HAPPENING NEAR: SAN FRANCISCO, CA</h2>
               <div className="sf-happenings bottom-line">

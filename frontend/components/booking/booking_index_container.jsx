@@ -8,7 +8,8 @@ import {
 
 const mSP = state => {
   return {
-    bookings: Object.values(state.entities.bookings)
+    bookings: Object.values(state.entities.bookings),
+    spots: state.entities.spots
   }
 };
 

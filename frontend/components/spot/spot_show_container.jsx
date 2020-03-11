@@ -5,7 +5,6 @@ import spotShow from './spot_show';
 import {logout} from '../../actions/session_actions';
 
 const mSP = ({entities, session}, ownProps) => {
-  // debugger;
   const spot = entities.spots[ownProps.match.params.spotId];
   return {
     spot,
