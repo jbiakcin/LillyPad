@@ -2,9 +2,10 @@ import React from 'react';
 import {withRouter} from 'react-router-dom';
 import DashboardHeader from '../dashboard/dashboard_header';
 // import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'react-dates/initialize';
-import { SingleDatePicker, DatePicker} from 'react-dates';
-// // import 'react-dates/lib/css/_datepicker.css';
+import 'react-dates/initialize';
+import { SingleDatePicker, DatePicker, DateRangePicker} from 'react-dates';
+import 'react-dates/lib/css/_datepicker.css';
+import moment from 'moment';
 
 
 class BookingForm extends React.Component {
@@ -24,55 +25,47 @@ class BookingForm extends React.Component {
   }
 
   handleSubmit(e) {
-    // debugger;
-    e.preventDefault;
-    this.props.processForm(this.state)
-      .then(this.props.history.push('/dashboard'));
+    e.preventDefault();
+    const booking = Object.assign({}, this.state)
+    booking.arrival_date = moment(booking.arrival_date).format('YYYY-MM-DD');
+    booking.departure_date = moment(booking.departure_date).format('YYYY-MM-DD');
+    this.props.processForm(booking)
+      .then(() => this.props.history.push('/dashboard'), (response => console.log(response)));
   }
 
   render () {
     return (
-      <main>
+      <main className="booking-form-main">
         <div>
           <DashboardHeader logout={this.props.logout}/>
         </div>
-        <div>
-          <h2>REQUEST TO STAY AT (this will be the spot name)</h2>
+        <div className="booking-form-body">
+          <h2>{this.props.formType} YOUR REQUEST TO STAY AT (this will be the spot name)</h2>
           <form onSubmit={this.handleSubmit}>
             <div className="date-join">
-              <label className="arr-date">Arrival Date:
+              <label className="date-range">Dates:
                 <br/>
-                {/* <input required
-                  type="date"
-                  value={this.state.arrival_date}
-                  placeholder="Arrival"
-                  onChange={this.updateDate('arrival_date')} /> */}
-                {/* <input type="date" value={this.state.arrival_date} onChange={this.updateDate('arrival_date')} placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>           */}
-                <input type="date" name={this.state.arrival_date} onChange={this.updateDate('arrival_date')} placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" title="Enter a date in this formart YYYY-MM-DD" />
-                {/* <DatePicker className="date-picker"selected={this.state.arrival_date} onChange={this.updateDate('arrival_date')}/> */}
-                {/* <SingleDatePicker
-                  date={this.state.arrival_date}
-                  onDateChange={date => this.setState({ arrival_date: date })}
-                  focused={this.state.focused}
-                  onFocusChange={({ focused }) => this.setState({ focused })}
-                /> */}
-              </label>
-              <br/>
-              <label className="dep-date">Departure Date:
-                <br/>
-                {/* <input required
-                  type="date"
-                  value={this.state.departure_date}
-                  placeholder="Arrival"
-                  onChange={this.updateDate('departure_date')} /> */}
-                {/* <input type="date" value={this.state.departure_date} onChange={this.updateDate('departure_date')} placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>           */}
-                <input type="date" name={this.state.departure_date} onChange={this.updateDate('departure_date')} placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" title="Enter a date in this formart YYYY-MM-DD" />
-                {/* <DatePicker className="date-picker"selected={this.state.departure_date} onChange={this.updateDate('departure_date')} /> */}
+                <DateRangePicker
+                  startDate={this.state.arrival_date} // momentPropTypes.momentObj or null,
+                  startDateId="1" // PropTypes.string.isRequired,
+                  endDate={this.state.departure_date} // momentPropTypes.momentObj or null,
+                  endDateId="2" // PropTypes.string.isRequired,
+                  onDatesChange={({ startDate, endDate }) => this.setState({ arrival_date: startDate, departure_date: endDate })} // PropTypes.func.isRequired,
+                  focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+                  onFocusChange={focusedInput => this.setState({ focusedInput })}
+                  showClearDates={true}
+                  regular={true}
+                  numberOfMonths={1} 
+                  startDatePlaceholderText="Arrival"
+                  endDatePlaceholderText="Departure"// PropTypes.func.isRequired,
+                />
               </label>
             </div>
-            <div>
-              <label className="num-travelers">Number of travelers
+            <div className="num-travelers">
+              <label className="num-label">Number of travelers
+              <br/>
                 <select className="num-travelers-select">
+                  <option value="--">--</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -91,7 +84,12 @@ class BookingForm extends React.Component {
                 </select>
               </label>
             </div>
-            <div>
+            <div className="msg">
+              <label>Message</label>
+              <br/>
+              <textarea name="msg" id="msg-to-host" placeholder="Introduce yourself to the host with a nice note describing your trip, why you’d like to stay, and why you’d be a great guest." required rows="6"></textarea>
+            </div>
+            <div className="booking-form-submit">
               <button type="submit" className="booking-form-submit-button">{this.props.formType}</button>
             </div>
           </form>

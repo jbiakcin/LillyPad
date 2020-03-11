@@ -6,7 +6,8 @@ export const REMOVE_SPOT = "REMOVE_SPOT";
 const receiveSpots = payload => ({
   type: RECEIVE_SPOTS,
   spots: payload.spots,
-  users: payload.users
+  users: payload.users,
+  bookings: payload.bookings
 });
 
 const receiveSpot = payload => ({

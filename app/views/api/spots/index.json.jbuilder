@@ -14,3 +14,13 @@ json.users do
     end
   end
 end
+
+json.bookings do
+  @spots.each do |spot|
+    spot.bookings.each do |booking|
+      json.set! booking.id do
+        json.partial! 'api/bookings/booking', booking: booking
+      end
+    end
+  end
+end

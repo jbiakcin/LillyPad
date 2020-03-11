@@ -9,15 +9,15 @@ const mSP = ({entities, session, errors}, ownProps) => {
   return {
     currentUser,
     booking: {
-      arrival_date: '',
-      departure_date: '',
-      num_travelers: '',
+      arrival_date: null,
+      departure_date: null,
+      num_travelers: 1,
       hopper_id: currentUser.id,
       spot_id: ownProps.match.params.spotId,
-      // focused: false
+      focusedInput: null
     },
     errors: errors.session,
-    formType: 'Send'
+    formType: 'SEND'
   }
 };
 

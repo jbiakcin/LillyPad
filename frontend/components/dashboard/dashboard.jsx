@@ -5,6 +5,12 @@ import BookingIndexContainer from '../booking/booking_index_container';
 
 
 class DashBoard extends React.Component {
+
+  componentDidMount() {
+    this.props.fetchSpots();
+    // debugger;
+    // this.props.fetchUserBookings(this.props.currentUser.id);
+  }
   
   render () {
     const {currentUser} = this.props;

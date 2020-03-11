@@ -4,7 +4,7 @@ import EditBookingForm from './edit_booking_form';
 
 const mSP = (state, ownProps) => ({
   booking: state.entities.bookings[ownProps.match.params.bookingId],
-  formType: 'Update'
+  formType: 'UPDATE'
 });
 
 const mDP = dispatch => ({

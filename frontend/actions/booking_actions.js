@@ -3,11 +3,13 @@ export const RECEIVE_BOOKINGS = "RECEIVE_BOOKINGS";
 export const RECEIVE_BOOKING = "RECEIVE_BOOKING";
 export const REMOVE_BOOKING = "REMOVE_BOOKING";
 
-const receiveBookings = payload =>({
+const receiveBookings = payload =>{
+  // debugger;
+  return {
   type: RECEIVE_BOOKINGS,
   bookings: payload.bookings,
   spots: payload.spots
-});
+}};
 
 const receiveBooking = payload =>({
   type: RECEIVE_BOOKING,
@@ -25,8 +27,8 @@ export const fetchAllBookings = () => dispatch => (
     .then(bookings => dispatch(receiveBookings(bookings)))
 );
 
-export const fetchUserBookings = () => dispatch => (
-  BookingAPIUtil.fetchUserBookings()
+export const fetchUserBookings = (userId) => dispatch => (
+  BookingAPIUtil.fetchUserBookings(userId)
     .then(bookings => dispatch(receiveBookings(bookings)))
 );
 
