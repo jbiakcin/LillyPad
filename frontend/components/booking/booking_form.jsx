@@ -34,11 +34,10 @@ class BookingForm extends React.Component {
   }
 
   render () {
+    // debugger;
+    // const spot = this.props.spot;
     return (
       <main className="booking-form-main">
-        {/* <div>
-          <DashboardHeader logout={this.props.logout}/>
-        </div> */}
         <div className="booking-form-body">
           <h2>{this.props.formType} YOUR BOOKING REQUEST</h2>
           <form onSubmit={this.handleSubmit}>
@@ -58,7 +57,7 @@ class BookingForm extends React.Component {
                   numberOfMonths={1} 
                   startDatePlaceholderText="yyyy-mm-dd"
                   endDatePlaceholderText="yyyy-mm-dd"// PropTypes.func.isRequired,
-                  className="date-picker"
+                  // className="date-picker"
                 />
               </label>
             </div>
@@ -86,7 +85,10 @@ class BookingForm extends React.Component {
             </div>
             <div className="msg">
               <label>Message</label>
-              <textarea name="msg" value={this.state.message} id="msg-to-host" placeholder="Introduce yourself to the host with a nice note describing your trip, why you’d like to stay, and why you’d be a great guest."></textarea>
+              <textarea onChange={this.update('message')} 
+                id="msg-to-host"
+                placeholder="Introduce yourself to the host with a nice note describing your trip, why you’d like to stay, and why you’d be a great guest."
+              >{this.state.message}</textarea>
             </div>
             <div className="booking-form-submit">
               <button onClick={this.props.hideForm} className="cancel-button" >CANCEL</button>

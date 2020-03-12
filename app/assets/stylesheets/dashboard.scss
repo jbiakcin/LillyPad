@@ -172,6 +172,14 @@
   font-weight: bold;
 }
 
+.no-current-booking {
+  padding-top: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-weight: bold;
+}
+
 .booking-req-ind:nth-child(even) {
   // background-color: lightskyblue;
 }

@@ -11,6 +11,7 @@
 #  status         :string           not null
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
+#  message        :text
 #
 class Booking < ApplicationRecord
   validates :arrival_date, :departure_date, :num_travelers, :status, presence: true

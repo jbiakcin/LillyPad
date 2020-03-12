@@ -2,10 +2,16 @@ import {connect} from 'react-redux';
 import {fetchBooking, updateBooking} from '../../actions/booking_actions';
 import EditBookingForm from './edit_booking_form';
 
-const mSP = (state, ownProps) => ({
-  booking: state.entities.bookings[ownProps.match.params.bookingId],
-  formType: 'UPDATE'
-});
+const mSP = (state, ownProps) => {
+  const booking = state.entities.bookings[ownProps.match.params.bookingId]
+  // const spot = state.entities.spots[booking.spot_id];
+  // debugger;
+  return {
+    booking,
+    // spot: spot,
+    formType: 'UPDATE'
+  }
+};
 
 const mDP = dispatch => ({
   processForm: booking => dispatch(updateBooking(booking)),
