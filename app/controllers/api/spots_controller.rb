@@ -39,6 +39,22 @@ class Api::SpotsController < ApplicationController
     end
   end
 
+  def search
+    search_arr = params[:site].split(" ")
+    @results = []
+    if search_arr.empty?
+      redirect_to(root_path)
+    else
+      search_arr.each do |part|
+        # parameter = part.downcase
+        @results = Spot.all.where("site LIKE '%#{part}%'")
+        # @results.push(result)
+      end
+    end
+    render :search
+
+  end
+
   private
   def spot_params
     params.require(:spot).permit(:host_id, :host_name, :site, :location_name, :max_guests, photos: [])

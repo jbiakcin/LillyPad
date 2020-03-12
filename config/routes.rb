@@ -9,6 +9,9 @@ Rails.application.routes.draw do
       resources :bookings, only: [:create]
     end
     resources :bookings, only: [:update, :destroy, :show]
+
+    # get '/search' => 'spots#search', :as => 'search_page'
+    get 'search', to: 'spots#search'
   end
 
   root to: "static_pages#root"

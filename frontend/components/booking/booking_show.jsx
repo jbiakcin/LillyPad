@@ -1,13 +1,24 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import DashboardHeader from '../dashboard/dashboard_header';
+import EditBookingContainer from './edit_booking_form_container';
 
 class BookingShow extends React.Component {
 
   constructor(props) {
     super(props);
-
+    this.state = {edit: false}
     this.handleClick = this.handleClick.bind(this);
+    this.editBooking = this.editBooking.bind(this);
+    this.cancelEdit = this.cancelEdit.bind(this);
+  }
+
+  editBooking () {
+    this.setState({edit: true})
+  }
+
+  cancelEdit () {
+    this.setState({edit: false})
   }
 
   componentDidMount() {
@@ -82,11 +93,10 @@ class BookingShow extends React.Component {
               </div>
             </div>
             <div className="booking-show-button-div">
-              <Link 
-                to={`/bookings/${booking.id}/edit`} 
+              <div onClick={this.editBooking}
                 className="update-booking-button">
                   <p>Update Booking</p>
-              </Link>
+              </div>
               <button 
                 className="booking-cancel-button" 
                 onClick={this.handleClick}>Cancel Booking
@@ -97,6 +107,7 @@ class BookingShow extends React.Component {
             </div>
           </div>
         </div>
+        {this.state.edit && <EditBookingContainer booking={booking}/>}
       </main>
     );
   }
