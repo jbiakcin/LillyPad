@@ -26,15 +26,6 @@ class SpotShow extends React.Component {
     }
   }
 
-  // hideShow() {
-  //   let x = document.getElementById("hide-show");
-  //   if (x.style.display === "none") {
-  //     x.style.display = "block";
-  //   } else {
-  //     x.style.display = "none";
-  //   }
-  // }
-
   showForm() {
     this.setState({showForm: true})
   }
@@ -75,8 +66,7 @@ class SpotShow extends React.Component {
             <Link to="/" className="back-to-link">Back to all spots</Link>
           </div>
           <div>
-            {this.state.showForm && < CreateBookingFormContainer/>}
-            {/* <BookingForm /> */}
+            {this.state.showForm && < CreateBookingFormContainer hideForm={this.hideForm}/>}
           </div>
           <div className="things-to-do">
             <h2><i className="fas fa-list-alt"></i>&nbsp;&nbsp; Things to do in the area:</h2>

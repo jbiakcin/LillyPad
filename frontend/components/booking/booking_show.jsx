@@ -33,40 +33,68 @@ class BookingShow extends React.Component {
   render () {
     const booking = this.props.booking;
     const currentUser = this.props.currentUser;
+    // debugger;
+    // const spot = this.props.spot;
     
     if (!booking) {
       return (
         <h1>No Booking to Show!</h1>
         );
       }
-    // const spot = this.props.spots[booking.spot_id]
-    //   debugger;
+  
+      // debugger;
     return (
       <main className="booking-show-main">
         <div><DashboardHeader logout={this.props.logout} /></div>
         <div className="booking-show-body">
           <div className="booking-show-detail">
             <header className="booking-detail-header">
-              <h1>Booking Details for (will put spot info here once figured out):</h1>
+              <h1>Booking Details for {this.props.spot.location_name}</h1>
             </header>
             <div className="booking-show-info">
-              <p>Booking Request by: {currentUser.first_name} {currentUser.last_name}</p>
-              <p>Arrival Date: {booking.arrival_date}</p>
-              <p>Departure Date: {booking.departure_date}</p>
-              <p>Number in group: {booking.num_travelers}</p>
-              <p>Approval Status: {booking.status}</p>
+              <div className="section-one">
+                <p className="req-by">Booking request by: {currentUser.first_name} {currentUser.last_name}</p>
+                <p className="approval-status">Approval status: {booking.status}</p>
+              </div>
+              <div className="section-two">
+                <div className="dates-div">
+                  <p>Arrival date: {booking.arrival_date}</p>
+                  <p>></p>
+                  <p>Departure date: {booking.departure_date}</p>
+                </div>
+                <div className="more-info">
+                  <span className="more-info-left">
+                    <p>Site to explore: {this.props.spot.site}</p>
+                    <br/>
+                    <ul className="activities">Activities in the area:
+                      <li key="thing1"><i className="fas fa-hiking"></i>&nbsp;&nbsp; Hiking</li>
+                      <li key="thing2"><i className="fas fa-swimmer"></i>&nbsp;&nbsp; Swimming in the nearby lake</li>
+                      <li key="thing3"><i className="fas fa-mountain"></i>&nbsp;&nbsp; Mountain Climbing</li>
+                      <li key="thing4"><i className="fas fa-skiing"></i>&nbsp;&nbsp; Skiing in winter</li>
+                      <li key="thing5"><i className="fas fa-running"></i>&nbsp;&nbsp; Trail running</li>
+                    </ul>
+                  </span>
+                  <span className="more-info-right">
+                    <p>Number of guests: {booking.num_travelers}</p>
+                    
+                  </span>
+                </div>
+              </div>
             </div>
-            <Link 
-              to={`/bookings/${booking.id}/edit`} 
-              className="update-booking-button">
-                <p>Update Booking</p>
-            </Link>
-            <button 
-              className="booking-cancel-button" 
-              onClick={this.handleClick}>Cancel Booking
-            </button>
-            <br />
-            <Link to="/" className="back-to-link">Back to all my bookings</Link>
+            <div className="booking-show-button-div">
+              <Link 
+                to={`/bookings/${booking.id}/edit`} 
+                className="update-booking-button">
+                  <p>Update Booking</p>
+              </Link>
+              <button 
+                className="booking-cancel-button" 
+                onClick={this.handleClick}>Cancel Booking
+              </button>
+            </div>
+            <div className="back-to-div">
+              <Link to="/" className="back-to-link">Back to all my bookings</Link>
+            </div>
           </div>
         </div>
       </main>

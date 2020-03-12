@@ -181,10 +181,22 @@
 }
 
 .booking-index-item {
-  display: block;
+  display: flex;
   margin: 15px;
   padding-left: 10px;
   background-color:  #f7f7f7;
+  justify-content: space-between;
+}
+
+.booking-index-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-ind-app-status {
+  display: flex;
+  align-items: center;
+  padding-right: 25px;
 }
 
 .booking-index-item:nth-child(2) {

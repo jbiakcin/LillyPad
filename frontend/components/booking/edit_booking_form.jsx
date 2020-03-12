@@ -5,7 +5,6 @@ import moment from 'moment'
 
 class EditBookingForm extends React.Component {
   componentDidMount() {
-    // debugger;
     this.props.fetchBooking(this.props.match.params.bookingId)
   }
 
@@ -15,7 +14,6 @@ class EditBookingForm extends React.Component {
     booking = Object.assign({}, booking);
     booking.arrival_date = moment(booking.arrival_date);
     booking.departure_date = moment(booking.departure_date);
-    // debugger;
     return (
       <BookingForm 
         booking={booking} 

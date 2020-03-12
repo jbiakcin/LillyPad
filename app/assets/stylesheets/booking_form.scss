@@ -1,13 +1,16 @@
 .booking-form-main {
   font-family: Arial, Helvetica, sans-serif;
+  color: black;
   background-color: #f1efea;
   width: 100vw;
+  justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: column;
 }
 
 .booking-form-body {
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -17,11 +20,14 @@
   width: 900px;
   background-color: white;
   margin-top: 10px;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.25);
 }
 
 .booking-form-body h2 {
   padding: 20px;
   border-bottom: 1px solid #e6e6e6;
+  color: #287FB8;
+  font-weight: bold;
 }
 
 .booking-form-body form {
@@ -30,19 +36,28 @@
 }
 
 .date-join {
-  display: flex;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
+  display: block;
+  box-sizing: border-box;
+  // padding-bottom: 10px;
+  margin-bottom: 15px;
+  line-height: 2.5;
 }
 
 .date-range {
   padding-bottom: 10px;
 }
 
+.date-picker {
+  margin-top: 10px;
+}
+
 .num-travelers{
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 5px;
+  display: block;
+  box-sizing: border-box;
+  // padding-bottom: 10px;
+  margin-bottom: 15px;
+  line-height: 2.5;
+  cursor: pointer;
 }
 
 #msg-to-host {
@@ -50,19 +65,50 @@
   box-sizing: border-box;
   width: 100%;
   border: 1px solid rgba(0,0,0,0.15);
-  margin-top: 20px;
+  margin-top: 10px;
+  padding: 4px 10px 10px 10px;
   border-radius: 3px;
+  height: 160px;
+  overflow-wrap: break-word;
+  color: -internal-light-dark-color(black, white);
 }
 
 .booking-form-submit {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.booking-form-submit-button {
+  display: inline-block;
   text-align: center;
   font-weight: bold;
   position: top;
   background: #287FB8;
+  border: 1px solid #287FB8;
   color: white;
   width: 100px;
   height: 40px;
   margin-top: 20px;
-  padding-top: 10px;
   border-radius: 3px;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 8px 12px;
+}
+
+.cancel-button {
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  position: top;
+  background: #afb7c3;
+  border: 1px solid #afb7c3;
+  color: white;
+  width: 100px;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 8px 12px;
+  margin-right: 20px;
 }

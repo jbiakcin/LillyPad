@@ -10,7 +10,8 @@ const mSP = (state, ownProps) => ({
 const mDP = dispatch => ({
   processForm: booking => dispatch(updateBooking(booking)),
   fetchBooking: bookingId => dispatch(fetchBooking(bookingId)),
-  updateBooking: booking => dispatch(updateBooking(booking))
+  updateBooking: booking => dispatch(updateBooking(booking)),
+  logout: () => dispatch(logout())
 });
 
 export default connect(mSP, mDP)(EditBookingForm);

@@ -9,7 +9,7 @@ class SpotIndex extends React.Component {
 
   render () {
     const {spots, deleteSpot} = this.props;
-
+    // debugger;
     return (
       <div>
         <div className="dashboard-spots">

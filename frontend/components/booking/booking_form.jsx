@@ -1,7 +1,6 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
 import DashboardHeader from '../dashboard/dashboard_header';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-dates/initialize';
 import { SingleDatePicker, DatePicker, DateRangePicker} from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
@@ -45,8 +44,7 @@ class BookingForm extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <div className="date-join">
               <label className="date-range">Arrival and Departure Dates:
-                <br/>
-                <br/>
+              <br/>
                 <DateRangePicker
                   startDate={this.state.arrival_date} // momentPropTypes.momentObj or null,
                   startDateId="1" // PropTypes.string.isRequired,
@@ -60,11 +58,13 @@ class BookingForm extends React.Component {
                   numberOfMonths={1} 
                   startDatePlaceholderText="yyyy-mm-dd"
                   endDatePlaceholderText="yyyy-mm-dd"// PropTypes.func.isRequired,
+                  className="date-picker"
                 />
               </label>
             </div>
             <div className="num-travelers">
-              <label className="num-label">Number of travelers </label>
+              <label className="num-label">Number of Travelers </label>
+              <br/>
                 <select value={this.state.num_travelers} onChange={this.update('num_travelers')} className="num-travelers-select">
                   <option value="--">--</option>
                   <option value="1">1</option>
@@ -86,13 +86,12 @@ class BookingForm extends React.Component {
             </div>
             <div className="msg">
               <label>Message</label>
-              <br/>
-              <textarea name="msg" id="msg-to-host" placeholder="Introduce yourself to the host with a nice note describing your trip, why you’d like to stay, and why you’d be a great guest." required rows="6"></textarea>
+              <textarea name="msg" id="msg-to-host" placeholder="Introduce yourself to the host with a nice note describing your trip, why you’d like to stay, and why you’d be a great guest."></textarea>
             </div>
             <div className="booking-form-submit">
+              <button onClick={this.props.hideForm} className="cancel-button" >CANCEL</button>
               <button type="submit" className="booking-form-submit-button">{this.props.formType}</button>
             </div>
-            <button onClick={this.hideForm} className="cancel-button" >Cancel</button>
           </form>
         </div>
       </main>
