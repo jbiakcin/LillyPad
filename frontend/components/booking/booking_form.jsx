@@ -40,7 +40,7 @@ class BookingForm extends React.Component {
           <DashboardHeader logout={this.props.logout}/>
         </div> */}
         <div className="booking-form-body">
-          <h2>{this.props.formType} YOUR REQUEST TO STAY AT (this will be the spot name)</h2>
+          <h2>{this.props.formType} YOUR BOOKING REQUEST</h2>
           <form onSubmit={this.handleSubmit}>
             <div className="date-join">
               <label className="date-range">Arrival and Departure Dates:
@@ -86,7 +86,7 @@ class BookingForm extends React.Component {
             </div>
             <div className="msg">
               <label>Message</label>
-              <textarea name="msg" id="msg-to-host" placeholder="Introduce yourself to the host with a nice note describing your trip, why you’d like to stay, and why you’d be a great guest."></textarea>
+              <textarea name="msg" value={this.state.message} id="msg-to-host" placeholder="Introduce yourself to the host with a nice note describing your trip, why you’d like to stay, and why you’d be a great guest."></textarea>
             </div>
             <div className="booking-form-submit">
               <button onClick={this.props.hideForm} className="cancel-button" >CANCEL</button>

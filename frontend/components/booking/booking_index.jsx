@@ -15,6 +15,13 @@ class BookingIndex extends React.Component {
     bookings = bookings.filter(booking => {
       return booking.hopper_id === this.props.currentUserId
     });
+
+
+    if (!bookings) {
+      return (
+        <h1>No current bookings!</h1>
+      )
+    }
     return (
       <div className="dashboard-booking-index">
         <h2><i className="far fa-list-alt"></i>&nbsp;&nbsp;MY BOOKING REQUESTS:</h2>

@@ -12,10 +12,7 @@ const mSP = ({entities, session, errors}, ownProps) => {
       arrival_date: null,
       departure_date: null,
       num_travelers: 1,
-      hopper_id: currentUser.id,
-      // spot_id: ownProps.match.params.spotId,
-      // spot_id: entities.spots.id,
-      // focusedInput: null
+      hopper_id: currentUser.id
     },
     errors: errors.session,
     formType: 'SEND'
