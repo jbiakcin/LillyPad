@@ -18,6 +18,7 @@ Find places to stay near America's National Parks with local hosts who also enjo
 ### Bookings
 * Users can request booking at a spot
 * Users can update or cancel a booking
+* Users cannot edit other users' bookings
 ### Search Spots
 * Users can search spots to stay near the park you want to visit
 # Code Highlights
