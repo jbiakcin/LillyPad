@@ -49,7 +49,6 @@ class BookingShow extends React.Component {
         <h1>No Booking to Show!</h1>
         );
       }
-      debugger;
     return (
       <main className="booking-show-main">
         <div><DashboardHeader logout={this.props.logout} findSpots={this.props.findSpots}/></div>

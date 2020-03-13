@@ -1,6 +1,6 @@
 json.spot do
     json.partial! "api/spots/spot", spot: @spot
-    json.photoUrls @spot.photos[1..5].map {|file| url_for(file)}
+    json.photoUrls @spot.photos.map {|file| url_for(file)}
 end
 
 json.user do

@@ -40,7 +40,6 @@ class Api::SpotsController < ApplicationController
   end
 
   def search
-    # debugger
     search_arr = params[:site].split(" ")
     @results = []
 

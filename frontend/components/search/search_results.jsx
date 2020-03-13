@@ -21,7 +21,6 @@ class SearchResults extends React.Component {
 
   render () {
     const spots = this.props.spots;
-    // debugger;
     let span;
     if (spots.length === 0) {
       span = <h1 className="no-search-results"> Ooooops! No results for the search!</h1>

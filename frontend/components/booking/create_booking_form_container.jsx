@@ -4,7 +4,6 @@ import {createBooking} from '../../actions/booking_actions';
 import {logout} from '../../actions/session_actions';
 
 const mSP = ({entities, session, errors}, ownProps) => {
-  debugger
   return {
     currentUser: entities.users[session.id],
     spot: Object.values(entities.spots)[0],
