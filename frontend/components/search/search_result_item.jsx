@@ -11,6 +11,7 @@ const SearchResultItem = props => {
             <img className="search-result-pix" src={props.spot.photoUrls[0]} />
             <div className="other-info">
               <h1> Host: Jennie Richardson</h1>
+              <h1> Near: {props.spot.site}</h1>
               <h1> Maximum number of guests: {props.spot.max_guests}</h1>
             </div>
           </section>

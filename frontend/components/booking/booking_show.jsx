@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 import DashboardHeader from '../dashboard/dashboard_header';
 import EditBookingContainer from './edit_booking_form_container';
 
@@ -49,10 +49,10 @@ class BookingShow extends React.Component {
         <h1>No Booking to Show!</h1>
         );
       }
-      
+      debugger;
     return (
       <main className="booking-show-main">
-        <div><DashboardHeader logout={this.props.logout} /></div>
+        <div><DashboardHeader logout={this.props.logout} findSpots={this.props.findSpots}/></div>
         <div className="booking-show-body">
           <div className="booking-show-detail">
             <header className="booking-detail-header">
@@ -109,4 +109,4 @@ class BookingShow extends React.Component {
   }
 }
 
-export default BookingShow;
+export default withRouter(BookingShow);
