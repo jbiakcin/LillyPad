@@ -1,7 +1,7 @@
 # Overview
 Find places to stay near America's National Parks with local hosts who also enjoy these National Treasures.
 
-https://lillypad.herokuapp.com/
+[LillyPad's Live Site](https://lillypad.herokuapp.com/)
 
 ![](images/splash_page.png)
 
