@@ -16,8 +16,8 @@
   // background-color: rgba(154, 235, 150, 0.25);
   color: #287FB8;
   // color: #ED6504;
-  font-family: fantasy;
-  font-weight: bold;
+  // font-family: fantasy;
+  // font-weight: bold;
   font-size: large;
   margin-top: 4px;
   margin-bottom: 8px;
@@ -32,4 +32,8 @@
 .spot-index-pix {
   width: 280px;
   height: 175px;
+}
+
+.spot-index-item img {
+  border-radius: 5px;
 }

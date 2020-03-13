@@ -3,12 +3,8 @@ import {fetchBooking, updateBooking} from '../../actions/booking_actions';
 import EditBookingForm from './edit_booking_form';
 
 const mSP = (state, ownProps) => {
-  const booking = state.entities.bookings[ownProps.match.params.bookingId]
-  // const spot = state.entities.spots[booking.spot_id];
-  // debugger;
   return {
-    booking,
-    // spot: spot,
+    booking: ownProps.booking,
     formType: 'UPDATE'
   }
 };

@@ -2,6 +2,8 @@
   background-color: #f1efea;
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  width: 100vw;
 }
 
 .booking-show-body {
@@ -15,7 +17,9 @@
   font-family: Arial, Helvetica, sans-serif;
   justify-content: center;
   overflow-y: hidden;
-  color: #287FB8
+  color: #287FB8;
+  width: 900px;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.25);
 }
 
 .booking-show-detail {

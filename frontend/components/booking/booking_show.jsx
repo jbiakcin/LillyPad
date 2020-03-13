@@ -1,17 +1,27 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 import DashboardHeader from '../dashboard/dashboard_header';
+import EditBookingContainer from './edit_booking_form_container';
 
 class BookingShow extends React.Component {
 
   constructor(props) {
     super(props);
-
+    this.state = {edit: false}
     this.handleClick = this.handleClick.bind(this);
+    this.editBooking = this.editBooking.bind(this);
+    this.cancelEdit = this.cancelEdit.bind(this);
+  }
+
+  editBooking () {
+    this.setState({edit: true})
+  }
+
+  cancelEdit () {
+    this.setState({edit: false})
   }
 
   componentDidMount() {
-    // debugger;
     this.props.fetchBooking(this.props.match.params.bookingId)
   }
 
@@ -33,19 +43,16 @@ class BookingShow extends React.Component {
   render () {
     const booking = this.props.booking;
     const currentUser = this.props.currentUser;
-    // debugger;
-    // const spot = this.props.spot;
     
     if (!booking) {
       return (
         <h1>No Booking to Show!</h1>
         );
       }
-  
-      // debugger;
+      debugger;
     return (
       <main className="booking-show-main">
-        <div><DashboardHeader logout={this.props.logout} /></div>
+        <div><DashboardHeader logout={this.props.logout} findSpots={this.props.findSpots}/></div>
         <div className="booking-show-body">
           <div className="booking-show-detail">
             <header className="booking-detail-header">
@@ -82,11 +89,10 @@ class BookingShow extends React.Component {
               </div>
             </div>
             <div className="booking-show-button-div">
-              <Link 
-                to={`/bookings/${booking.id}/edit`} 
+              <div onClick={this.editBooking}
                 className="update-booking-button">
                   <p>Update Booking</p>
-              </Link>
+              </div>
               <button 
                 className="booking-cancel-button" 
                 onClick={this.handleClick}>Cancel Booking
@@ -97,9 +103,10 @@ class BookingShow extends React.Component {
             </div>
           </div>
         </div>
+        {this.state.edit && <EditBookingContainer booking={booking}/>}
       </main>
     );
   }
 }
 
-export default BookingShow;
+export default withRouter(BookingShow);

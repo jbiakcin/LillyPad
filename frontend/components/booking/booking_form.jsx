@@ -34,8 +34,6 @@ class BookingForm extends React.Component {
   }
 
   render () {
-    // debugger;
-    // const spot = this.props.spot;
     return (
       <main className="booking-form-main">
         <div className="booking-form-body">
@@ -88,7 +86,8 @@ class BookingForm extends React.Component {
               <textarea onChange={this.update('message')} 
                 id="msg-to-host"
                 placeholder="Introduce yourself to the host with a nice note describing your trip, why you’d like to stay, and why you’d be a great guest."
-              >{this.state.message}</textarea>
+                value={this.state.message}
+              ></textarea>
             </div>
             <div className="booking-form-submit">
               <button onClick={this.props.hideForm} className="cancel-button" >CANCEL</button>

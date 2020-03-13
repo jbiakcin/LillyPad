@@ -4,7 +4,6 @@ export const RECEIVE_BOOKING = "RECEIVE_BOOKING";
 export const REMOVE_BOOKING = "REMOVE_BOOKING";
 
 const receiveBookings = payload =>{
-  // debugger;
   return {
   type: RECEIVE_BOOKINGS,
   bookings: payload.bookings,

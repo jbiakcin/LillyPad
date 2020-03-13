@@ -4,6 +4,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 import {fetchUsers} from './actions/user_actions';
+import {findSpots} from './util/search_api.util';
 
 document.addEventListener('DOMContentLoaded', ()=>{
   let preloadedState;
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.fetchUsers = fetchUsers;
+  window.findSpots = findSpots;
 
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root);

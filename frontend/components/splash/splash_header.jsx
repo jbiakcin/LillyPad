@@ -12,7 +12,7 @@ class SplashHeader extends React.Component {
             <Link to="/" className="logo-link"><p>LillyPad</p></Link>
           </div>
           <div className="login-button">
-            <LoginModal/>
+            <LoginModal clearErrors={this.props.clearErrors}/>
           </div>
         </div>
       </header>

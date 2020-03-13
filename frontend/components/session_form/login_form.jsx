@@ -4,7 +4,7 @@ import {Link, withRouter} from 'react-router-dom';
 class LoginForm extends React.Component{
   constructor (props) {
     super(props);
-    this.state= {
+    this.state = {
       email: '',
       password: ''
     };

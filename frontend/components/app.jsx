@@ -11,6 +11,7 @@ import SpotShowContainer from '../components/spot/spot_show_container';
 import EditBookingFormContainer from '../components/booking/edit_booking_form_container';
 import CreateBookingFormContainer from '../components/booking/create_booking_form_container';
 import BookingShowContainer from '../components/booking/booking_show_container';
+import SearchContainer from '../components/search/search_container';
 
 const App = () =>(
   <div>
@@ -20,6 +21,7 @@ const App = () =>(
       <ProtectedRoute path="/spots/:spotId/bookings/new" component={CreateBookingFormContainer}/>
       <ProtectedRoute path="/bookings/:bookingId/edit" component={EditBookingFormContainer}/>
       <ProtectedRoute path="/bookings/:bookingId" component={BookingShowContainer}/>
+      <ProtectedRoute path="/spots/search" component={SearchContainer}/>
       <ProtectedRoute path="/spots/:spotId" component={SpotShowContainer}/>
       <ProtectedRoute path="/dashboard" component={DashBoardContainer}/>
       <ProtectedRoute path="/spots" component={SpotIndexContainer}/>

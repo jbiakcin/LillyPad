@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 const BookingIndexItem = props => {
   const {booking, spots} = props;
   const spot = spots[booking.spot_id]
-  // debugger;
 
   return (
     <li className="booking-req-ind" key={booking.id}>

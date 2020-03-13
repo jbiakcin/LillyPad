@@ -7,7 +7,6 @@ import { RECEIVE_BOOKING } from '../actions/booking_actions';
 
 const SpotsReducer = (state = {}, action) => {
   Object.freeze(state);
-  // debugger;
   switch (action.type) {
     case RECEIVE_SPOTS:
       return Object.assign({}, state, action.spots);
