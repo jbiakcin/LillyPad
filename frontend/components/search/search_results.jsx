@@ -5,15 +5,15 @@ import SearchResultItem from '../search/search_result_item';
 
 class SearchResults extends React.Component {
 
-  componentDidUpdate(prevProps) {
-    const currentSpots = this.props.spot;
-    const prevSpots = prevProps.spots;
+  // componentDidUpdate(prevProps) {
+  //   const currentSpots = this.props.spot;
+  //   const prevSpots = prevProps.spots;
 
-    if (currentSpots != prevSpots) {
-      this.props.clearSearchSpots();
-      this.props.findSpots(currentSpots)
-    }
-  }
+  //   if (currentSpots != prevSpots) {
+  //     this.props.clearSearchSpots();
+  //     this.props.findSpots(currentSpots)
+  //   }
+  // }
 
   componentDidMount() {
     this.props.findSpots(this.props.spots)
