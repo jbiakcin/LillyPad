@@ -3,13 +3,13 @@ import SpotIndexItem from './spot_index_item';
 import {Link, withRouter} from 'react-router-dom';
 
 class SpotIndex extends React.Component {
-  componentDidMount() {
-    this.props.fetchSpots();
-  }
+  // componentDidMount() {
+  //   this.props.fetchSpots();
+  // }
 
   render () {
     const {spots, deleteSpot} = this.props;
-
+    // debugger;
     return (
       <div>
         <div className="dashboard-spots">

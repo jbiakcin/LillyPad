@@ -14,6 +14,7 @@ class LoginModal extends React.Component {
   }
 
   showModal(e) {
+    this.props.clearErrors ();
     this.setState({ show: true });
   }
 

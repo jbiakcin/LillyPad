@@ -11,10 +11,11 @@
 #  status         :string           not null
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
+#  message        :text
 #
 class Booking < ApplicationRecord
   validates :arrival_date, :departure_date, :num_travelers, :status, presence: true
-  validates :status, inclusion: {in: ["pending", "approved", "denied"]}
+  validates :status, inclusion: {in: ["Pending", "Approved", "Denied"]}
 
   belongs_to :hopper,
   class_name: :User,

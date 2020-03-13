@@ -42,6 +42,7 @@
 }
 
 .booking-button {
+  padding-top: 5px;
   width: 150px;
   height: 35px;
   cursor: pointer;
@@ -56,9 +57,9 @@
   color: #287FB8;
 }
 
-.back-to-link:hover {
-  color: teal;
-}
+// .back-to-link:hover {
+//   color: teal;
+// }
 
 .spot-show-pix {
   width: 900px;
@@ -129,4 +130,8 @@
 
 .things-to-do-list li i {
   color:#ED6504;
+}
+
+#hide-show {
+  display: none;
 }

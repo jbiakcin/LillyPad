@@ -11,6 +11,7 @@
 #  status         :string           not null
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
+#  message        :text
 #
 require 'test_helper'
 

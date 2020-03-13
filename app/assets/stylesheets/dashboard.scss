@@ -142,7 +142,7 @@
   padding-bottom: 20px;
 }
 
-.my-travel-plans {
+.dashboard-bookings {
   display: block;
   background-color: white;
   padding: 20px;
@@ -151,26 +151,64 @@
   margin-bottom: 10px;
 }
 
-.my-travel-plans h2 {
+.dashboard-booking-index h2{
   display: block;
   border-bottom: 1px solid #e6e6e6;
 }
 
-.planned-trips {
-  padding: 5px 10px;
-  display: block;
-  background-color: #f7f7f7;
-  line-height: 2.5;
+.dashboard-booking-index h2 i{
+  color: black;
 }
 
-.planned-trips p {
-  font-size: 18px;
+.dashboard-booking-list {
+  list-style: none;
+  display: block;
+  padding: 5px 10px;
+  line-height: 2.0;
+  margin: 10px;
+}
+
+.booking-site-name {
   font-weight: bold;
 }
 
-.planned-trips li {
-  padding-left: 25px;
-  list-style:none;
+.no-current-booking {
+  padding-top: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.booking-req-ind:nth-child(even) {
+  // background-color: lightskyblue;
+}
+
+.booking-req-ind:nth-child(odd) {
+  // background-color: lightsalmon;
+}
+
+.booking-index-item {
+  display: flex;
+  margin: 15px;
+  padding-left: 10px;
+  background-color:  #f7f7f7;
+  justify-content: space-between;
+}
+
+.booking-index-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-ind-app-status {
+  display: flex;
+  align-items: center;
+  padding-right: 25px;
+}
+
+.booking-index-item:nth-child(2) {
+  background-color: lightskyblue;
 }
 
 .bottom-line {

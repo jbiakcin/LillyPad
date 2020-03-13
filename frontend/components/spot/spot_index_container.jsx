@@ -3,9 +3,9 @@ import SpotIndex from './spot_index';
 import {fetchSpots} from '../../actions/spot_actions';
 
 const mSP = state => {
-
+  const onlySpots = Object.values(state.entities.spots)
   return ({
-  spots: Object.values(state.entities.spots)
+  spots: Object.values(onlySpots)
   });
 };
 

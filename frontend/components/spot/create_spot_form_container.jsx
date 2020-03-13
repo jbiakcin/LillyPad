@@ -7,8 +7,7 @@ const mSP = ({entities, errors, session}) => {
   return {
     currentUser,
     spot: {
-      host_id: currentUser.id,
-      host_name: `${currentUser.first_name + ' ' + currentUser.last_name}`,
+      hostId: currentUser.id,
       site: '',
       locationName: '',
       maxGuests: ''

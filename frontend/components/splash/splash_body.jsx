@@ -10,7 +10,7 @@ class SplashBody extends React.Component {
     return (
       <main className="splash-body" >
         <header className="splash-body-header">
-          <h1>Stay with Locals and Meet Travelers</h1>
+          <h1>Stay with Locals and Meet Other Park Hoppers</h1>
           <h2>Share Authentic Travel Experiences</h2>
         </header>
         <div className="sign-up-form-container">
@@ -18,7 +18,7 @@ class SplashBody extends React.Component {
         </div>
         <div className="splash-body-bottom">
           <h4>Already a member?</h4>
-          <LoginModal/>
+          <LoginModal clearErrors={this.props.clearErrors}/>
         </div>
       </main>
     )

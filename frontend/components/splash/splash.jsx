@@ -7,7 +7,7 @@ class Splash extends React.Component {
     return (
       <div>
         <SplashHeader />
-        <SplashBody />
+        <SplashBody clearErrors={this.props.clearErrors}/>
       </div>
     );
   }

@@ -1,4 +1,4 @@
-export const fetchBookings = () => (
+export const fetchAllBookings = () => (
   $.ajax({
     url: `/api/bookings`,
     method: `GET`
@@ -12,9 +12,17 @@ export const fetchBooking = bookingId => (
   })
 );
 
+export const fetchUserBookings = (userId) => {
+  // debugger
+  return $.ajax({
+    url: `/api/users/${userId}/bookings`,
+    method: 'GET'
+  })
+}
+
 export const createBooking = booking => (
   $.ajax({
-    url: `/api/bookings`,
+    url: `/api/spots/${booking.spot_id}/bookings`,
     method: `POST`,
     data: {booking}
   })
