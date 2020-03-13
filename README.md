@@ -21,7 +21,7 @@ https://lillypad.herokuapp.com/
 ### Search Spots
 * Users can search spots to stay near the park you want to visit
 # Code Highlights
-One of the challenges during the booking form creation was using the `<DateRangePicker/>` code.  It involved dealing react-moment.  The following code converts the date iput into the YYYY-MM-DD format.
+One of the challenges during the booking form creation was using the `<DateRangePicker/>` code.  It involved dealing with react-moment.  The following code converts the date iput into the YYYY-MM-DD format.
 
 ```javascript
 handleSubmit(e) {
