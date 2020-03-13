@@ -22,7 +22,6 @@ class BookingShow extends React.Component {
   }
 
   componentDidMount() {
-    // debugger;
     this.props.fetchBooking(this.props.match.params.bookingId)
   }
 
@@ -44,16 +43,13 @@ class BookingShow extends React.Component {
   render () {
     const booking = this.props.booking;
     const currentUser = this.props.currentUser;
-    // debugger;
-    // const spot = this.props.spot;
     
     if (!booking) {
       return (
         <h1>No Booking to Show!</h1>
         );
       }
-  
-      // debugger;
+      
     return (
       <main className="booking-show-main">
         <div><DashboardHeader logout={this.props.logout} /></div>

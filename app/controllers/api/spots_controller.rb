@@ -42,15 +42,11 @@ class Api::SpotsController < ApplicationController
   def search
     search_arr = params[:site].split(" ")
     @results = []
-    if search_arr.empty?
-      redirect_to(root_path)
-    else
-      search_arr.each do |part|
-        # parameter = part.downcase
-        @results = Spot.all.where("site LIKE '%#{part}%'")
-        # @results.push(result)
-      end
+
+    search_arr.each do |part|
+      @results = Spot.all.where("site LIKE '%#{part}%'")
     end
+    
     render :search
 
   end

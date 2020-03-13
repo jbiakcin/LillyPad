@@ -4,7 +4,6 @@ import {fetchBooking, updateBooking, deleteBooking} from '../../actions/booking_
 import {logout} from '../../actions/session_actions';
 
 const mSP = ( {entities, session}, ownProps) => {
-  // debugger;  //there are no spots in entities here at the moment
   const booking = entities.bookings[ownProps.match.params.bookingId]
   
   if (!booking) return {};

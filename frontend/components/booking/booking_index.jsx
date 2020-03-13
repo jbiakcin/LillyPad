@@ -11,7 +11,6 @@ class BookingIndex extends React.Component {
   render () {
     let {bookings} = this.props
     const {spots, deleteBooking, updateBooking} = this.props
-    // debugger;
     bookings = bookings.filter(booking => {
       return booking.hopper_id === this.props.currentUserId
     });

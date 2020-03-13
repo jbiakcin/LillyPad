@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const SpotIndexItem = props => {
-  // debugger;
   return (
     <li className="index-item-style" >
         <Link to={`/spots/${props.spot.id}`}>

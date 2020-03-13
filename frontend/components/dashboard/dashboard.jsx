@@ -8,15 +8,13 @@ class DashBoard extends React.Component {
 
   componentDidMount() {
     this.props.fetchSpots();
-    // debugger;
-    // this.props.fetchUserBookings(this.props.currentUser.id);
   }
   
   render () {
     const {currentUser} = this.props;
     return (
       <main className="dashboard">
-        <div><DashboardHeader logout={this.props.logout}/></div>
+        <div><DashboardHeader logout={this.props.logout} findSpots={this.props.findSpots}/></div>
         <div className="dashboard-body">
           <div className="dashboard-sidebar">
             <div className="greeting-box">

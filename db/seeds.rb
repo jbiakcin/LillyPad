@@ -28,7 +28,7 @@ cary = User.create!({first_name: 'Cary', last_name: 'Grant', email: 'cgrant@fake
 spot1 = Spot.create!({host_id: jennie.id, 
 host_name: jennie.first_name + " " + jennie.last_name, 
 site: 'Yosemite', location_name: "Casa Lilly", max_guests: 2})
-spot1.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/yosemite/lily-pad-pond-yosemite.jpg"), filename: "lily-pad-pond-yosemite.jpg")
+spot1.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/yosemite/yosemite-merced.png"), filename: "lily-pad-pond-yosemite.jpg")
 spot1.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/yosemite/yosemite.jpg"), filename: "yosemite.jpg")
 spot1.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/yosemite/yosemite_2.jpg"), filename: "yosemite_2.jpg")
 spot1.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/yosemite/yosemite_3.jpg"), filename: "yosemite_3.jpg")

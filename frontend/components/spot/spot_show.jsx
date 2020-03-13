@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, withRouter, NavLink} from 'react-router-dom';
+import {Link, withRouter} from 'react-router-dom';
 import DashboardHeader from '../dashboard/dashboard_header';
 import CreateBookingFormContainer from '../booking/create_booking_form_container';
 import BookingForm from '../booking/booking_form';
@@ -45,7 +45,7 @@ class SpotShow extends React.Component {
     
     return (
       <main className="spot-show-main">
-        <div><DashboardHeader logout={this.props.logout} /></div>
+        <div><DashboardHeader logout={this.props.logout} findSpots={this.props.findSpots}/></div>
         <div className="spot-show-body">
           <div className="spot-show-detail">
             <header className="spot-detail-header">

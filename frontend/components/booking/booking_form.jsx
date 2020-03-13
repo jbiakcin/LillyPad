@@ -34,8 +34,6 @@ class BookingForm extends React.Component {
   }
 
   render () {
-    // debugger;
-    // const spot = this.props.spot;
     return (
       <main className="booking-form-main">
         <div className="booking-form-body">
