@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import DashboardHeader from '../dashboard/dashboard_header';
-import SearchResultItem from '../search/search_result_item';
+import SearchResultItem from './search_result_item';
 
 class SearchResults extends React.Component {
 

@@ -51,10 +51,10 @@
 .splash-body {
   display: flex;
   flex-direction: column;
-  min-height: 750px;
+  // min-height: 700px;
   flex-grow: 1;
   margin: 0 auto;
-  padding: 40px;
+  // padding: 20px;
   line-height: 1.5;
   background-color: #287FB8;
   font-family: Arial, Helvetica, sans-serif;
@@ -99,10 +99,20 @@
   font-size: 14px;
   font-weight: bold;
   line-height: 1.5;
-  padding: 1px 12px;
+  // padding: 1px 12px;
+}
+
+.login-modal {
+  padding-top: 1px;
+  padding-bottom: 2px;
 }
 
 .splash-body-bottom h4 {
   font-size: 15px;
   font-weight: normal;
+}
+
+.sign-up-form-container {
+  padding-top: 0px;
+  // padding-bottom: 0px;
 }
