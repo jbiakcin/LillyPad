@@ -59,7 +59,7 @@ class SignupForm extends React.Component {
     if (this.props.errors) {
       errorMsg = <div className="signup-error">{this.renderErrors()}</div>
     }
-
+    
     return (
       <main className="join-content">
         <div className="sign-up-form">

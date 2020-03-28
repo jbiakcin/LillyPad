@@ -44,7 +44,7 @@ class LoginForm extends React.Component{
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <span className="x" onClick={this.props.hideModal}>&times;</span>
           <div className="login-header-box">
-            <header className="login-header">Log in to LillyPad</header>
+            <header className="login-header">Log in to ParkHopper</header>
           </div>
           <div className="login-form"> 
             <label>
