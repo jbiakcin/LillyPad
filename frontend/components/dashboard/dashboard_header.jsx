@@ -28,7 +28,7 @@ class DashboardHeader extends React.Component {
         <div className="splash-wrapper">
           <span>
             <div className="dashboard-logo">
-              <Link to="/" className="dashboard-logo-link"><img src="/assets/phlogo.jpeg" width="50" height="50"/></Link>
+              <Link to="/" className="dashboard-logo-link"><img src={window.logoURL} width="50" height="50"/></Link>
             </div>
             <form className="search-bar" onSubmit={this.handleSubmit}>
               <i className="fas fa-search"></i>&nbsp;&nbsp;
