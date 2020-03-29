@@ -3,7 +3,7 @@ Find places to stay near America's National Parks with local hosts who also enjo
 
 [ParkHopper's Live Site](https://parkhopper1.herokuapp.com/)
 
-![](images/splash_page.png)
+![](images/splash_page_png.png)
 
 # Built With
 * React
