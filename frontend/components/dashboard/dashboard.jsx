@@ -54,7 +54,7 @@ class DashBoard extends React.Component {
                   <li key={Math.random()}>When: Everyday 10 AM - 12 PM</li>
                   <li key={Math.random()}>Meet at: Tea Garden Entrance</li>
                 </ul>
-                <button>Join</button>
+                {/* <button>Join</button> */}
               </div>
               <div className="sf-happenings">
                 <ul className="sf-events"><p>Tour of Muir Woods, An Echanted Forest</p>
@@ -62,7 +62,7 @@ class DashBoard extends React.Component {
                   <li key={Math.random()}>When: Sundays 2 PM - 4 PM</li>
                   <li key={Math.random()}>Meet at: Visitor Center</li>
                 </ul>
-                <button>Join</button>
+                {/* <button>Join</button> */}
               </div>
             </div>
 
