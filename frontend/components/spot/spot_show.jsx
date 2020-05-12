@@ -36,7 +36,6 @@ class SpotShow extends React.Component {
   
   render (){
     const spot = this.props.spot;
-
     if (!spot) {
       return (
         <h2>Loading</h2>
@@ -66,7 +65,7 @@ class SpotShow extends React.Component {
             <Link to="/" className="back-to-link">Back to all spots</Link>
           </div>
           <div>
-            {this.state.showForm && < CreateBookingFormContainer hideForm={this.hideForm}/>}
+            {this.state.showForm && < CreateBookingFormContainer hideForm={this.hideForm} currentUser={this.props.currentUser}/>}
           </div>
           <div className="things-to-do">
             <h2><i className="fas fa-list-alt"></i>&nbsp;&nbsp; Things to do in the area:</h2>
