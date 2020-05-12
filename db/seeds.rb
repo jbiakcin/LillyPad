@@ -11,9 +11,9 @@ User.destroy_all
 Spot.destroy_all
 Booking.destroy_all
 
-demo_user= User.create!({first_name: 'Demo', last_name: 'User', email: 'abc@abc.com', password: 'hunter12', gender: 'Female', city: 'San Francisco', age: 23})
+demo_user= User.create!({first_name: 'Jennie', last_name: 'Richardson', email: 'abc@abc.com', password: 'hunter12', gender: 'Female', city: 'San Francisco', age: 23})
 
-jennie = User.create!({first_name: 'Jennie', last_name: 'Richardson', email: 'jrichardson@fakeemail.com', password: 12345678, gender: 'Female', city: 'Fresno', age: 21})
+jennie = User.create!({first_name: 'Maria', last_name: 'Richardson', email: 'mrichardson@fakeemail.com', password: 12345678, gender: 'Female', city: 'Fresno', age: 21})
 tom = User.create!({first_name: 'Tom', last_name: 'Cruise', email: 'tcruise@fakeemail.com', password: 12345678, gender: 'Male', city: 'New York', age: 50})
 james = User.create!({first_name: 'James', last_name: 'Bond', email: 'jbond@fakeemail.com', password: 12345678, gender: 'Male', city: 'Las Vegas', age: 45})
 jennifer = User.create!({first_name: 'Jennifer', last_name: 'Lopez', email: 'jlo@fakeemail.com', password: 12345678, gender: 'Female', city: 'Miami', age: 31})

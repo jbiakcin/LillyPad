@@ -1,11 +1,9 @@
 .footer-main {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 20px;
-  // max-width: 1280px;
   display: flex;
   box-sizing: border-box;
   font-size: 12px;
-  text-transform: uppercase;
   justify-content: center;
   text-align: left;
   color: #34495e
@@ -46,9 +44,31 @@
   line-height: 1;
   padding: 0.3em;
   margin-right: 30px;
-  // padding-left: 25px;
-  // padding-top: 10px;
   border: 2px solid #EFF3F3;
   border-radius: 50%;
-  // text-align: center;
+}
+
+a.contact:hover {
+  position: relative;
+}
+
+a.contact span {
+  display: none;
+}
+
+a.contact:hover span {
+  font-size: 12px;
+  text-align: center;
+  border: #ED6504;
+  width: 100px;
+  padding: 5px;
+  display: block;
+  z-index: 100;
+  background: #ED6504;
+  color: white;
+  left: -50px;
+  margin: 15px;
+  position: absolute;
+  top: -50px;
+  border-radius: 5px;
 }

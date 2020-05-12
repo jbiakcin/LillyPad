@@ -2,6 +2,7 @@ import {connect} from 'react-redux';
 import BookingForm from './booking_form';
 import {createBooking} from '../../actions/booking_actions';
 import {logout} from '../../actions/session_actions';
+import {fetchUser} from '../../actions/user_actions';
 
 const mSP = ({entities, session, errors}, ownProps) => {
   return {
@@ -21,6 +22,7 @@ const mSP = ({entities, session, errors}, ownProps) => {
 
 const mDP = dispatch => ({
   processForm: booking => dispatch(createBooking(booking)),
+  fetchUser: userId => dispatch(fetchUser(userId)),
   logout: () => dispatch(logout())
 });
 

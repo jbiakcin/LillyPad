@@ -31,11 +31,12 @@ class DashBoard extends React.Component {
             </div>
             <div className="verified">
               <div className="verified-header">MY PROFILE</div>
-              <ul className="verified-status">
-                <li><i className="fas fa-check"></i>&nbsp;&nbsp; Payment verified</li>
-                <li><i className="fas fa-times"></i> &nbsp;&nbsp;Phone not verified</li>
-                <li><i className="fas fa-times"></i> &nbsp;&nbsp;Government ID not verified</li>
-                <li><i className="fas fa-times"></i> &nbsp;&nbsp;Address not verified</li>
+              <ul className="profile">
+                <li key="portfolio" className="profile-portfolio"><a href="https://jbiakcin.com"><i class="fas fa-user"></i>&nbsp;&nbsp;Portfolio</a></li>
+                <li key="github" className="profile-github"><a href="https://github.com/jbiakcin"><i className="fab fa-github"></i>&nbsp;&nbsp;GitHub</a></li>
+                <li key="linkedin" className="profile-linkedin"><a href="https://www.linkedin.com/in/jennie-richardson-1531881a5/"><i className="fab fa-linkedin"></i>&nbsp;&nbsp;LinkedIn</a></li>
+                <li key="angellist" className="profile-angelist"><a href="https://angel.co/u/jennie-richardson"><i className="fab fa-angellist"></i>&nbsp;&nbsp;AngelList</a></li>
+                <li key="email" className="profile-email"><a href="mailto: jbiakcin@icloud.com"><i className="far fa-envelope"></i>&nbsp;&nbsp;Email</a></li>
               </ul>
             </div>
           </div>

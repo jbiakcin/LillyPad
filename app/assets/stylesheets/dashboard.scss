@@ -77,15 +77,6 @@
   height: 40px;
 }
 
-.verified-status {
-  line-height: 3;
-  color: gray;
-}
-
-.verified-status li {
-  list-style: none;
-}
-
 .dashboard-sidebar {
   text-align: center;
   margin-right: 20px;
@@ -276,10 +267,12 @@
   margin-top: 20px;
 }
 
-.fa-check {
-  color: green;
+.profile li {
+  font-size: 16px;
+  display: block;
+  line-height: 3;
 }
 
-.fa-times {
-  color: red;
+.profile li i {
+  color: #ED6504;
 }
