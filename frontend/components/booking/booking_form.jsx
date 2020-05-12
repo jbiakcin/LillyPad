@@ -55,6 +55,7 @@ class BookingForm extends React.Component {
                   numberOfMonths={1} 
                   startDatePlaceholderText="yyyy-mm-dd"
                   endDatePlaceholderText="yyyy-mm-dd"
+                  required
                 />
               </label>
             </div>
