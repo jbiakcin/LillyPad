@@ -1,5 +1,5 @@
 class Api::SpotsController < ApplicationController
-  before_action :require_logged_in, only: [:create, :update, :destroy]
+  # before_action :require_logged_in, only: [:create, :update, :destroy]
   
   def index
     @spots = Spot.includes(:host, :bookings, photos_attachments: :blob).all
@@ -52,6 +52,6 @@ class Api::SpotsController < ApplicationController
 
   private
   def spot_params
-    params.require(:spot).permit(:host_id, :site, :location_name, :max_guests, photos: [])
+    params.require(:spot).permit(:host_id, :site, :location_name, :max_guests, reviews: [], photos: [])
   end
 end

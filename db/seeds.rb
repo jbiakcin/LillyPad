@@ -23,7 +23,7 @@ cary = User.create!({first_name: 'Cary', last_name: 'Grant', email: 'cgrant@fake
 
 
 spot1 = Spot.create!({host_id: jennie.id, 
-site: 'Yosemite', location_name: "Casa Lilly", max_guests: 2})
+site: 'Yosemite', location_name: "Casa Lilly", max_guests: 2, reviews: []})
 # spot1.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/index/Index_Yosemite_29.png"), filename: "Index_Yosemite_29.png")
 spot1.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/yosemite/yosemite.jpg"), filename: "yosemite.jpg")
 spot1.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/yosemite/yosemite_2.jpg"), filename: "yosemite_2.jpg")
@@ -33,7 +33,7 @@ spot1.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/
 spot1.save!
 
 spot2 = Spot.create!({host_id: jennie.id, 
-site: 'Grand Canyon', location_name: "Grand Lilly", max_guests: 1})
+site: 'Grand Canyon', location_name: "Grand Lilly", max_guests: 1, reviews: []})
 # spot2.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/index/Index_GrandCanyon_29.jpg"), filename: "Index_GrandCanyon_29.jpg")
 spot2.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/Grand+Canyon/grand_1.jpeg"), filename: "grand_1.jpeg")
 spot2.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/Grand+Canyon/grand_2.jpg"), filename: "grand_2.jpg")
@@ -43,7 +43,7 @@ spot2.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/
 spot2.save!
 
 spot3 = Spot.create!({host_id: jennie.id,
-site: 'Everglades National Park', location_name: "Lilly by the Glades", max_guests: 3})
+site: 'Everglades National Park', location_name: "Lilly by the Glades", max_guests: 3, reviews: []})
 # spot3.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/index/Index_Everglades_29.jpg"), filename: "Index_Everglades_29.jpg")
 spot3.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/Everglades/everglades_1.jpg"), filename: "everglades_1.jpg")
 spot3.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/Everglades/everglades_2.jpg"), filename: "everglades_2.jpg")
@@ -53,7 +53,7 @@ spot3.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/
 spot3.save!
 
 spot4 = Spot.create!({host_id: jennie.id,
-site: 'Glacier National Park', location_name: "Home of Lillies", max_guests: 2})
+site: 'Glacier National Park', location_name: "Home of Lillies", max_guests: 2, reviews: []})
 # spot4.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/index/Index_Glacier_29.jpg"), filename: "Index_Glacier_29.jpg")
 spot4.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/Glacier/glacier_1.jpg"), filename: "glacier_1.jpg")
 spot4.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/Glacier/glacier_2.jpg"), filename: "glacier_2.jpg")
@@ -63,7 +63,7 @@ spot4.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/
 spot4.save!
 
 spot5 = Spot.create!({host_id: jennie.id, 
-site: 'Zion National Park', location_name: "Lilly Abode", max_guests: 1})
+site: 'Zion National Park', location_name: "Lilly Abode", max_guests: 1, reviews: []})
 # spot5.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/index/Index_Zion_29.jpg"), filename: "Index_Zion_29.jpg")
 spot5.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/Zion/zion_1.jpg"), filename: "zion_1.jpg")
 spot5.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/Zion/zion_2.webp"), filename: "zion_2.webp")
@@ -73,7 +73,7 @@ spot5.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/
 spot5.save!
 
 spot6 = Spot.create!({host_id: jennie.id, 
-site: 'Angeles National Forest', location_name: "Cozy Pad", max_guests: 3})
+site: 'Angeles National Forest', location_name: "Cozy Pad", max_guests: 3, reviews: []})
 # spot6.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/index/Index_Angeles_29.jpg"), filename: "Index_Angeles_29.jpg")
 spot6.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/Angeles/angeles_1.jpeg"), filename: "angeles_1.jpeg")
 spot6.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/Angeles/angeles_2.jpg"), filename: "angeles_2.jpg")
@@ -83,7 +83,7 @@ spot6.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/
 spot6.save!
 
 spot7 = Spot.create!({host_id: jennie.id,
-site: 'Haleakala National Park', location_name: "Lanai Lilly", max_guests: 4})
+site: 'Haleakala National Park', location_name: "Lanai Lilly", max_guests: 4, reviews: []})
 # spot7.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/index/Index_Haleakala_29.jpg"), filename: "Index_Haleakala_29.jpg")
 spot7.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/haleakala/haleakala1.jpg"), filename: "haleakala1.jpg")
 spot7.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/haleakala/haleakala2.jpg"), filename: "haleakala2.jpg")
@@ -93,7 +93,7 @@ spot7.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/
 spot7.save!
 
 spot8 = Spot.create!({host_id: jennie.id, 
-site: 'Yellowstone National Park', location_name: "Amber lilly", max_guests: 2})
+site: 'Yellowstone National Park', location_name: "Amber lilly", max_guests: 2, reviews: []})
 # spot8.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/index/Index_Yellowstone_29.jpg"), filename: "Index_Yellowstone_29.jpg")
 spot8.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/Yellowstone/yellowstone1.jpg"), filename: "yellowstone1.jpg")
 spot8.photos.attach(io: open("https://lillypad-seeds.s3-us-west-1.amazonaws.com/Yellowstone/yellowstone2.jpg"), filename: "yellowstone2.jpg")

@@ -16,6 +16,8 @@ class SpotShow extends React.Component {
 
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
+
+    this.reviewSubmit = this.reviewSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -45,10 +47,20 @@ class SpotShow extends React.Component {
       modal.classList.remove("hidden")
   }
 
-  hideModal(e) {
-    e.preventDefault();
+  hideModal() {
     let modal = document.getElementById("review-modal");
       modal.classList.add("hidden")
+  }
+
+  update(field) {
+    return e => this.setState({ [field]: e.currentTarget.value })
+  }
+
+  reviewSubmit(e) {
+    e.preventDefault();
+    this.props.spot.reviews.push(this.state.spotReview);
+    this.props.updateSpot(this.props.spot);
+    this.hideModal();
   }
   
   render (){
@@ -60,11 +72,11 @@ class SpotShow extends React.Component {
     }
 
     let reviews;
-    if (spot.reviews){
+    if (spot.reviews.length > 0){
       reviews = <ul>
-                  spot.reviews.map((review, i) => (
-                    <li>review</li>
-                  ))
+                  {spot.reviews.map((review, i) => (
+                    <li key={`review-${i}`}>{review}</li>
+                  ))}
                 </ul>
 
     } else {
@@ -104,10 +116,18 @@ class SpotShow extends React.Component {
               <button onClick={this.showModal}>Write a review</button>
             </div>
 
-            <div id="review-modal" className="modal hidden">
+            <div id="review-modal" className="review-modal hidden">
               <h4>Review for {spot.location_name}</h4>
-              <textarea></textarea>
-              <button onClick={this.hideModal}>submit review</button>
+              <textarea 
+                id="spot-review"
+                value={this.props.spotReview}
+                rows="15"
+                cols="75"
+                onChange={this.update("spotReview")}
+                placeholder="Give us your review on this spot."
+              />
+              <br />
+              <button onClick={this.reviewSubmit}>submit review</button>
             </div>
 
             <div className="review-content">
