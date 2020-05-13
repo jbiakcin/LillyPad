@@ -7,10 +7,15 @@ import BookingForm from '../booking/booking_form';
 class SpotShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {showForm: false};
+    this.state = {
+      showForm: false
+    };
 
     this.showForm = this.showForm.bind(this);
     this.hideForm = this.hideForm.bind(this);
+
+    this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
   }
 
   componentDidMount() {
@@ -33,6 +38,18 @@ class SpotShow extends React.Component {
   hideForm() {
     this.setState({ showForm: false })
   }
+
+  showModal(e) {
+    e.preventDefault();
+    let modal = document.getElementById("review-modal");
+      modal.classList.remove("hidden")
+  }
+
+  hideModal(e) {
+    e.preventDefault();
+    let modal = document.getElementById("review-modal");
+      modal.classList.add("hidden")
+  }
   
   render (){
     const spot = this.props.spot;
@@ -40,6 +57,18 @@ class SpotShow extends React.Component {
       return (
         <h2>Loading</h2>
       )
+    }
+
+    let reviews;
+    if (spot.reviews){
+      reviews = <ul>
+                  spot.reviews.map((review, i) => (
+                    <li>review</li>
+                  ))
+                </ul>
+
+    } else {
+      reviews = <p>No reviews for this spot yet.</p>
     }
     
     return (
@@ -67,6 +96,25 @@ class SpotShow extends React.Component {
           <div>
             {this.state.showForm && < CreateBookingFormContainer hideForm={this.hideForm} currentUser={this.props.currentUser}/>}
           </div>
+
+          <div className="reviews">
+
+            <div className="review-header">
+              <h2>Reviews:</h2>
+              <button onClick={this.showModal}>Write a review</button>
+            </div>
+
+            <div id="review-modal" className="modal hidden">
+              <h4>Review for {spot.location_name}</h4>
+              <textarea></textarea>
+              <button onClick={this.hideModal}>submit review</button>
+            </div>
+
+            <div className="review-content">
+              {reviews}
+            </div>
+          </div>
+
           <div className="things-to-do">
             <h2><i className="fas fa-list-alt"></i>&nbsp;&nbsp; Things to do in the area:</h2>
             <ul className="things-to-do-list">
@@ -78,10 +126,6 @@ class SpotShow extends React.Component {
             </ul>
           </div>
 
-          <div className="reviews">
-            <h2>Reviews:</h2>
-            <p>No reviews for this spot yet.</p>
-          </div>
         </div>
       </main>
     );

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_13_064550) do
+ActiveRecord::Schema.define(version: 2020_05_13_185737) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 2020_03_13_064550) do
     t.integer "max_guests"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "reviews"
     t.index ["host_id"], name: "index_spots_on_host_id"
     t.index ["site"], name: "index_spots_on_site", unique: true
   end
