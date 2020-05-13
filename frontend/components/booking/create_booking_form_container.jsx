@@ -12,7 +12,7 @@ const mSP = ({entities, session, errors}, ownProps) => {
       arrival_date: null,
       departure_date: null,
       num_travelers: 1,
-      hopper_id: currentUser.id,
+      hopper_id: entities.users[session.id].id,
       message: ''
     },
     errors: errors.session,
