@@ -42,9 +42,8 @@ class Api::SpotsController < ApplicationController
   def search
     search_arr = params[:site].split(" ")
     @results = []
-
     search_arr.each do |part|
-      @results = Spot.all.where("site LIKE '%#{part}%'")
+      @results = Spot.all.where("lower(site) LIKE '%#{part.downcase}%'")
     end
     
     render :search

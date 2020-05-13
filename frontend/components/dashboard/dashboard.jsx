@@ -32,7 +32,7 @@ class DashBoard extends React.Component {
             <div className="verified">
               <div className="verified-header">MY PROFILE</div>
               <ul className="profile">
-                <li key="portfolio" className="profile-portfolio"><a href="https://jbiakcin.com"><i class="fas fa-user"></i>&nbsp;&nbsp;Portfolio</a></li>
+                <li key="portfolio" className="profile-portfolio"><a href="https://jbiakcin.com"><i className="fas fa-user"></i>&nbsp;&nbsp;Portfolio</a></li>
                 <li key="github" className="profile-github"><a href="https://github.com/jbiakcin"><i className="fab fa-github"></i>&nbsp;&nbsp;GitHub</a></li>
                 <li key="linkedin" className="profile-linkedin"><a href="https://www.linkedin.com/in/jennie-richardson-1531881a5/"><i className="fab fa-linkedin"></i>&nbsp;&nbsp;LinkedIn</a></li>
                 <li key="angellist" className="profile-angelist"><a href="https://angel.co/u/jennie-richardson"><i className="fab fa-angellist"></i>&nbsp;&nbsp;AngelList</a></li>
