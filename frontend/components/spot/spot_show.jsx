@@ -8,7 +8,8 @@ class SpotShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showForm: false
+      showForm: false,
+      spotReview: ''
     };
 
     this.showForm = this.showForm.bind(this);
@@ -18,6 +19,8 @@ class SpotShow extends React.Component {
     this.hideModal = this.hideModal.bind(this);
 
     this.reviewSubmit = this.reviewSubmit.bind(this);
+
+    this.update = this.update.bind(this);
   }
 
   componentDidMount() {
@@ -53,12 +56,13 @@ class SpotShow extends React.Component {
   }
 
   update(field) {
-    return e => this.setState({ [field]: e.currentTarget.value })
+    return e => this.setState({ [field]: e.currentTarget.value });
   }
 
   reviewSubmit(e) {
     e.preventDefault();
-    this.props.spot.reviews.push(this.state.spotReview);
+    let review = { content: this.state.spotReview, user: this.props.currentUser};
+    this.props.spot.reviews.push(review);
     this.props.updateSpot(this.props.spot);
     this.hideModal();
   }
@@ -73,9 +77,12 @@ class SpotShow extends React.Component {
 
     let reviews;
     if (spot.reviews.length > 0){
-      reviews = <ul>
+      reviews = <ul className="reviews-ul">
                   {spot.reviews.map((review, i) => (
-                    <li key={`review-${i}`}>{review}</li>
+                    <li key={`review-${i}`}>
+                      {/* <p>Reviewed by: {review.user.first_name} {review.user.last_name}</p> */}
+                      <p>{review.content}</p>
+                    </li>
                   ))}
                 </ul>
 
@@ -120,10 +127,10 @@ class SpotShow extends React.Component {
               <h4>Review for {spot.location_name}</h4>
               <textarea 
                 id="spot-review"
-                value={this.props.spotReview}
+                value={this.state.spotReview}
                 rows="15"
                 cols="75"
-                onChange={this.update("spotReview")}
+                onChange={this.update(`spotReview`)}
                 placeholder="Give us your review on this spot."
               />
               <br />

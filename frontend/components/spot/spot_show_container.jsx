@@ -9,17 +9,18 @@ const mSP = ({entities, session}, ownProps) => {
   const spot = entities.spots[ownProps.match.params.spotId];
   return {
     spot,
-    currentUser: entities.users[session.id],
-    spotReview: undefined
+    currentUser: entities.users[session.id]
   };
 };
 
-const mDP = dispatch => ({
+const mDP = dispatch => {
+  return {
   fetchSpot: spotId => dispatch(fetchSpot(spotId)),
   fetchUsers: () => dispatch(fetchUsers()),
   logout: () => dispatch(logout()),
   findSpots: site => dispatch(findSpots(site)),
   updateSpot: (spot) => dispatch(updateSpot(spot))
-});
+  }
+};
 
 export default (connect(mSP, mDP)(spotShow));
