@@ -52,6 +52,6 @@ class Api::SpotsController < ApplicationController
 
   private
   def spot_params
-    params.require(:spot).permit(:host_id, :site, :location_name, :max_guests, {reviews: [:content, :user]}, photos: [])
+    params.require(:spot).permit(:host_id, :site, :location_name, :max_guests, photos: [])
   end
 end

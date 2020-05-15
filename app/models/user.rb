@@ -30,6 +30,11 @@ class User < ApplicationRecord
   foreign_key: :hopper_id,
   primary_key: :id
 
+  has_many :reviews,
+  class_name: :Review,
+  foreign_key: :reviewer_id,
+  primary_key: :id
+
   after_initialize :ensure_session_token
 
   attr_reader :password

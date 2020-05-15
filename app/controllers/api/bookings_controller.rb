@@ -1,5 +1,4 @@
 class Api::BookingsController < ApplicationController
-  # before_action :require_logged_in, only: [:create, :update, :destroy]
 
   def index
     @bookings = current_user.bookings.includes(:spot).all

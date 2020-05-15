@@ -9,12 +9,10 @@
 #  max_guests    :integer
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
-#  reviews       :text
 #
 class Spot < ApplicationRecord
   validates :host_id, :site, :location_name, presence: true
   validates :site, uniqueness: true
-  serialize :reviews, Array
 
   belongs_to :host,
   class_name: :User,
@@ -29,6 +27,15 @@ class Spot < ApplicationRecord
   has_many :hoppers,
   through: :bookings,
   source: :hopper
+
+  has_many :reviews,
+  class_name: :Review,
+  foreign_key: :review_id,
+  primary_key: :id
+
+  has_many :reviewers,
+  through: :reviews,
+  source: :reviewer
 
   has_many_attached :photos
 end

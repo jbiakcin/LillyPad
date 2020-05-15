@@ -59,15 +59,15 @@ class SpotShow extends React.Component {
     return e => this.setState({ [field]: e.currentTarget.value });
   }
 
-  reviewSubmit(e) {
-    e.preventDefault();
-    let review = { content: this.state.spotReview, user: this.props.currentUser.first_name};
-    // Object.assign(this.props.spot.reviews, review);
-    debugger;
-    this.props.spot.reviews.push(review);
-    this.props.updateSpot(this.props.spot);
-    this.hideModal();
-  }
+  // reviewSubmit(e) {
+  //   e.preventDefault();
+  //   let review = { content: this.state.spotReview, user: this.props.currentUser.first_name};
+  //   // Object.assign(this.props.spot.reviews, review);
+  //   debugger;
+  //   this.props.spot.reviews.push(review);
+  //   this.props.updateSpot(this.props.spot);
+  //   this.hideModal();
+  // }
   
   render (){
     const spot = this.props.spot;
@@ -77,20 +77,20 @@ class SpotShow extends React.Component {
       )
     }
 
-    let reviews;
-    if (spot.reviews.length > 0){
-      reviews = <ul className="reviews-ul">
-                  {spot.reviews.map((review, i) => (
-                    <li key={`review-${i}`}>
-                      {/* <p>Reviewed by: {review.user.first_name} {review.user.last_name}</p> */}
-                      <p>{review.content}</p>
-                    </li>
-                  ))}
-                </ul>
+    // let reviews;
+    // if (spot.reviews.length > 0){
+    //   reviews = <ul className="reviews-ul">
+    //               {spot.reviews.map((review, i) => (
+    //                 <li key={`review-${i}`}>
+    //                   {/* <p>Reviewed by: {review.user.first_name} {review.user.last_name}</p> */}
+    //                   <p>{review.content}</p>
+    //                 </li>
+    //               ))}
+    //             </ul>
 
-    } else {
-      reviews = <p>No reviews for this spot yet.</p>
-    }
+    // } else {
+    //   reviews = <p>No reviews for this spot yet.</p>
+    // }
     
     return (
       <main className="spot-show-main">
@@ -109,7 +109,6 @@ class SpotShow extends React.Component {
                 <img className="spot-show-pix-indiv" key={i} src={url} />
               ))}
             </div>
-            {/* <Link to={`/spots/${spot.id}/bookings/new`} className="booking-button"><p>Book this spot!</p></Link> */}
             <button className="booking-button" onClick={this.showForm}>Book this spot!</button>
             <br/>
             <Link to="/" className="back-to-link">Back to all spots</Link>

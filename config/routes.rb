@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :reviews
   namespace :api, defaults: {format: :json} do
     resources :users do
       resources :bookings, only: [:index]

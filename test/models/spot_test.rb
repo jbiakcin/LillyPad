@@ -9,7 +9,6 @@
 #  max_guests    :integer
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
-#  reviews       :text
 #
 require 'test_helper'
 
