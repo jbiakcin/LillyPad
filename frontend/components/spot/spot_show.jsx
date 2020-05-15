@@ -61,7 +61,9 @@ class SpotShow extends React.Component {
 
   reviewSubmit(e) {
     e.preventDefault();
-    let review = { content: this.state.spotReview, user: this.props.currentUser};
+    let review = { content: this.state.spotReview, user: this.props.currentUser.first_name};
+    // Object.assign(this.props.spot.reviews, review);
+    debugger;
     this.props.spot.reviews.push(review);
     this.props.updateSpot(this.props.spot);
     this.hideModal();

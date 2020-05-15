@@ -9,11 +9,12 @@
 #  max_guests    :integer
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
-#  reviews       :text             default("{}"), is an Array
+#  reviews       :text
 #
 class Spot < ApplicationRecord
   validates :host_id, :site, :location_name, presence: true
   validates :site, uniqueness: true
+  serialize :reviews, Array
 
   belongs_to :host,
   class_name: :User,

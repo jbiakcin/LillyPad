@@ -9,7 +9,7 @@
 #  max_guests    :integer
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
-#  reviews       :text             default("{}"), is an Array
+#  reviews       :text
 #
 require 'test_helper'
 
