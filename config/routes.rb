@@ -8,8 +8,10 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :spots, only: [:index, :show, :update] do
       resources :bookings, only: [:create]
+      resources :reviews, only: [:create]
     end
     resources :bookings, only: [:update, :destroy, :show]
+    resources :reviews, only: [:index, :update, :destroy, :show]
 
     # get '/search' => 'spots#search', :as => 'search_page'
     get 'search', to: 'spots#search'

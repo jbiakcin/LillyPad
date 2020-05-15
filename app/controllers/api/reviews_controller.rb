@@ -1,5 +1,14 @@
 class ReviewsController < ApplicationController
 
+  def index
+    @reviews = current_user.reviews.includes(:spot).all
+    render :index
+  end
+
+  def show
+    @review = current_user.reviews.includes(:spot).find(params[:id])
+  end
+
   def create
     @review = Review.new(review_params)
     if @review.save

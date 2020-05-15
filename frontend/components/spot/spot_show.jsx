@@ -18,9 +18,7 @@ class SpotShow extends React.Component {
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
 
-    this.reviewSubmit = this.reviewSubmit.bind(this);
-
-    this.update = this.update.bind(this);
+    // this.reviewSubmit = this.reviewSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -135,11 +133,11 @@ class SpotShow extends React.Component {
                 placeholder="Give us your review on this spot."
               />
               <br />
-              <button onClick={this.reviewSubmit}>submit review</button>
+              {/* <button onClick={this.reviewSubmit}>submit review</button> */}
             </div>
 
             <div className="review-content">
-              {reviews}
+              {/* {reviews} */}
             </div>
           </div>
 
