@@ -9,6 +9,7 @@ import { RECEIVE_REVIEWS } from '../actions/review_actions';
 const SpotsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
+    case RECEIVE_REVIEWS:
     case RECEIVE_SPOTS:
       return Object.assign({}, state, action.spots);
     case RECEIVE_BOOKING:

@@ -1,12 +1,13 @@
 class Api::ReviewsController < ApplicationController
 
   def index
-    @reviews = current_user.reviews.includes(:spot).all
+    @reviews = Review.all
     render :index
   end
 
   def show
     @review = current_user.reviews.includes(:spot).find(params[:id])
+    render :show
   end
 
   def create

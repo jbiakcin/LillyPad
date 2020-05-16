@@ -5,7 +5,6 @@ import {withRouter} from 'react-router-dom';
 class ReviewIndex extends React.Component {
 
   render() {
-    debugger;
     let deleteReview = this.props.deleteReview;
     let spot = this.props.spot;
     let allReviews = this.props.allReviews;
@@ -35,4 +34,4 @@ class ReviewIndex extends React.Component {
   }
 }
 
-export default ReviewIndex;
+export default withRouter(ReviewIndex);

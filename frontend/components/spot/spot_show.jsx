@@ -99,7 +99,7 @@ class SpotShow extends React.Component {
             </div>
 
             <div className="review-index">
-              <ReviewIndexContainer/>
+              {/* <ReviewIndexContainer/> */}
             </div>
 
             <div id="review-modal" className="review-modal hidden">

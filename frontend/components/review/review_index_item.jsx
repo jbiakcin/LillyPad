@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const ReviewIndexItem = props => {
-  debugger;
   const {review, spot, allUsers, deleteReview, currentUserId} = props;
   let reviewer = allUsers.filter(user => user.id === review.reviewer_id)[0]
 

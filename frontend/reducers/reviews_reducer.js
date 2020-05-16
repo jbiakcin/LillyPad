@@ -3,14 +3,14 @@ import {
   RECEIVE_REVIEW,
   REMOVE_REVIEW
 } from '../actions/review_actions';
-import {RECEIVE_SPOTS} from '../actions/spot_actions';
+import {RECEIVE_SPOTS, RECEIVE_SPOT} from '../actions/spot_actions';
 import { RECEIVE_BOOKINGS, REMOVE_BOOKING } from '../actions/booking_actions';
 
 const ReviewsReducer = (state = {}, action) => {
   Object.freeze(state);
 
   switch(action.type) {
-    case RECEIVE_SPOTS:
+    case RECEIVE_SPOT:
     case RECEIVE_REVIEWS:
       return Object.assign({}, state, action.reviews);
     case RECEIVE_REVIEW:

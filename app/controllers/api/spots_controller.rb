@@ -2,12 +2,12 @@ class Api::SpotsController < ApplicationController
   # before_action :require_logged_in, only: [:create, :update, :destroy]
   
   def index
-    @spots = Spot.includes(:host, :bookings, photos_attachments: :blob).all
+    @spots = Spot.includes(:host, :bookings, :reviews, photos_attachments: :blob).all
     render :index
   end
 
   def show
-    @spot = Spot.includes(:host).with_attached_photos.find(params[:id])
+    @spot = Spot.includes(:host, :reviews).with_attached_photos.find(params[:id])
   end
 
   def create

@@ -30,7 +30,7 @@ class Spot < ApplicationRecord
 
   has_many :reviews,
   class_name: :Review,
-  foreign_key: :review_id,
+  foreign_key: :spot_id,
   primary_key: :id
 
   has_many :reviewers,

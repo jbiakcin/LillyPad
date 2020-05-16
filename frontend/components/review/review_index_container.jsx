@@ -3,7 +3,6 @@ import ReviewIndex from './review_index';
 import {fetchUserReviews, updateReview, deleteReview} from '../../actions/review_actions';
 
 const mSP = state => {
-  debugger;
   return {
     allReviews: Object.values(state.entities.reviews),
     allUsers: Object.values(state.entities.users),

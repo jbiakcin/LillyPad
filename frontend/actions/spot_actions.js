@@ -3,17 +3,21 @@ export const RECEIVE_SPOTS = "RECEIVE_SPOTS";
 export const RECEIVE_SPOT = "RECEIVE_SPOT";
 export const REMOVE_SPOT = "REMOVE_SPOT";
 
-const receiveSpots = payload => ({
-  type: RECEIVE_SPOTS,
-  spots: payload.spots,
-  users: payload.users,
-  bookings: payload.bookings
-});
+const receiveSpots = payload => {
+  return {
+    type: RECEIVE_SPOTS,
+    spots: payload.spots,
+    users: payload.users,
+    bookings: payload.bookings,
+    reviews: payload.reviews
+  }
+};
 
 const receiveSpot = payload => ({
   type: RECEIVE_SPOT,
   spot: payload.spot,
-  user: payload.user
+  user: payload.user,
+  reviews: payload.reviews
 });
 
 const removeSpot = spotId => ({
