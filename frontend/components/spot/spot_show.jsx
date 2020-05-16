@@ -2,14 +2,15 @@ import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import DashboardHeader from '../dashboard/dashboard_header';
 import CreateBookingFormContainer from '../booking/create_booking_form_container';
-import BookingForm from '../booking/booking_form';
+import CreateReviewContainer from '../review/create_review_container';
+import ReviewIndexContainer from '../review/review_index_container';
+import ReviewIndexItem from '../review/review_index_item';
 
 class SpotShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showForm: false,
-      spotReview: ''
+      showForm: false
     };
 
     this.showForm = this.showForm.bind(this);
@@ -17,12 +18,12 @@ class SpotShow extends React.Component {
 
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
-
-    // this.reviewSubmit = this.reviewSubmit.bind(this);
   }
 
   componentDidMount() {
-    this.props.fetchSpot(this.props.match.params.spotId)
+    this.props.fetchSpot(this.props.match.params.spotId);
+    this.props.fetchAllReviews();
+    this.props.fetchUsers();
   }
 
   componentDidUpdate(prevProps) {
@@ -56,16 +57,6 @@ class SpotShow extends React.Component {
   update(field) {
     return e => this.setState({ [field]: e.currentTarget.value });
   }
-
-  // reviewSubmit(e) {
-  //   e.preventDefault();
-  //   let review = { content: this.state.spotReview, user: this.props.currentUser.first_name};
-  //   // Object.assign(this.props.spot.reviews, review);
-  //   debugger;
-  //   this.props.spot.reviews.push(review);
-  //   this.props.updateSpot(this.props.spot);
-  //   this.hideModal();
-  // }
   
   render (){
     const spot = this.props.spot;
@@ -75,21 +66,6 @@ class SpotShow extends React.Component {
       )
     }
 
-    // let reviews;
-    // if (spot.reviews.length > 0){
-    //   reviews = <ul className="reviews-ul">
-    //               {spot.reviews.map((review, i) => (
-    //                 <li key={`review-${i}`}>
-    //                   {/* <p>Reviewed by: {review.user.first_name} {review.user.last_name}</p> */}
-    //                   <p>{review.content}</p>
-    //                 </li>
-    //               ))}
-    //             </ul>
-
-    // } else {
-    //   reviews = <p>No reviews for this spot yet.</p>
-    // }
-    
     return (
       <main className="spot-show-main">
         <div><DashboardHeader logout={this.props.logout} findSpots={this.props.findSpots}/></div>
@@ -112,7 +88,7 @@ class SpotShow extends React.Component {
             <Link to="/" className="back-to-link">Back to all spots</Link>
           </div>
           <div>
-            {this.state.showForm && < CreateBookingFormContainer hideForm={this.hideForm} currentUser={this.props.currentUser}/>}
+            {this.state.showForm && <CreateBookingFormContainer hideForm={this.hideForm} currentUser={this.props.currentUser}/>}
           </div>
 
           <div className="reviews">
@@ -122,23 +98,16 @@ class SpotShow extends React.Component {
               <button onClick={this.showModal}>Write a review</button>
             </div>
 
-            <div id="review-modal" className="review-modal hidden">
-              <h4>Review for {spot.location_name}</h4>
-              <textarea 
-                id="spot-review"
-                value={this.state.spotReview}
-                rows="15"
-                cols="75"
-                onChange={this.update(`spotReview`)}
-                placeholder="Give us your review on this spot."
-              />
-              <br />
-              {/* <button onClick={this.reviewSubmit}>submit review</button> */}
+            <div className="review-index">
+              <ReviewIndexContainer/>
             </div>
 
-            <div className="review-content">
-              {/* {reviews} */}
+            <div id="review-modal" className="review-modal hidden">
+              <div className="review-content">
+                <CreateReviewContainer hideModal={this.hideModal} currentUser={this.props.currentUser}/>
+              </div>
             </div>
+
           </div>
 
           <div className="things-to-do">

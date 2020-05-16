@@ -11,6 +11,8 @@ import SpotShowContainer from '../components/spot/spot_show_container';
 import EditBookingFormContainer from '../components/booking/edit_booking_form_container';
 import CreateBookingFormContainer from '../components/booking/create_booking_form_container';
 import BookingShowContainer from '../components/booking/booking_show_container';
+import EditReviewContainer from '../components/review/edit_review_container';
+import CreateReviewContainer from '../components/review/create_review_container';
 import SearchContainer from '../components/search/search_container';
 
 const App = () =>(

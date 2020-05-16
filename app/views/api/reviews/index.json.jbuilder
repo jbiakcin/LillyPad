@@ -3,4 +3,5 @@ json.reviews do
     json.set! review.id do
       json.partial! 'review', review: review
     end
+  end
 end

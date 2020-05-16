@@ -4,6 +4,7 @@ import {
   REMOVE_SPOT
 } from '../actions/spot_actions';
 import { RECEIVE_BOOKING } from '../actions/booking_actions';
+import { RECEIVE_REVIEWS } from '../actions/review_actions';
 
 const SpotsReducer = (state = {}, action) => {
   Object.freeze(state);

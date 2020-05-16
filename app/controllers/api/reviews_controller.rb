@@ -1,4 +1,4 @@
-class ReviewsController < ApplicationController
+class Api::ReviewsController < ApplicationController
 
   def index
     @reviews = current_user.reviews.includes(:spot).all
