@@ -2,18 +2,19 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const ReviewIndexItem = props => {
-  const {review, spot, allUsers, deleteReview, currentUserId} = props;
+  const {review, allUsers, currentUserId} = props;
   let reviewer = allUsers.filter(user => user.id === review.reviewer_id)[0]
 
+
   let update;
-  if (currentUserId === reviewer.id) {
-    update = <div className="review-index-item-update">
-      <button className="review-index-item-edit">Edit</button>
-      <button className="review-index-item-delete" onClick={deleteReview(review.id)}>Delete</button>
-    </div>
-  } else {
-    update = null;
-  }
+if (currentUserId === reviewer.id) {
+  update = <div className="review-index-item-update">
+    <Link to={`/reviews/${review.id}/edit`}><button className="review-index-item-edit">Edit</button></Link>
+    {/* <button className="review-index-item-delete" onClick={deleteReview(review.id)}>Delete</button> */}
+  </div>
+} else {
+  update = null;
+}
   return (
     <div>
 
@@ -22,10 +23,13 @@ const ReviewIndexItem = props => {
         <p>{review.content}</p>
       </div>
 
-      {update}
+      <div>
+        {update}
+      </div>
 
     </div>
   )
 }
 
 export default ReviewIndexItem;
+

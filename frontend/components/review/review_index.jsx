@@ -5,19 +5,19 @@ import {withRouter} from 'react-router-dom';
 class ReviewIndex extends React.Component {
 
   render() {
-    let deleteReview = this.props.deleteReview;
     let spot = this.props.spot;
     let allReviews = this.props.allReviews;
     let allUsers = this.props.allUsers;
+    let updateReview = this.props.updateReview;
+    let currentUserId = this.props.currentUserId;
     let spotReviews = allReviews.filter(review => review.spot_id === spot.id);
     let reviews;
-    let currentUserId = this.props.currentUserId;
 
     if (spotReviews) {
       reviews = <ul className="reviews-ul">
         {spotReviews.map((review, i) => (
           <li key={`review-${i}`}>
-            <ReviewIndexItem spot={spot} review={review} currentUserId={currentUserId} allUsers={allUsers} deleteReview={deleteReview}/>
+            <ReviewIndexItem spot={spot} review={review} allUsers={allUsers} updateReview={updateReview} currentUserId={currentUserId}/>
           </li>
         ))}
       </ul>

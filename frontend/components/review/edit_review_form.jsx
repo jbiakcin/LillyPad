@@ -4,14 +4,30 @@ import {withRouter} from 'react-router-dom';
 
 class EditReviewForm extends React.Component{
 
-  componentDidMount() {
-    this.props.fetchReview(this.props.match.params.reviewId)
+  componentWillMount() {
+    this.props.fetchReview(this.props.reviewId);
+    this.props.fetchAllReviews();
   }
+  // componentDidMount() {
+  //   this.props.fetchReview(this.props.reviewId);
+  //   this.props.fetchAllReviews();
+  // }
 
   render () {
+    
+    let {reviewId, processForm, updateReview, formType} = this.props;
+    if (!reviewId) return null;
+
+    debugger;
     return (
-      <ReviewForm/>
-    )
+      null
+      // <ReviewForm
+      //   review={review}
+      //   updateReview={updateReview}
+      //   formType={formType}
+      //   processForm={processForm}
+      // />
+    );
   }
 
 }

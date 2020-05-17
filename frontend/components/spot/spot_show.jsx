@@ -4,7 +4,6 @@ import DashboardHeader from '../dashboard/dashboard_header';
 import CreateBookingFormContainer from '../booking/create_booking_form_container';
 import CreateReviewContainer from '../review/create_review_container';
 import ReviewIndexContainer from '../review/review_index_container';
-import ReviewIndexItem from '../review/review_index_item';
 
 class SpotShow extends React.Component {
   constructor(props) {
@@ -99,7 +98,7 @@ class SpotShow extends React.Component {
             </div>
 
             <div className="review-index">
-              {/* <ReviewIndexContainer/> */}
+              <ReviewIndexContainer/>
             </div>
 
             <div id="review-modal" className="review-modal hidden">

@@ -5,7 +5,7 @@ export const fetchAllReviews = () => (
   })
 );
 
-export const fetchReview = () => (
+export const fetchReview = (reviewId) => (
   $.ajax({
     url: `/api/reviews/${reviewId}`,
     method: `GET`
