@@ -11,7 +11,7 @@ const mSP = ({entities, session, errors}, ownProps) => {
       content: ''
     },
     errors: errors.session,
-    formType: 'SUBMIT'
+    formType: 'Submit'
   }
 };
 

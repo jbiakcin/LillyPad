@@ -4,6 +4,10 @@ import {withRouter} from 'react-router-dom';
 
 class ReviewIndex extends React.Component {
 
+  componentDidMount() {
+    this.props.fetchAllReviews();
+  }
+
   render() {
     let spot = this.props.spot;
     let allReviews = this.props.allReviews;
@@ -11,9 +15,9 @@ class ReviewIndex extends React.Component {
     let updateReview = this.props.updateReview;
     let currentUserId = this.props.currentUserId;
     let spotReviews = allReviews.filter(review => review.spot_id === spot.id);
+    
     let reviews;
-
-    if (spotReviews) {
+    if (spotReviews.length > 0) {
       reviews = <ul className="reviews-ul">
         {spotReviews.map((review, i) => (
           <li key={`review-${i}`}>

@@ -1,32 +1,32 @@
 import React from 'react';
 import ReviewForm from './review_form';
-import {withRouter} from 'react-router-dom';
+import {withRouter, useParams} from 'react-router-dom';
+import { deleteReview } from '../../util/review_api_util';
 
 class EditReviewForm extends React.Component{
 
-  componentWillMount() {
-    this.props.fetchReview(this.props.reviewId);
+  constructor(props){
+    super(props);
+  }
+
+  componentDidMount() {
+    this.props.fetchReview(this.props.review.id);
     this.props.fetchAllReviews();
   }
-  // componentDidMount() {
-  //   this.props.fetchReview(this.props.reviewId);
-  //   this.props.fetchAllReviews();
-  // }
 
   render () {
-    
-    let {reviewId, processForm, updateReview, formType} = this.props;
-    if (!reviewId) return null;
-
-    debugger;
+    let {review, processForm, updateReview, formType, spot, currentUser, deleteReview} = this.props;
+    if (!review) return null;
     return (
-      null
-      // <ReviewForm
-      //   review={review}
-      //   updateReview={updateReview}
-      //   formType={formType}
-      //   processForm={processForm}
-      // />
+      <ReviewForm
+        review={review}
+        updateReview={updateReview}
+        formType={formType}
+        processForm={processForm}
+        spot={spot}
+        currentUser={currentUser}
+        deleteReview={deleteReview}
+      />
     );
   }
 

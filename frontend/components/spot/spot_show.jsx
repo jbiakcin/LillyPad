@@ -21,7 +21,6 @@ class SpotShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchSpot(this.props.match.params.spotId);
-    this.props.fetchAllReviews();
     this.props.fetchUsers();
   }
 
@@ -64,7 +63,7 @@ class SpotShow extends React.Component {
         <h2>Loading</h2>
       )
     }
-
+    const currentUserId = this.props.currentUser.id;
     return (
       <main className="spot-show-main">
         <div><DashboardHeader logout={this.props.logout} findSpots={this.props.findSpots}/></div>
@@ -98,7 +97,7 @@ class SpotShow extends React.Component {
             </div>
 
             <div className="review-index">
-              <ReviewIndexContainer/>
+              <ReviewIndexContainer spot={spot} currentUserId={currentUserId}/>
             </div>
 
             <div id="review-modal" className="review-modal hidden">

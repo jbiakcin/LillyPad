@@ -1,16 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import EditReviewContainer from '../review/edit_review_container'
 
 const ReviewIndexItem = props => {
   const {review, allUsers, currentUserId} = props;
   let reviewer = allUsers.filter(user => user.id === review.reviewer_id)[0]
 
-
   let update;
 if (currentUserId === reviewer.id) {
   update = <div className="review-index-item-update">
-    <Link to={`/reviews/${review.id}/edit`}><button className="review-index-item-edit">Edit</button></Link>
-    {/* <button className="review-index-item-delete" onClick={deleteReview(review.id)}>Delete</button> */}
+    <Link to={`/reviews/${review.id}/edit`}><button className="review-index-item-edit">Edit/Delete</button></Link>
   </div>
 } else {
   update = null;
