@@ -9,20 +9,20 @@ const ReviewIndexItem = props => {
   let update;
 if (currentUserId === reviewer.id) {
   update = <div className="review-index-item-update">
-    <Link to={`/reviews/${review.id}/edit`}><button className="review-index-item-edit">Edit/Delete</button></Link>
+    <Link to={`/reviews/${review.id}/edit`}><button className="review-index-item-edit">Edit / Delete</button></Link>
   </div>
 } else {
   update = null;
 }
   return (
-    <div>
+    <div className="review-index-item">
 
       <div className="review-index-item-main">
         <p>Reviewed by: {reviewer.first_name} {reviewer.last_name}</p>
         <p>{review.content}</p>
       </div>
 
-      <div>
+      <div className="review-index-item-update-container">
         {update}
       </div>
 

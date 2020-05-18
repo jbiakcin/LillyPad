@@ -96,12 +96,12 @@ class SpotShow extends React.Component {
               <button onClick={this.showModal}>Write a review</button>
             </div>
 
-            <div className="review-index">
-              <ReviewIndexContainer spot={spot} currentUserId={currentUserId}/>
+            <div className="review-index-container">
+              <ReviewIndexContainer spot={spot} currentUserId={currentUserId} hideModal={this.hideModal}/>
             </div>
 
             <div id="review-modal" className="review-modal hidden">
-              <div className="review-content">
+              <div className="review-container">
                 <CreateReviewContainer hideModal={this.hideModal} currentUser={this.props.currentUser}/>
               </div>
             </div>

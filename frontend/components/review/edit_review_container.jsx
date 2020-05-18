@@ -5,6 +5,7 @@ import EditReviewForm from './edit_review_form';
 const mSP = (state, ownProps) => {
   const reviewId = ownProps.match.params.reviewId;
   const review = state.entities.reviews[reviewId];
+  debugger;
   let spot;
   let currentUser;
   if (review) {

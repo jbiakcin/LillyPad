@@ -1,7 +1,6 @@
 import React from 'react';
 import ReviewForm from './review_form';
-import {withRouter, useParams} from 'react-router-dom';
-import { deleteReview } from '../../util/review_api_util';
+import {withRouter} from 'react-router-dom';
 
 class EditReviewForm extends React.Component{
 
@@ -10,23 +9,28 @@ class EditReviewForm extends React.Component{
   }
 
   componentDidMount() {
-    this.props.fetchReview(this.props.review.id);
-    this.props.fetchAllReviews();
+    this.props.fetchAllReviews()
+    .then(() =>this.props.fetchReview(this.props.review.id));
+    debugger;
   }
 
   render () {
     let {review, processForm, updateReview, formType, spot, currentUser, deleteReview} = this.props;
     if (!review) return null;
     return (
-      <ReviewForm
-        review={review}
-        updateReview={updateReview}
-        formType={formType}
-        processForm={processForm}
-        spot={spot}
-        currentUser={currentUser}
-        deleteReview={deleteReview}
-      />
+      <div className="review-modal">
+        <div className="edit-review-container">
+          <ReviewForm
+            review={review}
+            updateReview={updateReview}
+            formType={formType}
+            processForm={processForm}
+            spot={spot}
+            currentUser={currentUser}
+            deleteReview={deleteReview}
+          />
+        </div>
+      </div>
     );
   }
 
