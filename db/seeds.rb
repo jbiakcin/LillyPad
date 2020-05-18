@@ -10,6 +10,7 @@ require 'open-uri'
 User.destroy_all
 Spot.destroy_all
 Booking.destroy_all
+Review.destroy_all
 
 demo_user= User.create!({first_name: 'Jennie', last_name: 'Richardson', email: 'abc@abc.com', password: 'hunter12', gender: 'Female', city: 'San Francisco', age: 23})
 

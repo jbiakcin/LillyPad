@@ -14,7 +14,6 @@ class ReviewIndex extends React.Component {
     let allUsers = this.props.allUsers;
     let updateReview = this.props.updateReview;
     let currentUserId = this.props.currentUserId;
-    debugger;
     let spotReviews = allReviews.filter(review => review.spot_id === spot.id);
     
     let reviews;

@@ -60,10 +60,16 @@
   padding: 10px;
 }
 
+.review-index-item-reviewer {
+  display: flex;
+  flex-direction: row;
+}
+
 .review-index-item-update-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   width: 25%;
 }
 
