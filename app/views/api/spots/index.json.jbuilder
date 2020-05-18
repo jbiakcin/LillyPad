@@ -10,7 +10,7 @@ end
 json.users do
   @spots.map(&:host).each do |host|
     json.set! host.id do
-      json.extract! host, :id, :first_name, :last_name, :email
+      json.extract! host, :id, :first_name, :last_name, :email, :age, :city, :gender
     end
   end
 end

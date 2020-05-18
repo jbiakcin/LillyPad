@@ -1,4 +1,4 @@
-export const signup = ({firstName, lastName, password, email}) => {
+export const signup = ({firstName, lastName, password, email, age, city, gender}) => {
 
   return $.ajax({
     url: '/api/users',
@@ -8,7 +8,10 @@ export const signup = ({firstName, lastName, password, email}) => {
         email,
         password,
         first_name: firstName,
-        last_name: lastName
+        last_name: lastName,
+        city: city,
+        age: age,
+        gender: gender
       }
     }
   })
