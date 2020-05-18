@@ -4,6 +4,7 @@ import DashBoard from './dashboard';
 import { fetchUserBookings } from '../../actions/booking_actions';
 import {fetchSpots} from '../../actions/spot_actions';
 import {findSpots} from '../../actions/search_actions';
+import {fetchUsers} from '../../actions/user_actions';
 
 const mSP = ({session, errors, entities: {users}}) => {
   return {
@@ -17,7 +18,8 @@ const mDP = dispatch => {
     logout: () => dispatch(logout()),
     fetchUserBookings: () => dispatch(fetchUserBookings()),
     fetchSpots: () => dispatch(fetchSpots()),
-    findSpots: (site) => dispatch(findSpots(site))
+    findSpots: (site) => dispatch(findSpots(site)),
+    fetchUsers: () => dispatch(fetchUsers())
   };
 };
 

@@ -8,6 +8,7 @@ class DashBoard extends React.Component {
 
   componentDidMount() {
     this.props.fetchSpots();
+    this.props.fetchUsers();
   }
   
   render () {
