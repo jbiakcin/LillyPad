@@ -9,9 +9,9 @@ class EditReviewForm extends React.Component{
   }
 
   componentDidMount() {
-    this.props.fetchAllReviews()
-    .then(() =>this.props.fetchReview(this.props.review.id));
-    debugger;
+    this.props.fetchSpots()
+    .then (() => this.props.fetchAllReviews())
+    .then(() => this.props.fetchReview(this.props.review.id));
   }
 
   render () {

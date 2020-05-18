@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import EditReviewContainer from '../review/edit_review_container'
 
 const ReviewIndexItem = props => {
   const {review, allUsers, currentUserId} = props;

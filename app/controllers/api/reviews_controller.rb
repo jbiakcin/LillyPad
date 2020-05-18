@@ -1,7 +1,7 @@
 class Api::ReviewsController < ApplicationController
 
   def index
-    @reviews = Review.all
+    @reviews = Review.includes(:spot).all
     render :index
   end
 
