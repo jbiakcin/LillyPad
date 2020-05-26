@@ -11,7 +11,7 @@ if (currentUserId === reviewer.id) {
   update = <div className="review-index-item-update">
     <Link to={`/reviews/${review.id}/edit`}><button className="review-index-item-edit">Edit / Delete</button></Link>
   </div>;
-  who = <p>me</p >
+  who = <p>Me</p >
 } else {
   update = null;
   who = <p >{ reviewer.first_name } { reviewer.last_name }</p >;
