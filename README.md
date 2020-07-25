@@ -15,6 +15,8 @@ Find places to stay near America's National Parks with local hosts who also enjo
 * Users can create accounts with unique email addresses
 ### Spots
 * Users can see all the spots available to choose
+### Reviews
+* Users can submit reviews on spots they have visited
 ### Bookings
 * Users can request booking at a spot
 * Users can update or cancel a booking
